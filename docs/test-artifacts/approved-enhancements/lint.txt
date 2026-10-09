@@ -1,0 +1,4 @@
+
+> amx-wf-007-prototype-v1@0.1.0 lint
+> eslint .
+

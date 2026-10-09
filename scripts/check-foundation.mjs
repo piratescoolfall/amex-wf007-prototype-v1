@@ -13,10 +13,10 @@ try {
   const { default: App } = await server.ssrLoadModule('/src/App.jsx')
   const html = renderToStaticMarkup(createElement(App))
   for (const label of [
-    'Demonstration environment', 'Synthetic data', 'Simulated actions',
+    'Training environment', 'No live account access',
     'Not affiliated with or authorized by American Express',
-    '$500 reversal request', 'Identity Verification', 'AI-Assisted Assessment',
-    'Supervisor Authorization', 'Action &amp; Closure', 'Audit History',
+    '$500 reversal request', 'Identity Verification', 'AI Assessment',
+    'Supervisor Review', 'Action &amp; Closure', 'Audit History',
   ]) {
     assert.ok(html.includes(label), `Initial screen must include: ${label}`)
   }

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "simulationOnly": true,
+  "exportedAt": "2026-10-09T21:14:33.104Z",
+  "cases": [
+    {
+      "caseId": "SYN-007-001",
+      "revision": 1,
+      "status": "Open for review · withdrawn",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Completed",
+        "method": "Security questions",
+        "revision": 1
+      },
+      "incompleteReason": null,
+      "events": [
+        {
+          "id": "SYN-007-001-1",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:14:32.563Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "simulated_role_selected",
+          "details": {
+            "role": "CSR"
+          }
+        },
+        {
+          "id": "SYN-007-001-2",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:14:32.639Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "verification_attestation",
+          "details": {
+            "completed": true,
+            "method": "Security questions",
+            "outcome": "Completed",
+            "attestedBy": "Human CSR",
+            "revision": 1,
+            "simulationOnly": true
+          }
+        },
+        {
+          "id": "SYN-007-001-3",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:14:32.797Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_assessment",
+          "details": {
+            "method": "manual",
+            "revision": 1,
+            "reviewedBy": "Human CSR",
+            "uncertaintyAcknowledged": false,
+            "recommendation": "Request Supervisor review of fictional $500 reversal"
+          }
+        },
+        {
+          "id": "SYN-007-001-4",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:14:32.836Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "supervisor_review_requested",
+          "details": {
+            "approvalGranted": false
+          }
+        },
+        {
+          "id": "SYN-007-001-5",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:14:32.973Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_decision",
+          "details": {
+            "decision": "withdrawn"
+          }
+        },
+        {
+          "id": "SYN-007-001-6",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:14:32.973Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "case_transition",
+          "details": {
+            "from": "open",
+            "to": "open for review",
+            "outcome": "withdrawn"
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "SYN-007-002",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "One-time verification code",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-003",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "Identity document review",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "events": []
+    }
+  ]
+}

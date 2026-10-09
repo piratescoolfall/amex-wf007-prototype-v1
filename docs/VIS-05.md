@@ -19,7 +19,13 @@ flowchart TD
     Warning --> Review["CSR reviews evidence and recommendation"]
     Output --> Review
     Manual --> Review
-    Review --> Request["Fictional $500 reversal request<br/>Requires simulated Supervisor approval"]
+    Review --> Routing{"Evaluate versioned project approval rules"}
+    Routing -->|Routine information request| Routine["Supervisor Approval: Not Required<br/>Explicit human CSR completion; no account change"]
+    Routine --> RoutineClose{"CSR separately confirms case closure?"}
+    RoutineClose -->|Yes| RoutineClosed["Closed — Successfully Resolved<br/>Log completion, closure and routing metadata"]
+    RoutineClose -->|No| RoutineOpen["Case remains open; request completed"]
+    Routing -->|Exception or unsupported| ReviewHold["Request human review; processing held<br/>No financial approval or routine completion authority"]
+    Routing -->|Exact $500 reversal| Request["Fictional $500 reversal request<br/>Requires simulated Supervisor approval"]
     Request --> Auth{"Supervisor authorization present?"}
     Auth -->|No| Missing["Supervisor assistance is needed for this action. No approval or account change has been performed."]
     Missing --> Open["Case remains open for review"]
@@ -28,7 +34,13 @@ flowchart TD
     Decision -->|Approved| Approved["Record Supervisor approval<br/>No reversal executed"]
     Decision -->|Rejected| Hold["Record rejection; case remains open for review"]
     Auth -->|Yes| Approved
-    Request -->|CSR withdraws request| Withdrawn["Record withdrawal; case remains open for review"]
+    Assess --> CancelRequest["CSR selects Close / Cancel Case<br/>at any stage before reversal processing"]
+    Approved --> CancelRequest
+    Hold --> CancelRequest
+    CancelRequest --> CancelGate{"Open case, current verification,<br/>available evidence, no processed reversal,<br/>preset reason and explicit CSR confirmation?"}
+    CancelGate -->|Yes| Cancelled["Record CSR decision, reason, timestamp<br/>Closed — Cancelled; revoke approval<br/>Block all further processing and duplicate closure"]
+    CancelGate -->|No| CancelBlocked["Block and audit cancellation<br/>No state change"]
+    Mock --> PostCancel["Cancellation after successful or failed action blocked<br/>Supervisor review required for a separate corrective action<br/>Never automatically undo a reversal"]
     Approved --> Trigger{"CSR explicitly triggers mock reversal?"}
     Trigger -->|No| Pending["Keep case open; no account change"]
     Trigger -->|Yes| Gate{"Verification, CSR role, and<br/>Supervisor approval still valid?"}
@@ -43,6 +55,8 @@ flowchart TD
     Audit["JSON audit export available throughout:<br/>synthetic case ID, attestation, blocked actions,<br/>AI output and uncertainty, human decisions,<br/>mock action results and case transitions<br/>Never include verification secrets"]
 ```
 
-The audit box describes a cross-cutting control covering all branches, including blocked and failed attempts. Exporting audit data does not change case state. Rejected, withdrawn, and failed-action outcomes stay open for review and do not reach closure through this flow. Any further disposition requires an approved workflow decision.
+The audit box describes a cross-cutting control covering all branches, including blocked and failed attempts. Exporting audit data does not change case state. Rejected requests remain open for review unless an eligible CSR explicitly cancels them. Failed-action cases remain open and cannot be cancelled. Cancellation applies to all case types after current verification and with available evidence; no assessment or Supervisor approval is required. Incomplete-verification closure remains a separate existing path.
 
 Usable but uncertain AI output remains visible with a warning and human review. Failed or unusable AI output uses manual fallback. Neither route grants authority, bypasses verification, or substitutes for Supervisor approval, the separate CSR action, or explicit CSR closure.
+
+Routine information requests now have a separate CSR completion and human closure path. Exceptions and unsupported requests are held for human review. Routing evaluates actual stored request type, category, exact reversal amount, and explicit exception attributes; missing attributes fail closed. The policy version, rule, revision, and reason are included in audit records. Material changes reset verification and authority. This supersedes the earlier absence of routine successful-resolution closure.

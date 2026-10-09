@@ -1,0 +1,14 @@
+
+> amx-wf-007-prototype-v1@0.1.0 build
+> vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 21 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.58 kB │ gzip:  0.34 kB
+dist/assets/index-CCi78TVJ.css   13.61 kB │ gzip:  3.83 kB
+dist/assets/index-Cumi8XFX.js   254.03 kB │ gzip: 77.54 kB
+
+✓ built in 216ms

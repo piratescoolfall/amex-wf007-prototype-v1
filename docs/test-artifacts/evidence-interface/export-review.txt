@@ -1,0 +1,3 @@
+PASS: 95 checks/groups; 77 automated + 17 browser + 1 smoke. Browser page errors: zero.
+PASS: 17 synthetic audit exports parsed, case associations and schema verified, no secret detail keys. Evidence edits preserve original internal materialNote.
+PASS: unchanged workflow guards and direct material/context-change security test files verified with git diff --exit-code.

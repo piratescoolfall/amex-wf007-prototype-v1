@@ -1,0 +1,36 @@
+
+> amx-wf-007-prototype-v1@0.1.0 test:browser
+> node tests/browser.mjs
+
+PASS Verification bypasses and unauthorized human actions
+PASS Evidence editor absent; internal unavailable-evidence fixture retains all gates
+FAIL AI usable and uncertain output requires explicit human review: The expression evaluated to a falsy value:
+
+  assert.ok(await page.getByRole('heading',{name:'Simulated AI · usable'}).isVisible())
+
+FAIL AI unusable and system failure support guarded manual fallback: The expression evaluated to a falsy value:
+
+  assert.ok((await page.getByRole('status').innerText()).includes(text))
+
+FAIL Supervisor approval is separate; role and explicit decision guards: locator.check: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('checkbox', { name: 'I have reviewed' })[22m
+[2m    - locator resolved to <input disabled type="checkbox"/>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not enabled[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not enabled[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not enabled[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+PASS Failed mock reversal stays open; duplicate and closure controls disabled
+PASS Rejected and withdrawn cases stay unresolved
+PASS Complete $500 success, separate human closure, audit JSON and export immutability
+PASS Browser refresh resets all cases and audit

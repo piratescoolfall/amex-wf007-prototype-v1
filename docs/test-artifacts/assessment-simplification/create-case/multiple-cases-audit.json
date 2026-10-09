@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "simulationOnly": true,
+  "exportedAt": "2026-10-09T21:16:41.945Z",
+  "cases": [
+    {
+      "caseId": "SYN-007-001",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "Security questions",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-002",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "One-time verification code",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-003",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "Identity document review",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-004",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "Security questions",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "events": [
+        {
+          "id": "SYN-007-004-1",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T21:16:40.661Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "case_created",
+          "details": {
+            "simulationOnly": true,
+            "customer": "Casey Rowan",
+            "requestType": "Reversal request",
+            "amount": "$500.00",
+            "description": "Fictional customer requests a $500 synthetic transaction reversal.",
+            "transactionReference": "SYN-TXN-007-004",
+            "status": "open",
+            "verified": false,
+            "verificationMethod": "Security questions",
+            "verificationOutcome": "Not completed"
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "SYN-007-005",
+      "revision": 1,
+      "status": "Open · Verified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Completed",
+        "method": "One-time verification code",
+        "revision": 1
+      },
+      "incompleteReason": null,
+      "events": [
+        {
+          "id": "SYN-007-005-1",
+          "caseId": "SYN-007-005",
+          "timestamp": "2026-10-09T21:16:40.920Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "case_created",
+          "details": {
+            "simulationOnly": true,
+            "customer": "Casey Rowan",
+            "requestType": "Transaction inquiry",
+            "amount": "$500.00",
+            "description": "Fictional customer requests clarification of a synthetic transaction description.",
+            "transactionReference": "SYN-TXN-007-005",
+            "status": "open",
+            "verified": false,
+            "verificationMethod": "One-time verification code",
+            "verificationOutcome": "Not completed"
+          }
+        },
+        {
+          "id": "SYN-007-005-2",
+          "caseId": "SYN-007-005",
+          "timestamp": "2026-10-09T21:16:41.175Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "verification_attestation",
+          "details": {
+            "completed": true,
+            "method": "One-time verification code",
+            "outcome": "Completed",
+            "attestedBy": "Human CSR",
+            "revision": 1,
+            "simulationOnly": true
+          }
+        },
+        {
+          "id": "SYN-007-005-3",
+          "caseId": "SYN-007-005",
+          "timestamp": "2026-10-09T21:16:41.401Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "simulated_ai_output",
+          "details": {
+            "label": "Simulated AI",
+            "mode": "usable",
+            "revision": 1,
+            "summary": "Casey Rowan — Transaction inquiry. Fictional customer requests clarification of a synthetic transaction description.",
+            "classification": "Information request",
+            "uncertainty": null,
+            "recommendation": "Recommend human CSR review of this fictional inquiry and its missing information. No supported financial action is identified.",
+            "report": {
+              "label": "Simulated AI case-analysis report",
+              "caseId": "SYN-007-005",
+              "revision": 1,
+              "customerRequestSummary": "Casey Rowan — Transaction inquiry. Fictional customer requests clarification of a synthetic transaction description.",
+              "evidenceAndKnownFacts": {
+                "providedFacts": [
+                  "Synthetic case: SYN-007-005",
+                  "Fictional customer: Casey Rowan",
+                  "Provided request type: Information request",
+                  "Fictional amount: $500.00",
+                  "Channel: Simulated intake form",
+                  "Description: Fictional customer requests clarification of a synthetic transaction description.",
+                  "Synthetic transaction reference: SYN-TXN-007-005",
+                  "Synthetic evidence availability: Available",
+                  "Provided context: Original synthetic request"
+                ],
+                "approvedSimulationKnowledge": [
+                  "This is a classroom simulation using fictional cases, roles, AI output, and account actions.",
+                  "Only a human CSR can attest verification. AI processing and manual assessment require current verification and available synthetic evidence.",
+                  "Information requests have no approved reversal or successful-resolution closure path; they remain open for human review.",
+                  "Incomplete-verification closure is a separate explicit CSR decision for an active unverified case, with no downstream processing or action."
+                ],
+                "supportedConclusions": [
+                  "The supplied request type supports an information-request classification for human review.",
+                  "A recorded CSR attestation indicates completion in the simulation; it is not AI identity verification or production identity proof."
+                ],
+                "assumptions": [
+                  "No additional facts are assumed. The customer request is not treated as proof of a valid reversal or confirmed duplicate charge."
+                ],
+                "unknowns": [
+                  "Underlying identity-verification records and secret responses are not collected by this prototype.",
+                  "Transaction date, merchant, account history, and supporting transaction documents are not supplied.",
+                  "A request description and evidence-availability flag do not establish that a duplicate charge occurred."
+                ]
+              },
+              "missingInformation": [
+                "Underlying identity-verification records and secret responses are not collected by this prototype.",
+                "Transaction date, merchant, account history, and supporting transaction documents are not supplied.",
+                "A request description and evidence-availability flag do not establish that a duplicate charge occurred."
+              ],
+              "verificationStatus": {
+                "recorded": true,
+                "method": "One-time verification code",
+                "revision": 1,
+                "actor": "Human CSR",
+                "statement": "Verification is recorded only by human CSR attestation; AI cannot perform or attest verification."
+              },
+              "requestClassification": {
+                "category": "Information request",
+                "basis": "Provided synthetic request type and description; classification is advisory, not approval."
+              },
+              "riskAndReviewIndicators": [
+                "No additional uncertainty was injected by this simulated scenario. The documented evidence gaps still require human judgment.",
+                "Synthetic presets and an availability flag are not independent transaction proof.",
+                "This information case requires human review; no financial action is authorized."
+              ],
+              "recommendedNextSteps": [
+                "Recommend human CSR review of this fictional inquiry and its missing information. No supported financial action is identified.",
+                "The supplied facts and approved knowledge do not justify Fraud, Legal, IT, or Operations referral. No specialist escalation is recorded or implemented."
+              ],
+              "humanDecisions": {
+                "verification": "Human CSR attestation recorded using One-time verification code.",
+                "assessment": "No current human assessment recorded.",
+                "escalation": "No escalation recorded.",
+                "approval": "No current Supervisor approval recorded.",
+                "action": "No mock account action recorded.",
+                "closure": "Case remains open."
+              },
+              "draftCustomerCommunication": {
+                "label": "Draft — Human Review Required",
+                "text": "Hello Casey Rowan. Regarding your fictional request (SYN-007-005): A human CSR recorded simulated verification using One-time verification code. Your request awaits human assessment; no approval, reversal, or closure has been performed."
+              },
+              "humanAuthorityRequired": [
+                "AI cannot verify identity or attest completion of verification.",
+                "AI cannot approve requests, execute account changes, or close cases.",
+                "Only a human Supervisor may approve the fictional $500 reversal; only a human CSR may trigger its separate mock action or explicitly confirm eligible closure."
+              ],
+              "uncertainty": null
+            }
+          }
+        },
+        {
+          "id": "SYN-007-005-4",
+          "caseId": "SYN-007-005",
+          "timestamp": "2026-10-09T21:16:41.618Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_assessment",
+          "details": {
+            "method": "ai",
+            "revision": 1,
+            "reviewedBy": "Human CSR",
+            "uncertaintyAcknowledged": false,
+            "recommendation": "Manual review of synthetic inquiry"
+          }
+        },
+        {
+          "id": "SYN-007-005-5",
+          "caseId": "SYN-007-005",
+          "timestamp": "2026-10-09T21:16:41.618Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "report_human_status_updated",
+          "details": {
+            "caseId": "SYN-007-005",
+            "revision": 1,
+            "source": "Recorded human workflow; no new AI processing",
+            "humanDecisions": {
+              "verification": "Human CSR attestation recorded using One-time verification code.",
+              "assessment": "Human CSR assessment recorded via ai. Recommendation only.",
+              "escalation": "No escalation recorded.",
+              "approval": "No current Supervisor approval recorded.",
+              "action": "No mock account action recorded.",
+              "closure": "Case remains open."
+            },
+            "draftCustomerCommunication": {
+              "label": "Draft — Human Review Required",
+              "text": "Hello Casey Rowan. Regarding your fictional request (SYN-007-005): A human CSR recorded an assessment. This is a recommendation only; no approval, reversal, or closure has been performed."
+            }
+          }
+        },
+        {
+          "id": "SYN-007-005-6",
+          "caseId": "SYN-007-005",
+          "timestamp": "2026-10-09T21:16:41.683Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "blocked_action",
+          "details": {
+            "action": "escalate",
+            "reason": "This action is only defined for the fictional $500 reversal scenario. This information case remains open for review."
+          }
+        },
+        {
+          "id": "SYN-007-005-7",
+          "caseId": "SYN-007-005",
+          "timestamp": "2026-10-09T21:16:41.821Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "blocked_action",
+          "details": {
+            "action": "close",
+            "reason": "This action is only defined for the fictional $500 reversal scenario. This information case remains open for review."
+          }
+        }
+      ]
+    }
+  ]
+}

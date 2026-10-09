@@ -41,6 +41,20 @@ sequenceDiagram
             CSR->>UI: Perform manual assessment
         end
 
+        UI->>Gate: Evaluate versioned routing rules from current case attributes
+        alt Routine information request within CSR authority
+            UI-->>CSR: Supervisor Approval Not Required; routine completion available
+            CSR->>UI: Explicitly confirm Complete Request after reviewed assessment
+            UI->>Gate: Check verification, evidence, CSR role, assessment, current route
+            UI->>Audit: Record CSR completion and routing metadata; case stays open
+            CSR->>UI: Separately confirm Case Closure
+            UI->>Gate: Recheck current completion, route, verification and CSR role
+            UI->>Audit: Record successful-resolution closure; no financial action
+        else Exception or unsupported request
+            UI-->>CSR: Human review required; no processing path authorized
+            CSR->>UI: Request review after verification and human assessment
+            UI->>Audit: Record review request and routing reason; no approval granted
+        else Exact $500 reversal requires Supervisor approval
         CSR->>UI: Request fictional $500 reversal
         UI->>Gate: Check Supervisor authorization
         alt Supervisor authorization missing
@@ -55,8 +69,8 @@ sequenceDiagram
             Gate-->>UI: Approval recorded. no reversal executed
         end
 
-        alt Request rejected or withdrawn
-            UI->>Audit: Record rejection or withdrawal. case stays open for review
+        alt Request rejected
+            UI->>Audit: Record rejection. case stays open for review
             UI-->>CSR: Case open for review. no reversal or automatic closure
         else Supervisor approved request
             UI-->>CSR: Approval recorded. separate CSR action required
@@ -87,6 +101,23 @@ sequenceDiagram
         else No approval decision yet
             UI-->>CSR: Case remains open. no reversal or closure
         end
+        end
+    end
+    opt CSR requests cancellation of an open case
+        CSR->>UI: Close / Cancel Case with preset reason and explicit confirmation
+        UI->>Gate: Check CSR role, current verification, evidence, no processed reversal
+        alt Reversal already processed (success or failure)
+            Gate-->>UI: Block cancellation; no automatic undo
+            UI->>Audit: Record blocked cancellation and corrective-review requirement
+            UI-->>CSR: Supervisor review required to determine separate corrective action
+        else Missing verification, evidence, reason, confirmation or authority
+            Gate-->>UI: Block cancellation; case state unchanged
+            UI->>Audit: Record blocked action and reason
+        else Cancellation eligible
+            UI->>Audit: Record CSR decision, reason, timestamp, closure and transition
+            UI-->>CSR: Closed — Cancelled; prior approval revoked
+            Note over UI,Gate: Block further AI, approval, reversal and duplicate closure
+        end
     end
     CSR->>UI: Export JSON audit
     UI->>Audit: Read synthetic events
@@ -96,4 +127,6 @@ sequenceDiagram
 
 The sequence shows one successful attestation path and its failure branches. An authorized human CSR supplies the verification attestation; AI never performs verification. Every assessment or AI entry point must enforce that prerequisite. The manual assessment route is also available without invoking AI, after verification.
 
-Supervisor approval, CSR-triggered mock reversal, and CSR-confirmed closure are separate events. The absence of a CSR action or closure confirmation leaves the case open. Rejected, withdrawn, and failed-action cases remain open for review. No real banking or payment system is contacted.
+Supervisor approval, CSR-triggered mock reversal, and CSR-confirmed closure are separate events. The absence of a CSR action or closure confirmation leaves the case open. Rejected cases remain open unless explicitly cancelled before processing; failed-action cases remain open and cannot be cancelled. No real banking or payment system is contacted.
+
+Routine resolution requires distinct CSR completion and closure decisions with all verification/evidence guards. Review-only exceptions cannot be converted to executable financial approval. New audit events and JSON exports include routing metadata; approvals and completions bind the matched rule/version and case revision.

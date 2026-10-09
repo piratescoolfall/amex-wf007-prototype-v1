@@ -1,0 +1,12 @@
+
+> amx-wf-007-prototype-v1@0.1.0 test:browser:create-case
+> node tests/browser-create-case.mjs
+
+PASS Required presets, fixed reversal amount, generated reference, cancel and open/unverified creation
+PASS CSR-only creation remains enforced if role changes while form is open
+PASS Forged non-preset input rejected in app logic without storing submitted text
+PASS Multiple cases get distinct IDs and references; information case cannot resolve
+PASS New case verification and evidence gates block processing and actions
+PASS New case internal material-change fixture invalidates approval without an evidence editor
+PASS New $500 case completes only with Supervisor approval, distinct CSR action and human closure; export unchanged
+PASS Form at mobile viewport fits and refresh resets new cases and creation audit

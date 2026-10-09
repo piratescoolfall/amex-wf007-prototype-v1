@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "simulationOnly": true,
+  "exportedAt": "2026-10-09T21:37:37.855Z",
+  "cases": [
+    {
+      "caseId": "SYN-007-001",
+      "revision": 1,
+      "requestType": "Reversal request",
+      "routing": {
+        "policyVersion": "AMX-routing-1",
+        "caseRevision": 1,
+        "ruleId": "reversal-500",
+        "route": "supervisor",
+        "approvalRequired": true,
+        "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+      },
+      "resolution": null,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "Security questions",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-002",
+      "revision": 1,
+      "requestType": "Statement explanation request",
+      "routing": {
+        "policyVersion": "AMX-routing-1",
+        "caseRevision": 1,
+        "ruleId": "routine-information",
+        "route": "csr",
+        "approvalRequired": false,
+        "reason": "Routine information request within CSR authority. No account change is authorized."
+      },
+      "resolution": null,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "One-time verification code",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-003",
+      "revision": 1,
+      "requestType": "Transaction inquiry",
+      "routing": {
+        "policyVersion": "AMX-routing-1",
+        "caseRevision": 1,
+        "ruleId": "routine-information",
+        "route": "csr",
+        "approvalRequired": false,
+        "reason": "Routine information request within CSR authority. No account change is authorized."
+      },
+      "resolution": null,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "Identity document review",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-004",
+      "revision": 2,
+      "requestType": "Reversal request",
+      "routing": {
+        "policyVersion": "AMX-routing-1",
+        "caseRevision": 2,
+        "ruleId": "reversal-500",
+        "route": "supervisor",
+        "approvalRequired": true,
+        "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+      },
+      "resolution": null,
+      "status": "Open · Verified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Completed",
+        "method": "Security questions",
+        "revision": 2
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": [
+        {
+          "id": "SYN-007-004-1",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T20:00:00.000Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "case_created",
+          "details": {
+            "simulationOnly": true,
+            "customer": "Casey Rowan",
+            "requestType": "Reversal request",
+            "amount": "$500.00",
+            "description": "Fictional customer requests a $500 synthetic transaction reversal.",
+            "transactionReference": "SYN-TXN-007-004",
+            "status": "open",
+            "verified": false,
+            "verificationMethod": "Security questions",
+            "verificationOutcome": "Not completed"
+          },
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          }
+        },
+        {
+          "id": "SYN-007-004-2",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T21:37:36.646Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "verification_attestation",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "completed": true,
+            "method": "Security questions",
+            "outcome": "Completed",
+            "attestedBy": "Human CSR",
+            "revision": 1,
+            "simulationOnly": true
+          }
+        },
+        {
+          "id": "SYN-007-004-3",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T21:37:36.646Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_assessment",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "method": "manual",
+            "revision": 1,
+            "reviewedBy": "Human CSR",
+            "uncertaintyAcknowledged": false,
+            "recommendation": "Request Supervisor review of fictional $500 reversal"
+          }
+        },
+        {
+          "id": "SYN-007-004-4",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T21:37:36.646Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "supervisor_review_requested",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "approvalGranted": false
+          }
+        },
+        {
+          "id": "SYN-007-004-5",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T21:37:36.646Z",
+          "actor": "Supervisor",
+          "revision": 1,
+          "type": "supervisor_approval",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "revision": 1,
+            "approvedBy": "Human Supervisor",
+            "amount": "$500.00",
+            "policyVersion": "AMX-routing-1",
+            "ruleId": "reversal-500"
+          }
+        },
+        {
+          "id": "SYN-007-004-6",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T21:37:36.646Z",
+          "actor": "CSR",
+          "revision": 2,
+          "type": "material_information_changed",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 2,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "evidenceAvailable": true,
+            "syntheticNote": "Fictional duplicate-charge context added",
+            "requiresAccountChange": false,
+            "evidenceConflict": false,
+            "previousRevision": 1
+          }
+        },
+        {
+          "id": "SYN-007-004-7",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T21:37:36.646Z",
+          "actor": "CSR",
+          "revision": 2,
+          "type": "prior_authority_invalidated",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 2,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "approvalInvalidated": true,
+            "verificationReset": true,
+            "verificationMethod": "Security questions",
+            "verificationOutcome": "Not completed",
+            "assessmentReset": true
+          }
+        },
+        {
+          "id": "SYN-007-004-8",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T21:37:37.493Z",
+          "actor": "CSR",
+          "revision": 2,
+          "type": "verification_attestation",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 2,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "completed": true,
+            "method": "Security questions",
+            "outcome": "Completed",
+            "attestedBy": "Human CSR",
+            "revision": 2,
+            "simulationOnly": true
+          }
+        },
+        {
+          "id": "SYN-007-004-9",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T21:37:37.704Z",
+          "actor": "CSR",
+          "revision": 2,
+          "type": "blocked_action",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 2,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "action": "reverse",
+            "reason": "Supervisor assistance is needed for this action. No approval or account change has been performed."
+          }
+        }
+      ]
+    }
+  ]
+}

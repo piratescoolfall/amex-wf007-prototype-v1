@@ -1,0 +1,45 @@
+{
+  "browser": "156.0.8078.4",
+  "results": [
+    {
+      "name": "Verification bypasses and unauthorized human actions",
+      "result": "PASS"
+    },
+    {
+      "name": "Evidence editor absent; internal unavailable-evidence fixture retains all gates",
+      "result": "PASS"
+    },
+    {
+      "name": "AI usable and uncertain output requires explicit human review",
+      "result": "FAIL",
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok(await page.getByRole('heading',{name:'Simulated AI · usable'}).isVisible())\n"
+    },
+    {
+      "name": "AI unusable and system failure support guarded manual fallback",
+      "result": "FAIL",
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok((await page.getByRole('status').innerText()).includes(text))\n"
+    },
+    {
+      "name": "Supervisor approval is separate; role and explicit decision guards",
+      "result": "FAIL",
+      "error": "locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('checkbox', { name: 'I have reviewed' })\u001b[22m\n\u001b[2m    - locator resolved to <input disabled type=\"checkbox\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "name": "Failed mock reversal stays open; duplicate and closure controls disabled",
+      "result": "PASS"
+    },
+    {
+      "name": "Rejected and withdrawn cases stay unresolved",
+      "result": "PASS"
+    },
+    {
+      "name": "Complete $500 success, separate human closure, audit JSON and export immutability",
+      "result": "PASS"
+    },
+    {
+      "name": "Browser refresh resets all cases and audit",
+      "result": "PASS"
+    }
+  ],
+  "pageErrors": []
+}

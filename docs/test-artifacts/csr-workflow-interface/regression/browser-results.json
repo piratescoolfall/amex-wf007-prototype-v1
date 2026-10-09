@@ -1,0 +1,42 @@
+{
+  "browser": "156.0.8078.4",
+  "results": [
+    {
+      "name": "Verification bypasses and unauthorized human actions",
+      "result": "PASS"
+    },
+    {
+      "name": "Evidence editor absent; internal unavailable-evidence fixture retains all gates",
+      "result": "PASS"
+    },
+    {
+      "name": "AI usable and uncertain output requires explicit human review",
+      "result": "PASS"
+    },
+    {
+      "name": "AI unusable and system failure support guarded manual fallback",
+      "result": "PASS"
+    },
+    {
+      "name": "Supervisor approval is separate; role and explicit decision guards",
+      "result": "PASS"
+    },
+    {
+      "name": "Failed mock reversal stays open; duplicate and closure controls disabled",
+      "result": "PASS"
+    },
+    {
+      "name": "Rejected and withdrawn cases stay unresolved",
+      "result": "PASS"
+    },
+    {
+      "name": "Complete $500 success, separate human closure, audit JSON and export immutability",
+      "result": "PASS"
+    },
+    {
+      "name": "Browser refresh resets all cases and audit",
+      "result": "PASS"
+    }
+  ],
+  "pageErrors": []
+}

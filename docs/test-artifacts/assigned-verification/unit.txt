@@ -1,0 +1,145 @@
+
+> amx-wf-007-prototype-v1@0.1.0 test
+> node tests/workflow.test.mjs && node tests/case-creation.test.mjs && node tests/report-verification.test.mjs
+
+✔ unverified ai blocked (3.361169ms)
+✔ unverified assess blocked (0.440083ms)
+✔ unverified escalate blocked (0.213637ms)
+✔ unverified approve blocked (0.240607ms)
+✔ unverified reject blocked (0.232465ms)
+✔ unverified close blocked (1.34735ms)
+✔ Supervisor cannot attest (0.238554ms)
+✔ AI cannot attest (0.19529ms)
+✔ Administrator cannot attest (0.138496ms)
+✔ empty cannot attest (0.340916ms)
+✔ Supervisor cannot ai (0.428436ms)
+✔ Supervisor cannot assess (0.247407ms)
+✔ Supervisor cannot material (0.203122ms)
+✔ Supervisor cannot escalate (0.12833ms)
+✔ Supervisor cannot reverse (0.111215ms)
+✔ Supervisor cannot close (0.11437ms)
+✔ Supervisor cannot withdraw (0.105306ms)
+✔ CSR cannot approve (0.231804ms)
+✔ CSR cannot reject (0.157153ms)
+✔ explicit attestation required and duplicate blocked (0.135671ms)
+✔ missing evidence invalidates authority and blocks all processing (0.156102ms)
+✔ changed/conflicting context requires fresh verification and approval (0.204183ms)
+✔ AI usable deterministic, advisory, reviewed or manual fallback (0.606906ms)
+✔ AI uncertain deterministic, advisory, reviewed or manual fallback (0.263571ms)
+✔ AI unusable deterministic, advisory, reviewed or manual fallback (0.132166ms)
+✔ AI failed deterministic, advisory, reviewed or manual fallback (0.085277ms)
+✔ AI cannot perform privileged transitions (0.143673ms)
+✔ invalid modes and absent human review blocked (0.102612ms)
+✔ approval needs escalation and explicit human decision (0.139407ms)
+✔ ai invalidates prior approval (0.158305ms)
+✔ assess invalidates prior approval (0.085406ms)
+✔ stale approval and stale assessment blocked at execution (0.220948ms)
+✔ reversal without authorization (fresh) uses exact message (0.164665ms)
+✔ reversal without authorization (verified) uses exact message (0.079388ms)
+✔ reversal without authorization (assessed) uses exact message (0.07358ms)
+✔ reversal without authorization (escalated) uses exact message (0.138255ms)
+✔ failed reversal stays open, cannot retry or close (0.198795ms)
+✔ reject remains unresolved (0.200197ms)
+✔ withdraw remains unresolved (0.090274ms)
+✔ successful $500 path separates recommendation approval action and human closure (0.750815ms)
+✔ information case 1 has no reversal or closure path (0.163352ms)
+✔ information case 2 has no reversal or closure path (0.088231ms)
+✔ fresh session resets all cases and audit (0.134129ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31.516131
+✔ creation initializes every authority gate and audits synthetic fields (2.468684ms)
+✔ creation denied for Supervisor role (0.592399ms)
+✔ creation denied for AI role (0.175069ms)
+✔ creation denied for Admin role (2.347545ms)
+✔ creation denied for missing role (1.028597ms)
+✔ reject unknown name without creating or mutating a case (0.271102ms)
+✔ reject unknown type without creating or mutating a case (0.224533ms)
+✔ reject free description without creating or mutating a case (4.450465ms)
+✔ reject non-$500 reversal without creating or mutating a case (0.219576ms)
+✔ reject negative amount without creating or mutating a case (2.20298ms)
+✔ reject number amount without creating or mutating a case (0.239766ms)
+✔ reject nonfinite amount without creating or mutating a case (0.152356ms)
+✔ reject caller ID without creating or mutating a case (0.162851ms)
+✔ reject caller reference without creating or mutating a case (0.132417ms)
+✔ reject injected verification without creating or mutating a case (1.281642ms)
+✔ reject injected approval without creating or mutating a case (0.129903ms)
+✔ empty and null payloads rejected (0.175751ms)
+✔ IDs skip collisions; generated references are unique for repeated submissions (0.757524ms)
+✔ reducer serializes queued submissions and clears form after success (0.883632ms)
+✔ blocked creation logs reason only, retains form, adds no case (0.30365ms)
+✔ Statement explanation request uses existing information-case safeguards (0.886546ms)
+✔ Transaction inquiry uses existing information-case safeguards (0.177483ms)
+✔ new case verification gate blocks AI, both assessment methods and closure (0.346945ms)
+✔ new case missing evidence invalidates authority and blocks verification (0.362167ms)
+✔ new case AI usable retains gates (0.592369ms)
+✔ new case AI uncertain retains gates (0.171775ms)
+✔ new case AI unusable retains gates (0.132967ms)
+✔ new case AI failed retains gates (0.113659ms)
+✔ new case stale approval, unauthorized approval and execution blocked (0.254868ms)
+✔ new case rejected remains unresolved (0.206436ms)
+✔ new case withdrawn remains unresolved (0.12128ms)
+✔ new case failed-action remains unresolved (0.182161ms)
+✔ new $500 case needs separate approval action and explicit human closure (0.579089ms)
+✔ created cases do not alter refresh initialization (0.195941ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 39.33398
+✔ approved method Security questions requires and records human attestation (3.105899ms)
+✔ approved method One-time verification code requires and records human attestation (0.295749ms)
+✔ approved method Identity document review requires and records human attestation (1.172881ms)
+✔ invalid method  denied (0.18144ms)
+✔ invalid method Unapproved method denied (0.255019ms)
+✔ invalid method 0 denied (0.230422ms)
+✔ truthy nonboolean attestation cannot verify (0.271212ms)
+✔ verification boolean without valid current method cannot bypass processing (0.622705ms)
+✔ incomplete reason Required synthetic evidence unavailable closes only by explicit CSR decision (0.405642ms)
+✔ incomplete reason Fictional details could not be confirmed closes only by explicit CSR decision (0.213997ms)
+✔ incomplete reason Simulated verification interrupted closes only by explicit CSR decision (0.229751ms)
+✔ incomplete closure works for each active unverified synthetic case type (0.661261ms)
+✔ role Supervisor cannot close incomplete (0.179947ms)
+✔ role AI cannot close incomplete (0.156652ms)
+✔ role Administrator cannot close incomplete (0.078937ms)
+✔ role missing cannot close incomplete (0.059027ms)
+✔ missing/invalid reason and missing/nonboolean confirmation denied (0.186006ms)
+✔ incomplete closure bypass is denied after current downstream processing or invalid case status (0.969129ms)
+✔ closed-incomplete case blocks duplicate closure and all processing, decision and action attempts (0.380535ms)
+✔ missing evidence can close incomplete but cannot verify or process (0.242259ms)
+✔ material changes preserve assigned method and reset report and authority; old attestation cannot authorize new revision (0.268758ms)
+✔ rejected cannot use incomplete exception and remains open (0.244593ms)
+✔ withdrawn cannot use incomplete exception and remains open (0.189481ms)
+✔ failed-action cannot use incomplete exception and remains open (0.164535ms)
+✔ successful closure is distinct and keeps method; incomplete exception cannot close it again (0.278303ms)
+✔ Next Step eligibility checks role, method, revision, evidence and active/open state (0.223832ms)
+✔ assessment navigation requires actual reviewed escalation and then routes according to recorded approval (0.393624ms)
+✔ report for case 1 uses selected facts and no invented context (0.341727ms)
+✔ report for case 2 uses selected facts and no invented context (0.155271ms)
+✔ report for case 3 uses selected facts and no invented context (0.171124ms)
+✔ new-case report includes generated reference and chosen description exactly (0.228188ms)
+✔ report deterministic for identical inputs and generated only after verification (0.214168ms)
+✔ uncertain report requires acknowledgment and retains unknowns (0.227368ms)
+✔ failed AI generates no report and requires guarded manual fallback (0.241279ms)
+✔ unusable AI generates no report and requires guarded manual fallback (0.096504ms)
+✔ report regeneration revokes prior approval before drafting any authority claims (0.198685ms)
+✔ human status refreshes draft accurately without mutating original AI audit snapshot (0.775481ms)
+✔ drafts distinguish rejection withdrawal failure and incomplete closure without claiming resolution (0.399043ms)
+✔ each seeded case has a predefined method before attestation; all outcomes retain it (0.45175ms)
+✔ new cases automatically cycle fictional methods and audit the initial outcome (0.492351ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31.359855

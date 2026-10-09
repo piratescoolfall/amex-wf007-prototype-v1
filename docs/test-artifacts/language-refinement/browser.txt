@@ -1,0 +1,16 @@
+
+> amx-wf-007-prototype-v1@0.1.0 test:browser
+> node tests/browser.mjs
+
+PASS Professional language across all screens with visible disclosure and unchanged stored records
+PASS Read-only assigned methods, verification outcomes and incomplete JSON export
+PASS Verification bypasses and unauthorized human actions
+PASS Evidence editor absent; internal unavailable-evidence fixture retains all gates
+PASS Normal AI simulation has no outcome controls, preserves structured report and human review gate
+PASS Uncertainty fixture requires explicit acknowledgment
+PASS Failed, unusable and unavailable fixtures expose guarded assessment without AI
+PASS Supervisor approval is separate; role and explicit decision guards
+PASS Failed mock reversal stays open; duplicate and closure controls disabled
+PASS Rejected and withdrawn cases stay unresolved
+PASS Complete $500 success, separate human closure, audit JSON and export immutability
+PASS Browser refresh resets all cases and audit

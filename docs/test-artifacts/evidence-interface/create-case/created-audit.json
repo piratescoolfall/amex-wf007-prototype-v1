@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "simulationOnly": true,
+  "exportedAt": "2026-10-09T20:50:04.164Z",
+  "cases": [
+    {
+      "caseId": "SYN-007-001",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-002",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-003",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-004",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "events": [
+        {
+          "id": "SYN-007-004-1",
+          "caseId": "SYN-007-004",
+          "timestamp": "2026-10-09T20:50:04.012Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "case_created",
+          "details": {
+            "simulationOnly": true,
+            "customer": "Casey Rowan",
+            "requestType": "Reversal request",
+            "amount": "$500.00",
+            "description": "Fictional customer requests a $500 synthetic transaction reversal.",
+            "transactionReference": "SYN-TXN-007-004",
+            "status": "open",
+            "verified": false
+          }
+        }
+      ]
+    }
+  ]
+}

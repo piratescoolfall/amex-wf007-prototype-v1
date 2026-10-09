@@ -1,0 +1,10 @@
+✔ presentation formatting does not mutate cases, reports or audit records (9.741458ms)
+✔ approval and action wording retains simulated context (0.342018ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19.1547

@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "simulationOnly": true,
+  "exportedAt": "2026-10-09T21:43:45.285Z",
+  "cases": [
+    {
+      "caseId": "SYN-007-001",
+      "revision": 1,
+      "requestType": "Reversal request",
+      "routing": {
+        "policyVersion": "AMX-routing-1",
+        "caseRevision": 1,
+        "ruleId": "reversal-500",
+        "route": "supervisor",
+        "approvalRequired": true,
+        "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+      },
+      "resolution": null,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "Security questions",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-002",
+      "revision": 1,
+      "requestType": "Unsupported request",
+      "routing": {
+        "policyVersion": "AMX-routing-1",
+        "caseRevision": 1,
+        "ruleId": "unsupported-request",
+        "route": "hold",
+        "approvalRequired": false,
+        "reason": "This request has no approved processing path. Human review is required."
+      },
+      "resolution": null,
+      "status": "Open · Verified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Completed",
+        "method": "One-time verification code",
+        "revision": 1
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": [
+        {
+          "id": "SYN-007-002-1",
+          "caseId": "SYN-007-002",
+          "timestamp": "2026-10-09T21:43:44.750Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "verification_attestation",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "unsupported-request",
+            "route": "hold",
+            "approvalRequired": false,
+            "reason": "This request has no approved processing path. Human review is required."
+          },
+          "details": {
+            "completed": true,
+            "method": "One-time verification code",
+            "outcome": "Completed",
+            "attestedBy": "Human CSR",
+            "revision": 1,
+            "simulationOnly": true
+          }
+        },
+        {
+          "id": "SYN-007-002-2",
+          "caseId": "SYN-007-002",
+          "timestamp": "2026-10-09T21:43:44.838Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "simulated_ai_output",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "unsupported-request",
+            "route": "hold",
+            "approvalRequired": false,
+            "reason": "This request has no approved processing path. Human review is required."
+          },
+          "details": {
+            "label": "Simulated AI",
+            "mode": "usable",
+            "revision": 1,
+            "summary": "Riley Bennett — Statement explanation request. Fictional customer requests an explanation of a synthetic statement entry. No assessment has been performed.",
+            "classification": "Information request",
+            "uncertainty": null,
+            "recommendation": "Request human review of this exception or unsupported request. No financial processing or routine completion is authorized.",
+            "report": {
+              "label": "Simulated AI case-analysis report",
+              "routing": {
+                "policyVersion": "AMX-routing-1",
+                "caseRevision": 1,
+                "ruleId": "unsupported-request",
+                "route": "hold",
+                "approvalRequired": false,
+                "reason": "This request has no approved processing path. Human review is required."
+              },
+              "caseId": "SYN-007-002",
+              "revision": 1,
+              "customerRequestSummary": "Riley Bennett — Statement explanation request. Fictional customer requests an explanation of a synthetic statement entry. No assessment has been performed.",
+              "evidenceAndKnownFacts": {
+                "providedFacts": [
+                  "Synthetic case: SYN-007-002",
+                  "Fictional customer: Riley Bennett",
+                  "Provided request type: Information request",
+                  "Fictional amount: —",
+                  "Channel: Simulated chat",
+                  "Description: Fictional customer requests an explanation of a synthetic statement entry. No assessment has been performed.",
+                  "Synthetic transaction reference: Not supplied",
+                  "Synthetic evidence availability: Available",
+                  "Provided context: Original synthetic request"
+                ],
+                "approvedSimulationKnowledge": [
+                  "This is a classroom simulation using fictional cases, roles, AI output, and account actions.",
+                  "Only a human CSR can attest verification. AI processing and manual assessment require current verification and available synthetic evidence.",
+                  "This request has no approved processing path. Human review is required.",
+                  "Incomplete-verification closure is a separate explicit CSR decision for an active unverified case, with no downstream processing or action."
+                ],
+                "supportedConclusions": [
+                  "The supplied request type supports an information-request classification for human review.",
+                  "A recorded CSR attestation indicates completion in the simulation; it is not AI identity verification or production identity proof."
+                ],
+                "assumptions": [
+                  "No additional facts are assumed. The customer request is not treated as proof of a valid reversal or confirmed duplicate charge."
+                ],
+                "unknowns": [
+                  "Underlying identity-verification records and secret responses are not collected by this prototype.",
+                  "Transaction date, merchant, account history, and supporting transaction documents are not supplied.",
+                  "A request description and evidence-availability flag do not establish that a duplicate charge occurred.",
+                  "A synthetic transaction reference has not been supplied for this fixture."
+                ]
+              },
+              "missingInformation": [
+                "Underlying identity-verification records and secret responses are not collected by this prototype.",
+                "Transaction date, merchant, account history, and supporting transaction documents are not supplied.",
+                "A request description and evidence-availability flag do not establish that a duplicate charge occurred.",
+                "A synthetic transaction reference has not been supplied for this fixture."
+              ],
+              "verificationStatus": {
+                "recorded": true,
+                "method": "One-time verification code",
+                "revision": 1,
+                "actor": "Human CSR",
+                "statement": "Verification is recorded only by human CSR attestation; AI cannot perform or attest verification."
+              },
+              "requestClassification": {
+                "category": "Information request",
+                "basis": "Provided synthetic request type and description; classification is advisory, not approval."
+              },
+              "riskAndReviewIndicators": [
+                "No additional uncertainty was injected by this simulated scenario. The documented evidence gaps still require human judgment.",
+                "Synthetic presets and an availability flag are not independent transaction proof.",
+                "This information case requires human review; no financial action is authorized."
+              ],
+              "recommendedNextSteps": [
+                "Request human review of this exception or unsupported request. No financial processing or routine completion is authorized.",
+                "The supplied facts and approved knowledge do not justify Fraud, Legal, IT, or Operations referral. No specialist escalation is recorded or implemented."
+              ],
+              "humanDecisions": {
+                "verification": "Human CSR attestation recorded using One-time verification code.",
+                "assessment": "No current human assessment recorded.",
+                "escalation": "No escalation recorded.",
+                "approval": "Supervisor Approval: More Information Required. This request has no approved processing path. Human review is required.",
+                "action": "No mock account action recorded.",
+                "requestCompletion": "No CSR request completion recorded.",
+                "cancellation": "No cancellation recorded.",
+                "closure": "Case remains open."
+              },
+              "draftCustomerCommunication": {
+                "label": "Draft — Human Review Required",
+                "text": "Hello Riley Bennett. Regarding your fictional request (SYN-007-002): A human CSR recorded simulated verification using One-time verification code. Your request awaits human assessment; no approval, reversal, or closure has been performed."
+              },
+              "humanAuthorityRequired": [
+                "AI cannot verify identity or attest completion of verification.",
+                "AI cannot approve requests, execute account changes, or close cases.",
+                "Human review of exceptions grants no financial processing or routine-completion authority."
+              ],
+              "uncertainty": null
+            }
+          }
+        },
+        {
+          "id": "SYN-007-002-3",
+          "caseId": "SYN-007-002",
+          "timestamp": "2026-10-09T21:43:44.951Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_assessment",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "unsupported-request",
+            "route": "hold",
+            "approvalRequired": false,
+            "reason": "This request has no approved processing path. Human review is required."
+          },
+          "details": {
+            "method": "ai",
+            "revision": 1,
+            "reviewedBy": "Human CSR",
+            "uncertaintyAcknowledged": false,
+            "recommendation": "Request human review; no processing path is authorized"
+          }
+        },
+        {
+          "id": "SYN-007-002-4",
+          "caseId": "SYN-007-002",
+          "timestamp": "2026-10-09T21:43:44.951Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "report_human_status_updated",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "unsupported-request",
+            "route": "hold",
+            "approvalRequired": false,
+            "reason": "This request has no approved processing path. Human review is required."
+          },
+          "details": {
+            "caseId": "SYN-007-002",
+            "revision": 1,
+            "source": "Recorded human workflow; no new AI processing",
+            "humanDecisions": {
+              "verification": "Human CSR attestation recorded using One-time verification code.",
+              "assessment": "Human CSR assessment recorded via ai. Recommendation only.",
+              "escalation": "No escalation recorded.",
+              "approval": "Supervisor Approval: More Information Required. This request has no approved processing path. Human review is required.",
+              "action": "No mock account action recorded.",
+              "requestCompletion": "No CSR request completion recorded.",
+              "cancellation": "No cancellation recorded.",
+              "closure": "Case remains open."
+            },
+            "draftCustomerCommunication": {
+              "label": "Draft — Human Review Required",
+              "text": "Hello Riley Bennett. Regarding your fictional request (SYN-007-002): A human CSR recorded an assessment. This is a recommendation only; no approval, reversal, or closure has been performed."
+            }
+          }
+        },
+        {
+          "id": "SYN-007-002-5",
+          "caseId": "SYN-007-002",
+          "timestamp": "2026-10-09T21:43:45.001Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "supervisor_review_requested",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "unsupported-request",
+            "route": "hold",
+            "approvalRequired": false,
+            "reason": "This request has no approved processing path. Human review is required."
+          },
+          "details": {
+            "approvalGranted": false
+          }
+        },
+        {
+          "id": "SYN-007-002-6",
+          "caseId": "SYN-007-002",
+          "timestamp": "2026-10-09T21:43:45.001Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "report_human_status_updated",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "unsupported-request",
+            "route": "hold",
+            "approvalRequired": false,
+            "reason": "This request has no approved processing path. Human review is required."
+          },
+          "details": {
+            "caseId": "SYN-007-002",
+            "revision": 1,
+            "source": "Recorded human workflow; no new AI processing",
+            "humanDecisions": {
+              "verification": "Human CSR attestation recorded using One-time verification code.",
+              "assessment": "Human CSR assessment recorded via ai. Recommendation only.",
+              "escalation": "Human CSR requested Supervisor review.",
+              "approval": "Supervisor Approval: More Information Required. This request has no approved processing path. Human review is required.",
+              "action": "No mock account action recorded.",
+              "requestCompletion": "No CSR request completion recorded.",
+              "cancellation": "No cancellation recorded.",
+              "closure": "Case remains open."
+            },
+            "draftCustomerCommunication": {
+              "label": "Draft — Human Review Required",
+              "text": "Hello Riley Bennett. Regarding your fictional request (SYN-007-002): A human CSR requested Supervisor review. No approval, reversal, or closure has been performed."
+            }
+          }
+        },
+        {
+          "id": "SYN-007-002-7",
+          "caseId": "SYN-007-002",
+          "timestamp": "2026-10-09T21:43:45.169Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "blocked_action",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "unsupported-request",
+            "route": "hold",
+            "approvalRequired": false,
+            "reason": "This request has no approved processing path. Human review is required."
+          },
+          "details": {
+            "action": "close",
+            "reason": "No financial processing or approval is authorized for this routing decision."
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "SYN-007-003",
+      "revision": 1,
+      "requestType": "Transaction inquiry",
+      "routing": {
+        "policyVersion": "AMX-routing-1",
+        "caseRevision": 1,
+        "ruleId": "routine-information",
+        "route": "csr",
+        "approvalRequired": false,
+        "reason": "Routine information request within CSR authority. No account change is authorized."
+      },
+      "resolution": null,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "Identity document review",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": []
+    }
+  ]
+}

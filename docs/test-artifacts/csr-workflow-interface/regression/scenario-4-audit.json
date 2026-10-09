@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "simulationOnly": true,
+  "exportedAt": "2026-10-09T20:56:34.300Z",
+  "cases": [
+    {
+      "caseId": "SYN-007-001",
+      "revision": 1,
+      "status": "Open · Verified",
+      "events": [
+        {
+          "id": "SYN-007-001-1",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T20:56:33.622Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "verification_attestation",
+          "details": {
+            "completed": true,
+            "attestedBy": "Human CSR",
+            "simulationOnly": true
+          }
+        },
+        {
+          "id": "SYN-007-001-2",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T20:56:33.817Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "simulated_ai_output",
+          "details": {
+            "label": "Simulated AI",
+            "mode": "failed",
+            "revision": 1,
+            "summary": null,
+            "classification": null,
+            "uncertainty": null,
+            "recommendation": null
+          }
+        },
+        {
+          "id": "SYN-007-001-3",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T20:56:34.036Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "blocked_action",
+          "details": {
+            "action": "assess",
+            "reason": "Use manual fallback for failed, missing, or unusable AI output."
+          }
+        },
+        {
+          "id": "SYN-007-001-4",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T20:56:34.139Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_assessment",
+          "details": {
+            "method": "manual",
+            "revision": 1,
+            "reviewedBy": "Human CSR",
+            "uncertaintyAcknowledged": false,
+            "recommendation": "Request Supervisor review of fictional $500 reversal"
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "SYN-007-002",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-003",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "events": []
+    }
+  ]
+}

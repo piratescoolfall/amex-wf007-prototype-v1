@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "simulationOnly": true,
+  "exportedAt": "2026-10-09T21:52:56.762Z",
+  "cases": [
+    {
+      "caseId": "SYN-007-001",
+      "revision": 1,
+      "requestType": "Reversal request",
+      "routing": {
+        "policyVersion": "AMX-routing-1",
+        "caseRevision": 1,
+        "ruleId": "reversal-500",
+        "route": "supervisor",
+        "approvalRequired": true,
+        "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+      },
+      "resolution": null,
+      "status": "Open · Verified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Completed",
+        "method": "Security questions",
+        "revision": 1
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": [
+        {
+          "id": "SYN-007-001-1",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:52:55.813Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "verification_attestation",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "completed": true,
+            "method": "Security questions",
+            "outcome": "Completed",
+            "attestedBy": "Human CSR",
+            "revision": 1,
+            "simulationOnly": true
+          }
+        },
+        {
+          "id": "SYN-007-001-2",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:52:55.928Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "blocked_action",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "action": "escalate",
+            "reason": "A current human-reviewed assessment is required."
+          }
+        },
+        {
+          "id": "SYN-007-001-3",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:52:55.983Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "simulated_ai_output",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "label": "Simulated AI",
+            "mode": "usable",
+            "revision": 1,
+            "summary": "Morgan Avery — Fictional $500 reversal request. Fictional customer requests review of a $500 synthetic transaction. The approved classroom design requires Supervisor approval before a separate CSR-triggered mock reversal.",
+            "classification": "Reversal request",
+            "uncertainty": null,
+            "recommendation": "Recommend current human CSR assessment, then human Supervisor review of the fictional $500 reversal. A recommendation does not record an escalation or grant approval.",
+            "report": {
+              "label": "Simulated AI case-analysis report",
+              "routing": {
+                "policyVersion": "AMX-routing-1",
+                "caseRevision": 1,
+                "ruleId": "reversal-500",
+                "route": "supervisor",
+                "approvalRequired": true,
+                "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+              },
+              "caseId": "SYN-007-001",
+              "revision": 1,
+              "customerRequestSummary": "Morgan Avery — Fictional $500 reversal request. Fictional customer requests review of a $500 synthetic transaction. The approved classroom design requires Supervisor approval before a separate CSR-triggered mock reversal.",
+              "evidenceAndKnownFacts": {
+                "providedFacts": [
+                  "Synthetic case: SYN-007-001",
+                  "Fictional customer: Morgan Avery",
+                  "Provided request type: Reversal request",
+                  "Fictional amount: $500.00",
+                  "Channel: Simulated phone",
+                  "Description: Fictional customer requests review of a $500 synthetic transaction. The approved classroom design requires Supervisor approval before a separate CSR-triggered mock reversal.",
+                  "Synthetic transaction reference: Not supplied",
+                  "Synthetic evidence availability: Available",
+                  "Provided context: Original synthetic request"
+                ],
+                "approvedSimulationKnowledge": [
+                  "This is a classroom simulation using fictional cases, roles, AI output, and account actions.",
+                  "Only a human CSR can attest verification. AI processing and manual assessment require current verification and available synthetic evidence.",
+                  "The approved fictional $500 reversal requires human Supervisor approval, a separate CSR mock action, and explicit CSR closure.",
+                  "Incomplete-verification closure is a separate explicit CSR decision for an active unverified case, with no downstream processing or action."
+                ],
+                "supportedConclusions": [
+                  "The supplied reversal request requires human Supervisor review under the approved simulation rule; the request is not approved by this report.",
+                  "A recorded CSR attestation indicates completion in the simulation; it is not AI identity verification or production identity proof."
+                ],
+                "assumptions": [
+                  "No additional facts are assumed. The customer request is not treated as proof of a valid reversal or confirmed duplicate charge."
+                ],
+                "unknowns": [
+                  "Underlying identity-verification records and secret responses are not collected by this prototype.",
+                  "Transaction date, merchant, account history, and supporting transaction documents are not supplied.",
+                  "A request description and evidence-availability flag do not establish that a duplicate charge occurred.",
+                  "A synthetic transaction reference has not been supplied for this fixture."
+                ]
+              },
+              "missingInformation": [
+                "Underlying identity-verification records and secret responses are not collected by this prototype.",
+                "Transaction date, merchant, account history, and supporting transaction documents are not supplied.",
+                "A request description and evidence-availability flag do not establish that a duplicate charge occurred.",
+                "A synthetic transaction reference has not been supplied for this fixture."
+              ],
+              "verificationStatus": {
+                "recorded": true,
+                "method": "Security questions",
+                "revision": 1,
+                "actor": "Human CSR",
+                "statement": "Verification is recorded only by human CSR attestation; AI cannot perform or attest verification."
+              },
+              "requestClassification": {
+                "category": "Reversal request",
+                "basis": "Provided synthetic request type and description; classification is advisory, not approval."
+              },
+              "riskAndReviewIndicators": [
+                "No additional uncertainty was injected by this simulated scenario. The documented evidence gaps still require human judgment.",
+                "Synthetic presets and an availability flag are not independent transaction proof.",
+                "Reversal approval and execution require separate authorized human decisions."
+              ],
+              "recommendedNextSteps": [
+                "Recommend current human CSR assessment, then human Supervisor review of the fictional $500 reversal. A recommendation does not record an escalation or grant approval.",
+                "The supplied facts and approved knowledge do not justify Fraud, Legal, IT, or Operations referral. No specialist escalation is recorded or implemented."
+              ],
+              "humanDecisions": {
+                "verification": "Human CSR attestation recorded using Security questions.",
+                "assessment": "No current human assessment recorded.",
+                "escalation": "No escalation recorded.",
+                "approval": "Supervisor Approval: Pending. The project-specific $500 reversal requires Supervisor approval before CSR processing.",
+                "action": "No mock account action recorded.",
+                "requestCompletion": "No CSR request completion recorded.",
+                "cancellation": "No cancellation recorded.",
+                "closure": "Case remains open."
+              },
+              "draftCustomerCommunication": {
+                "label": "Draft — Human Review Required",
+                "text": "Hello Morgan Avery. Regarding your fictional request (SYN-007-001): A human CSR recorded simulated verification using Security questions. Your request awaits human assessment; no approval, reversal, or closure has been performed."
+              },
+              "humanAuthorityRequired": [
+                "AI cannot verify identity or attest completion of verification.",
+                "AI cannot approve requests, execute account changes, or close cases.",
+                "Only a human Supervisor may approve the fictional $500 reversal; only a human CSR may trigger its separate mock action or explicitly confirm eligible closure."
+              ],
+              "uncertainty": null
+            }
+          }
+        },
+        {
+          "id": "SYN-007-001-4",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:52:56.081Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "blocked_action",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "action": "assess",
+            "reason": "Explicit human review of the synthetic evidence is required."
+          }
+        },
+        {
+          "id": "SYN-007-001-5",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:52:56.153Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "blocked_action",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "action": "escalate",
+            "reason": "A current human-reviewed assessment is required."
+          }
+        },
+        {
+          "id": "SYN-007-001-6",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:52:56.645Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_assessment",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "method": "ai",
+            "revision": 1,
+            "reviewedBy": "Human CSR",
+            "uncertaintyAcknowledged": false,
+            "recommendation": "Request Supervisor review of fictional $500 reversal"
+          }
+        },
+        {
+          "id": "SYN-007-001-7",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:52:56.645Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "report_human_status_updated",
+          "routing": {
+            "policyVersion": "AMX-routing-1",
+            "caseRevision": 1,
+            "ruleId": "reversal-500",
+            "route": "supervisor",
+            "approvalRequired": true,
+            "reason": "The project-specific $500 reversal requires Supervisor approval before CSR processing."
+          },
+          "details": {
+            "caseId": "SYN-007-001",
+            "revision": 1,
+            "source": "Recorded human workflow; no new AI processing",
+            "humanDecisions": {
+              "verification": "Human CSR attestation recorded using Security questions.",
+              "assessment": "Human CSR assessment recorded via ai. Recommendation only.",
+              "escalation": "No escalation recorded.",
+              "approval": "Supervisor Approval: Pending. The project-specific $500 reversal requires Supervisor approval before CSR processing.",
+              "action": "No mock account action recorded.",
+              "requestCompletion": "No CSR request completion recorded.",
+              "cancellation": "No cancellation recorded.",
+              "closure": "Case remains open."
+            },
+            "draftCustomerCommunication": {
+              "label": "Draft — Human Review Required",
+              "text": "Hello Morgan Avery. Regarding your fictional request (SYN-007-001): A human CSR recorded an assessment. This is a recommendation only; no approval, reversal, or closure has been performed."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "SYN-007-002",
+      "revision": 1,
+      "requestType": "Statement explanation request",
+      "routing": {
+        "policyVersion": "AMX-routing-1",
+        "caseRevision": 1,
+        "ruleId": "routine-information",
+        "route": "csr",
+        "approvalRequired": false,
+        "reason": "Routine information request within CSR authority. No account change is authorized."
+      },
+      "resolution": null,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "One-time verification code",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-003",
+      "revision": 1,
+      "requestType": "Transaction inquiry",
+      "routing": {
+        "policyVersion": "AMX-routing-1",
+        "caseRevision": 1,
+        "ruleId": "routine-information",
+        "route": "csr",
+        "approvalRequired": false,
+        "reason": "Routine information request within CSR authority. No account change is authorized."
+      },
+      "resolution": null,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "Identity document review",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": []
+    }
+  ]
+}

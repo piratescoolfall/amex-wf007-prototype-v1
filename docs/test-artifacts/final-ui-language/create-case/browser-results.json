@@ -1,0 +1,42 @@
+{
+  "browser": "156.0.8078.4",
+  "results": [
+    {
+      "name": "Required presets, fixed reversal amount, generated reference, cancel and open/unverified creation",
+      "result": "PASS"
+    },
+    {
+      "name": "CSR-only creation remains enforced if role changes while form is open",
+      "result": "PASS"
+    },
+    {
+      "name": "Forged non-preset input rejected in app logic without storing submitted text",
+      "result": "PASS"
+    },
+    {
+      "name": "Multiple cases get distinct IDs and references; information case cannot resolve",
+      "result": "PASS"
+    },
+    {
+      "name": "New case verification and evidence gates block processing and actions",
+      "result": "PASS"
+    },
+    {
+      "name": "New case internal material-change fixture invalidates approval without an evidence editor",
+      "result": "PASS"
+    },
+    {
+      "name": "New $500 case completes only with Supervisor approval, distinct CSR action and human closure; export unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "New case can close as cancelled after CSR verification without AI or approval",
+      "result": "PASS"
+    },
+    {
+      "name": "Form at mobile viewport fits and refresh resets new cases and creation audit",
+      "result": "PASS"
+    }
+  ],
+  "pageErrors": []
+}

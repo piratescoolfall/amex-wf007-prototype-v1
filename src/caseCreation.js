@@ -1,4 +1,6 @@
+import { evaluateApprovalRouting } from './approvalRouting.js'
 import { createCases, transition } from './workflow.js'
+import { assignedVerificationMethod } from './verification.js'
 
 export const syntheticCustomers = ['Casey Rowan', 'Taylor Quinn', 'Alex Linden', 'Sam Emery']
 export const requestTypes = ['Reversal request', 'Statement explanation request', 'Transaction inquiry']
@@ -28,15 +30,16 @@ export function createCase(cases, role, input = {}, timestamp = new Date().toISO
   const id = nextSyntheticId(cases)
   const reference = transactionReference(id)
   const item = {
-    ...createCases()[0], id, customer: input.customer,
+    ...createCases()[0], id, requestType: input.requestType, verificationMethod: assignedVerificationMethod(id), customer: input.customer,
     initials: input.customer.split(' ').map(word => word[0]).join(''),
     subject: input.requestType === 'Reversal request' ? 'Fictional $500 reversal request' : input.requestType,
     category: input.requestType === 'Reversal request' ? 'Reversal request' : 'Information request',
     amount: `$${input.amount}`, channel: 'Simulated intake form',
     description: input.description, transactionReference: reference,
     audit: [{ id: `${id}-1`, caseId: id, timestamp, actor: 'CSR', revision: 1, type: 'case_created',
-      details: { simulationOnly: true, customer: input.customer, requestType: input.requestType, amount: `$${input.amount}`, description: input.description, transactionReference: reference, status: 'open', verified: false } }],
+      details: { simulationOnly: true, customer: input.customer, requestType: input.requestType, amount: `$${input.amount}`, description: input.description, transactionReference: reference, status: 'open', verified: false, verificationMethod: assignedVerificationMethod(id), verificationOutcome: 'Not completed' } }],
   }
+  item.audit[0].routing = evaluateApprovalRouting(item)
   return { blocked: false, item, message: `${id} created. Case is open and unverified; human CSR verification is required.` }
 }
 

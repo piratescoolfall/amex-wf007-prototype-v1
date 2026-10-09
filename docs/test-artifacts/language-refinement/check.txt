@@ -1,0 +1,5 @@
+
+> amx-wf-007-prototype-v1@0.1.0 check
+> node scripts/check-foundation.mjs
+
+PASS: simulation banner, fictional $500 case, five navigation screens, three open/unverified cases.

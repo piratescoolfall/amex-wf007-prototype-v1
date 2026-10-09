@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "simulationOnly": true,
+  "exportedAt": "2026-10-09T21:25:17.976Z",
+  "cases": [
+    {
+      "caseId": "SYN-007-001",
+      "revision": 1,
+      "status": "Closed — Incomplete Verification",
+      "closureOutcome": "incomplete-verification",
+      "verification": {
+        "status": "Incomplete",
+        "method": "Security questions",
+        "revision": null
+      },
+      "incompleteReason": "Required synthetic evidence unavailable",
+      "cancellationReason": null,
+      "events": [
+        {
+          "id": "SYN-007-001-1",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:25:17.319Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "verification_incomplete",
+          "details": {
+            "completed": false,
+            "method": "Security questions",
+            "outcome": "Incomplete",
+            "reason": "Required synthetic evidence unavailable",
+            "recordedBy": "Human CSR",
+            "simulationOnly": true
+          }
+        },
+        {
+          "id": "SYN-007-001-2",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:25:17.319Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_decision",
+          "details": {
+            "decision": "close-incomplete-verification",
+            "reason": "Required synthetic evidence unavailable",
+            "decidedBy": "Human CSR"
+          }
+        },
+        {
+          "id": "SYN-007-001-3",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:25:17.319Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_closure_confirmation",
+          "details": {
+            "confirmedBy": "Human CSR",
+            "outcome": "incomplete-verification",
+            "simulationOnly": true
+          }
+        },
+        {
+          "id": "SYN-007-001-4",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T21:25:17.319Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "case_transition",
+          "details": {
+            "from": "open",
+            "to": "closed",
+            "outcome": "incomplete-verification",
+            "simulationOnly": true
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "SYN-007-002",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "One-time verification code",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-003",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "closureOutcome": null,
+      "verification": {
+        "status": "Not completed",
+        "method": "Identity document review",
+        "revision": null
+      },
+      "incompleteReason": null,
+      "cancellationReason": null,
+      "events": []
+    }
+  ]
+}
