@@ -1,0 +1,11 @@
+PASS parsed synthetic export, case association and forbidden secret keys: scenario-1-audit.json
+PASS parsed synthetic export, case association and forbidden secret keys: scenario-2-audit.json
+PASS parsed synthetic export, case association and forbidden secret keys: scenario-3-audit.json
+PASS parsed synthetic export, case association and forbidden secret keys: scenario-4-audit.json
+PASS parsed synthetic export, case association and forbidden secret keys: scenario-5-audit.json
+PASS parsed synthetic export, case association and forbidden secret keys: scenario-6-audit.json
+PASS parsed synthetic export, case association and forbidden secret keys: scenario-7-audit.json
+PASS parsed synthetic export, case association and forbidden secret keys: scenario-8-audit.json
+PASS parsed synthetic export, case association and forbidden secret keys: scenario-9-audit.json
+PASS parsed synthetic export, case association and forbidden secret keys: success-audit.json
+Reviewed 10 exports; input presets and source collect no verification secrets.

@@ -1,0 +1,6 @@
+
+> amx-wf-007-prototype-v1@0.1.0 check
+> node scripts/check-foundation.mjs
+
+7:40:25 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+PASS: simulation banner, fictional $500 case, five navigation screens, three open/unverified cases.

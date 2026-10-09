@@ -13,6 +13,7 @@ npm run dev
 Validation and production preview:
 
 ```sh
+npm test
 npm run lint
 npm run check
 npm run build
@@ -23,6 +24,6 @@ The default screen is the synthetic case queue. Select **View case** on the $500
 
 The role selector is a simulation control, not authentication. Unverified processing attempts and wrong-role actions are blocked and audited by centralized workflow guards. Usable but uncertain AI output displays a warning requiring acknowledgment; failed or unusable output requires manual fallback. Material information edits in **Verification** invalidate verification, assessment, escalation, and approval. Rejected, withdrawn, and failed-action cases remain open for review. The other two information cases can be verified and assessed, but have no approved reversal/closure path.
 
-No live AI, real authentication, real financial action, or banking integration exists. Reloading resets cases and audit events; export before reload. Audit data is not durable or tamper-resistant. The approved design documents are in `docs/`. The [Phase 1 validation record](docs/phase-1-validation.md) describes the earlier foundation only. Phases 2–4 are ready for Product Owner preview; formal Step 4 testing and final test evidence have not begun.
+No live AI, real authentication, real financial action, or banking integration exists. Reloading resets cases and audit events; export before reload. Audit data is not durable or tamper-resistant. The approved design documents are in `docs/`. The [Phase 1 validation record](docs/phase-1-validation.md) describes the earlier foundation only. Formal Step 4 testing is complete; results and limitations are recorded in [test evidence](docs/test-evidence.md). Step 5 awaits Product Owner review.
 
 For this preview, run only `npm run build` and start `npm run dev -- --port 5173 --strictPort`. In GitHub Codespaces, open the **Ports** tab and use **Open in Browser** for port **5173**. Keep the forwarded port **Private**. If the server stops, rerun that command. Use the workflow screens to explore the synthetic simulation; navigation does not process a case.

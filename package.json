@@ -8,7 +8,9 @@
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
     "lint": "eslint .",
-    "check": "node scripts/check-foundation.mjs"
+    "check": "node scripts/check-foundation.mjs",
+    "test": "node tests/workflow.test.mjs",
+    "test:browser": "node tests/browser.mjs"
   },
   "dependencies": {
     "react": "^19.3.0",

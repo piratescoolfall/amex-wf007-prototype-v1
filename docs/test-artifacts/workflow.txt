@@ -1,0 +1,55 @@
+
+> amx-wf-007-prototype-v1@0.1.0 test
+> node tests/workflow.test.mjs
+
+✔ unverified ai blocked (3.403928ms)
+✔ unverified assess blocked (0.258674ms)
+✔ unverified escalate blocked (0.18865ms)
+✔ unverified approve blocked (0.519496ms)
+✔ unverified reject blocked (0.197163ms)
+✔ unverified close blocked (0.172476ms)
+✔ Supervisor cannot attest (1.724379ms)
+✔ AI cannot attest (0.198795ms)
+✔ Administrator cannot attest (1.325368ms)
+✔ empty cannot attest (5.285175ms)
+✔ Supervisor cannot ai (0.886496ms)
+✔ Supervisor cannot assess (0.213968ms)
+✔ Supervisor cannot material (1.416993ms)
+✔ Supervisor cannot escalate (0.146958ms)
+✔ Supervisor cannot reverse (0.120448ms)
+✔ Supervisor cannot close (0.139137ms)
+✔ Supervisor cannot withdraw (0.118286ms)
+✔ CSR cannot approve (0.159217ms)
+✔ CSR cannot reject (0.12858ms)
+✔ explicit attestation required and duplicate blocked (0.169071ms)
+✔ missing evidence invalidates authority and blocks all processing (2.120252ms)
+✔ changed/conflicting context requires fresh verification and approval (0.648482ms)
+✔ AI usable deterministic, advisory, reviewed or manual fallback (0.291052ms)
+✔ AI uncertain deterministic, advisory, reviewed or manual fallback (0.135371ms)
+✔ AI unusable deterministic, advisory, reviewed or manual fallback (0.174489ms)
+✔ AI failed deterministic, advisory, reviewed or manual fallback (0.118756ms)
+✔ AI cannot perform privileged transitions (0.220607ms)
+✔ invalid modes and absent human review blocked (0.168059ms)
+✔ approval needs escalation and explicit human decision (0.715592ms)
+✔ ai invalidates prior approval (0.32293ms)
+✔ assess invalidates prior approval (0.172195ms)
+✔ stale approval and stale assessment blocked at execution (0.348688ms)
+✔ reversal without authorization (fresh) uses exact message (0.160809ms)
+✔ reversal without authorization (verified) uses exact message (0.102121ms)
+✔ reversal without authorization (assessed) uses exact message (0.090685ms)
+✔ reversal without authorization (escalated) uses exact message (0.219215ms)
+✔ failed reversal stays open, cannot retry or close (0.266265ms)
+✔ reject remains unresolved (0.227728ms)
+✔ withdraw remains unresolved (0.155571ms)
+✔ successful $500 path separates recommendation approval action and human closure (0.607972ms)
+✔ information case 1 has no reversal or closure path (0.202351ms)
+✔ information case 2 has no reversal or closure path (0.171265ms)
+✔ fresh session resets all cases and audit (0.19535ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 55.279293

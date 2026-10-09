@@ -1,0 +1,13 @@
+
+> amx-wf-007-prototype-v1@0.1.0 test:browser
+> node tests/browser.mjs
+
+PASS Verification bypasses and unauthorized human actions
+PASS Missing evidence and changed context invalidate approval
+PASS AI usable and uncertain output requires explicit human review
+PASS AI unusable and system failure support guarded manual fallback
+PASS Supervisor approval is separate; role and explicit decision guards
+PASS Failed mock reversal stays open; duplicate and closure controls disabled
+PASS Rejected and withdrawn cases stay unresolved
+PASS Complete $500 success, separate human closure, audit JSON and export immutability
+PASS Browser refresh resets all cases and audit
