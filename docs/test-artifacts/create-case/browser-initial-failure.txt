@@ -1,0 +1,35 @@
+
+> amx-wf-007-prototype-v1@0.1.0 test:browser:create-case
+> node tests/browser-create-case.mjs
+
+FAIL Required presets, fixed reversal amount, generated reference, cancel and open/unverified creation: locator.selectOption: Timeout 8000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Request type', { exact: true })[22m
+
+FAIL CSR-only creation remains enforced if role changes while form is open: locator.selectOption: Timeout 8000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Request type', { exact: true })[22m
+
+FAIL Forged non-preset input rejected in app logic without storing submitted text: locator.selectOption: Timeout 8000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Request type', { exact: true })[22m
+
+FAIL Multiple cases get distinct IDs and references; information case cannot resolve: locator.selectOption: Timeout 8000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Request type', { exact: true })[22m
+
+FAIL New case verification and evidence gates block processing and actions: locator.selectOption: Timeout 8000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Request type', { exact: true })[22m
+
+FAIL New case stale approval invalidates on context change: locator.selectOption: Timeout 8000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Request type', { exact: true })[22m
+
+FAIL New $500 case completes only with Supervisor approval, distinct CSR action and human closure; export unchanged: locator.selectOption: Timeout 8000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Request type', { exact: true })[22m
+
+FAIL Form at mobile viewport fits and refresh resets new cases and creation audit: locator.selectOption: Timeout 8000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Request type', { exact: true })[22m

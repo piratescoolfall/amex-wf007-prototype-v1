@@ -138,3 +138,14 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12
 @media (max-width: 900px) { .workspace-badge { display: none; } table { min-width: 770px; } .metrics { gap: 12px; } .metrics > div { padding: 22px 18px; } .case-context { flex-wrap: wrap; } }
 @media (max-width: 760px) { .simulation-banner { font-size: 10px; line-height: 1.6; padding: 9px 14px; } .app-shell { flex-direction: column; } .sidebar { width: 100%; padding: 22px 18px 18px; } .brand { padding: 0 4px 20px; } .brand strong { font-size: 19px; } .nav-label, .sidebar-note { display: none; } nav { grid-template-columns: repeat(2, 1fr); gap: 7px; } .nav-button { padding: 11px; font-size: 11px; } .topbar { padding: 14px 20px; min-height: 70px; flex-wrap: wrap; } .topbar-context { gap: 8px; font-size: 11px; } main { padding: 28px 18px; } .page-heading { margin-bottom: 24px; } h1 { font-size: 28px; } .eyebrow { font-size: 9px; letter-spacing: 1.3px; } .metrics { gap: 8px; } .metrics > div { padding: 18px 12px; } .metrics span { font-size: 10px; } .metrics strong { font-size: 30px; } .panel-heading, .case-context { padding: 22px 20px; flex-wrap: wrap; } .workflow-panel { padding: 24px 20px; } .workflow-summary { margin: -24px -20px 24px; padding: 14px 20px; } .action-group { gap: 10px; } footer { padding: 20px; flex-direction: column; gap: 8px; line-height: 1.7; } }
 @media (prefers-reduced-motion: reduce) { button { transition: none; } }
+
+.queue-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.create-case-panel { margin-bottom: 26px; border-top: 3px solid var(--blue); }
+.create-case-panel form { padding: 0 28px 26px; }
+.create-case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 24px; }
+.create-case-grid .field-label { margin: 0; max-width: none; min-width: 0; }
+.create-case-grid small { color: var(--muted); font-weight: 400; line-height: 1.6; }
+.description-field { grid-column: 1 / -1; }
+.create-case-grid input { font: inherit; color: #254563; background: #f6f9fe; border: 1px solid #bed0e3; border-radius: 7px; padding: 12px 14px; width: 100%; }
+.transaction-reference { margin-top: 10px !important; font-weight: 600; }
+@media (max-width: 760px) { .create-case-grid { grid-template-columns: 1fr; } .create-case-panel form { padding: 0 20px 22px; } }

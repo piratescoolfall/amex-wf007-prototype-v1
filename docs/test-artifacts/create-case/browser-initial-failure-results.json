@@ -1,0 +1,46 @@
+{
+  "browser": "156.0.8078.4",
+  "results": [
+    {
+      "name": "Required presets, fixed reversal amount, generated reference, cancel and open/unverified creation",
+      "result": "FAIL",
+      "error": "locator.selectOption: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Request type', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "CSR-only creation remains enforced if role changes while form is open",
+      "result": "FAIL",
+      "error": "locator.selectOption: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Request type', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "Forged non-preset input rejected in app logic without storing submitted text",
+      "result": "FAIL",
+      "error": "locator.selectOption: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Request type', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "Multiple cases get distinct IDs and references; information case cannot resolve",
+      "result": "FAIL",
+      "error": "locator.selectOption: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Request type', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "New case verification and evidence gates block processing and actions",
+      "result": "FAIL",
+      "error": "locator.selectOption: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Request type', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "New case stale approval invalidates on context change",
+      "result": "FAIL",
+      "error": "locator.selectOption: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Request type', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "New $500 case completes only with Supervisor approval, distinct CSR action and human closure; export unchanged",
+      "result": "FAIL",
+      "error": "locator.selectOption: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Request type', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "Form at mobile viewport fits and refresh resets new cases and creation audit",
+      "result": "FAIL",
+      "error": "locator.selectOption: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Request type', { exact: true })\u001b[22m\n"
+    }
+  ],
+  "pageErrors": []
+}

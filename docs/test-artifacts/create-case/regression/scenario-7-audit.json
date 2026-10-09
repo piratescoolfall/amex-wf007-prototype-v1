@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "simulationOnly": true,
+  "exportedAt": "2026-10-09T20:16:09.114Z",
+  "cases": [
+    {
+      "caseId": "SYN-007-001",
+      "revision": 1,
+      "status": "Open for review · withdrawn",
+      "events": [
+        {
+          "id": "SYN-007-001-1",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T20:16:08.397Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "simulated_role_selected",
+          "details": {
+            "role": "CSR"
+          }
+        },
+        {
+          "id": "SYN-007-001-2",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T20:16:08.531Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "verification_attestation",
+          "details": {
+            "completed": true,
+            "attestedBy": "Human CSR",
+            "simulationOnly": true
+          }
+        },
+        {
+          "id": "SYN-007-001-3",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T20:16:08.663Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_assessment",
+          "details": {
+            "method": "manual",
+            "revision": 1,
+            "reviewedBy": "Human CSR",
+            "uncertaintyAcknowledged": false,
+            "recommendation": "Request Supervisor review of fictional $500 reversal"
+          }
+        },
+        {
+          "id": "SYN-007-001-4",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T20:16:08.711Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "supervisor_review_requested",
+          "details": {
+            "approvalGranted": false
+          }
+        },
+        {
+          "id": "SYN-007-001-5",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T20:16:08.863Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "human_decision",
+          "details": {
+            "decision": "withdrawn"
+          }
+        },
+        {
+          "id": "SYN-007-001-6",
+          "caseId": "SYN-007-001",
+          "timestamp": "2026-10-09T20:16:08.863Z",
+          "actor": "CSR",
+          "revision": 1,
+          "type": "case_transition",
+          "details": {
+            "from": "open",
+            "to": "open for review",
+            "outcome": "withdrawn"
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "SYN-007-002",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "events": []
+    },
+    {
+      "caseId": "SYN-007-003",
+      "revision": 1,
+      "status": "Open · Unverified",
+      "events": []
+    }
+  ]
+}

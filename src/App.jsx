@@ -1,6 +1,8 @@
-import { useState } from 'react'
-import { createCases, caseStatus, transition, supervisorMessage } from './workflow.js'
+import { useReducer, useState } from 'react'
+import { createCases, caseStatus, supervisorMessage } from './workflow.js'
 import WorkflowScreen from './WorkflowScreen.jsx'
+import CreateCaseForm from './CreateCaseForm.jsx'
+import { caseStore } from './caseCreation.js'
 
 const screens = [
   { id: 'queue', title: 'Case Management', number: '00' },
@@ -26,9 +28,9 @@ function NavigationIcon({ id }) {
 
 
 export default function App() {
-  const [cases, setCases] = useState(createCases)
+  const [{ cases, notice, creating }, dispatch] = useReducer(caseStore, undefined, () => ({ cases: createCases(), notice: null, creating: false }))
   const [role, setRole] = useState('CSR')
-  const [notice, setNotice] = useState(null)
+  const setNotice = notice => dispatch({ type: 'notice', notice })
   const [screenId, setScreenId] = useState('queue')
   const [selectedId, setSelectedId] = useState(cases[0].id)
   const selectedCase = cases.find((item) => item.id === selectedId)
@@ -41,9 +43,7 @@ export default function App() {
   }
 
   function act(action, payload = {}, actingRole = role) {
-    const result = transition(selectedCase, actingRole, action, payload)
-    setCases((current) => current.map((item) => item.id === selectedId ? result.item : item))
-    setNotice({ message: result.message, blocked: result.blocked })
+    dispatch({ type: 'workflow', caseId: selectedId, role: actingRole, action, payload })
   }
 
   function exportAudit() {
@@ -76,15 +76,18 @@ export default function App() {
             <div className="page-heading"><div><p className="eyebrow">CUSTOMER SERVICE OPERATIONS</p><h1>{screen.title}</h1><p>{screenId === 'queue' ? 'Manage requests, review evidence, and coordinate the next step.' : `${selectedCase.id} · ${selectedCase.customer} · Synthetic case`}</p></div><span className="workspace-badge"><span className="status-dot" aria-hidden="true" />Human-led case review</span></div>
             {screenId === 'queue' ? (
               <>
+                {notice && <div className={`workflow-notice ${notice.blocked ? 'warning' : ''}`} role="status">{notice.message}</div>}
+                {creating && <CreateCaseForm cases={cases} role={role} onCreate={input => dispatch({ type: 'create', role, input, caseId: selectedId, timestamp: new Date().toISOString() })} onCancel={() => dispatch({ type: 'form', open: false })} />}
+                {role !== 'CSR' && <p className="disabled-note">Switch the simulated role to CSR to create a fictional case.</p>}
                 <div className="metrics" aria-label="Queue overview"><div><span>Open cases</span><strong>{String(cases.filter((item) => item.status === 'open').length).padStart(2, '0')}</strong></div><div><span>Identity verified</span><strong>{String(cases.filter((item) => item.verified).length).padStart(2, '0')}</strong></div><div><span>Supervisor authorizations</span><strong>{String(cases.filter((item) => item.approval).length).padStart(2, '0')}</strong></div></div>
-                <section className="panel"><div className="panel-heading"><div><h2>Service request queue</h2><p>Review an assigned request and manage its progress.</p></div><span className="queue-count">{cases.length} requests</span></div>
+                <section className="panel"><div className="panel-heading"><div><h2>Service request queue</h2><p>Review an assigned request and manage its progress.</p></div><div className="queue-actions"><span className="queue-count">{cases.length} requests</span><button className="primary-button enabled" disabled={role !== 'CSR'} onClick={() => dispatch({ type: 'form', open: true })}><span aria-hidden="true">＋ </span>Create New Case</button></div></div>
                   <div className="table-scroll"><table><caption className="sr-only">Fictional customer cases and current simulated status.</caption><thead><tr><th scope="col">Case / request</th><th scope="col">Customer</th><th scope="col">Amount</th><th scope="col">Status</th><th scope="col">View</th></tr></thead><tbody>{cases.map((item) => <tr key={item.id}><td><strong>{item.subject.replace('Fictional ', '')}</strong><small>{item.id} · {item.channel}</small></td><td><span className="customer"><span className="avatar" aria-hidden="true">{item.initials}</span>{item.customer}</span></td><td className="amount">{item.amount}</td><td><span className={`tag case-status ${item.status === 'closed' ? 'resolved' : item.disposition !== 'active' ? 'review' : item.verified ? 'verified' : 'pending'}`}>{caseStatus(item)}</span></td><td><button className="text-button" onClick={() => openCase(item.id)} aria-label={`View case ${item.id}`}>View case <span aria-hidden="true">→</span></button></td></tr>)}</tbody></table></div>
                 </section>
                 <div className="info-note"><strong>Clear accountability at every step</strong><p>Verification comes before assessment or AI processing. Authorization, simulated action, and closure each require a separate human decision.</p></div>
               </>
             ) : (
               <>
-                <section className="panel case-context" aria-label="Selected synthetic case"><div><p className="eyebrow">SELECTED CASE</p><h2>{selectedCase.subject.replace('Fictional ', '')}</h2><p>{selectedCase.description}</p></div><span className={`tag case-status ${selectedCase.status === 'closed' ? 'resolved' : selectedCase.disposition !== 'active' ? 'review' : selectedCase.verified ? 'verified' : 'pending'}`}>{caseStatus(selectedCase)}</span></section>
+                <section className="panel case-context" aria-label="Selected synthetic case"><div><p className="eyebrow">SELECTED CASE</p><h2>{selectedCase.subject.replace('Fictional ', '')}</h2><p>{selectedCase.description}</p>{selectedCase.transactionReference && <p className="transaction-reference">Synthetic transaction reference: {selectedCase.transactionReference}</p>}</div><span className={`tag case-status ${selectedCase.status === 'closed' ? 'resolved' : selectedCase.disposition !== 'active' ? 'review' : selectedCase.verified ? 'verified' : 'pending'}`}>{caseStatus(selectedCase)}</span></section>
                 {notice && <div className={`workflow-notice ${notice.blocked ? 'warning' : ''}`} role="status">{notice.message}</div>}
                 <WorkflowScreen key={`${selectedId}-${screenId}-${selectedCase.revision}`} screenId={screenId} item={selectedCase} role={role} act={act} exportAudit={exportAudit} supervisorMessage={supervisorMessage} />
                 <button className="text-button back-button" onClick={() => setScreenId('queue')}>← Back to case management</button>

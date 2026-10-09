@@ -72,3 +72,72 @@ Final checks: `npm test` 43 pass; `npm run test:browser` 9 pass; `npm run check`
 - Browser group exports preserve the final case state of each group; groups that reload between subcases do not retain every earlier subcase's audit. Named workflow assertions and browser results cover those subcases.
 
 No unresolved failure was found in the tested approved workflow. The limitations above remain for review. No commit or push performed. Step 4 stops for Product Owner review; Step 5 has not begun.
+
+## Approved Create New Case feature — validation addendum
+
+The Product Owner approved the implementation plan after the Step 4 commit `d933b0c0fe6cf640f76346e0dad0d69c93660c82`. This addendum records additional feature work; the original 53-pass Step 4 record and its artifacts above remain historical evidence. At implementation time, no commit or push was authorized. The Product Owner subsequently authorized committing and pushing this feature, subject to successful personal review. Step 5 remains unauthorized.
+
+### Implementation
+
+- Added a blue **Create New Case** queue button and responsive form. Only CSR can create; both the button/submit controls and creation logic enforce the role, including a role change while the form is open.
+- Customer names and descriptions are allowlisted fictional presets. Request types are the existing reversal, statement explanation, and transaction inquiry types. No free-text customer data is accepted. Submitted IDs, references, approvals, verification flags, and extra fields are rejected; rejected values are not copied into audit records.
+- Reversals are fixed at **$500.00**. Information cases offer fictional $25/$100/$500 presets and keep their existing open-for-review behavior. No authority limit or resolution rule changed.
+- Collision-checked `SYN-007-…` IDs and `SYN-TXN-007-…` references are allocated against the latest queue by a reducer. Back-to-back accepted submissions create distinct cases. IDs and references cannot be edited through the form.
+- Every created case starts open and unverified at revision 1, with the same synthetic evidence availability default as existing fixtures, no assessment/AI/approval/action result, and no escalation. Evidence availability never substitutes for human verification.
+- A `case_created` event records the synthetic case ID, human CSR actor, presets, reference, initial status, and simulation flag. Subsequent actions use the existing unchanged `transition` guards. JSON export includes new cases and their events. Failed creation records only the action/reason against the currently selected existing case, because no new case exists for that attempt.
+- All state stays in React memory. Refresh discards added cases and events. No services, dependencies, storage, live AI, banking connections, or real customer records were added.
+
+### Final results
+
+**95 checks/scenario groups passed, 0 failed in final runs:** 43 existing workflow tests + 34 new creation/security tests + 9 existing browser scenario groups + 8 new browser scenario groups + 1 render smoke check. Counts refer to named tests/groups, not individual assertions. Lint, build, and whitespace checks passed separately.
+
+| Command / evidence | Actual final result |
+| --- | --- |
+| `npm test` | 43/43 existing tests and 34/34 new tests passed. Saved as `test-artifacts/create-case/automated.txt`. |
+| `npm run check` | Initial render smoke check passed; original three fixtures and navigation remain available. Saved as `create-case/render.txt`. |
+| `TEST_ARTIFACT_DIR=docs/test-artifacts/create-case/regression PLAYWRIGHT_BROWSERS_PATH=/tmp/amx-browser/browsers npm run test:browser` | 9/9 original browser groups passed; no page errors. All regression outputs/downloads saved separately under `create-case/regression/` to preserve original Step 4 artifacts. |
+| `PLAYWRIGHT_BROWSERS_PATH=/tmp/amx-browser/browsers npm run test:browser:create-case` | 8/8 new browser groups passed; no page errors. Saved as `create-case/browser.txt` and `create-case/browser-results.json`. |
+| `npm run lint` | Exit 0; saved as `create-case/lint.txt`. |
+| `npm run build` | Exit 0; saved as `create-case/build.txt`. |
+| `git diff --check` and new text-file whitespace review | Passed. |
+
+Browser runs used the same temporary Playwright tooling and Chromium 156.0.8078.4 as Step 4, with authorized execution outside the process-restricted sandbox. Existing port 5173 preview was used; an attempted second server start correctly failed because the port was already occupied. That setup message is not an application test failure.
+
+New automated tests cover initial state, synthetic creation audit, unauthorized roles, empty/null/invalid input, unsupported request types, non-preset names/descriptions, invalid/negative/nonfinite/non-string amounts, non-$500 reversals, injected IDs/references/verification/approvals, collision skipping, 30 consecutive allocations, reducer submissions, rejected-value audit omission, both information-case types, mandatory verification, unavailable evidence, all four AI outcomes and manual fallback, stale authority, rejection/withdrawal/failed reversals, duplicate execution, explicit human closure, and refresh initialization.
+
+New browser groups cover:
+
+1. Required presets, fixed $500 field, read-only generated reference, cancel without creating, initial open/unverified state, and downloaded creation audit.
+2. Supervisor cannot open creation; switching to Supervisor during entry disables submission. A programmatic form submission still hits the CSR-only guard and produces a blocked audit event.
+3. A forged dropdown option is rejected by creation logic; the submitted arbitrary value is not stored or exported.
+4. Repeated creation produces unique IDs/references; information cases retain assessment and resolution gates.
+5. A new case blocks AI, both assessment methods, and reversal before verification; Supervisor attestation and attestation without evidence remain blocked.
+6. Material context edits invalidate a new case's existing approval and block reversal.
+7. A new $500 case follows verification → simulated AI → human review → escalation → human Supervisor approval → separate CSR mock action → explicit CSR closure. Wrong-role reversal/closure and missing closure confirmation are blocked. Export includes all four cases and leaves the timeline unchanged.
+8. The form fits a 390×844 viewport, shows a readable selected-description preview, and refresh removes the new case and all session audit events.
+
+Representative synthetic downloads are saved under `test-artifacts/create-case/`: `created-audit.json`, `blocked-creation-audit.json`, `invalid-creation-audit.json`, `multiple-cases-audit.json`, `stale-approval-audit.json`, `successful-new-case-audit.json`, and `refresh-audit.json`. Desktop/mobile form screenshots and a successful new-case audit screenshot are also saved there and were visually reviewed. Supplementary export/schema/secret-pattern review is recorded in `create-case/export-review.txt`.
+
+### Failure and retest record
+
+The first new browser run reported **0 passed, 8 failed**: each group stopped at the same `getByLabel('Request type', { exact: true })` timeout. The wrapped label includes dropdown option text, so the exact-text test locator did not match. Corrected the test locator to use the form's label consistently with the existing browser suite. The initial log and result JSON are preserved as `create-case/browser-initial-failure.txt` and `create-case/browser-initial-failure-results.json`. The corrected suite passed **8/8**. No application gate was relaxed. Desktop/mobile screenshots then prompted a small display improvement: show the full selected description below the dropdown on narrow screens. The suite was rerun after that change and again passed **8/8**; lint, smoke, and build also passed afterward.
+
+### Limitations and review boundary
+
+- All previously documented prototype limits still apply: simulated roles do not authenticate humans, AI/actions are mocks, and audit/state are neither persistent nor tamper-resistant. No WP-04A source or arbitrary conflicting-evidence handling was introduced.
+- This version intentionally accepts only supplied synthetic presets, not typed names/descriptions or real transaction references. References and IDs are unique within the in-memory session; refresh restarts allocation and may reuse prior session IDs. Separate browser tabs have independent sessions.
+- Identical preset submissions may create separate cases with distinct IDs. No duplicate-request business rule was approved; duplicate IDs are prevented.
+- Information-case transaction amounts are fictional context only; those cases still have no approved reversal/closure path. Reversal amounts other than $500 require a later approved design change.
+- New-case failures without an allocated ID are audited on the selected existing case with a `create_case` reason. No failed input values are retained.
+- New browser checks cover desktop Chromium and one 390px mobile viewport. They do not certify accessibility, all devices/browsers, production hosting, load, or malicious modification of the whole client runtime. The existing queue remains horizontally scrollable on narrow screens.
+- No application workflow failures remain in the tested scope. The Product Owner subsequently authorized committing and pushing the feature, subject to successful personal review. Step 5 has not begun.
+
+### Try the feature
+
+Open the running prototype on port 5173, choose the **CSR** role, and open **Case Management**. Click **Create New Case**, select a synthetic customer and request type, select a preset description, and click **Create fictional case**. For reversals the amount stays $500; the reference is generated automatically. The new row starts **Open · Unverified**. Click its **View case** button to follow the existing verification, assessment, Supervisor approval, CSR mock reversal, and explicit closure flow. **Audit History → Download JSON audit** exports new-case events. Export before refresh; reloading removes added cases.
+
+### Pre-commit verification after Product Owner authorization
+
+Before the authorized feature commit, reran `npm test` (43 existing + 34 new, all passed), `npm run check` (passed), both Chromium browser suites (9 existing + 8 new, all passed, zero page errors), `npm run lint` (exit 0), and `npm run build` (exit 0). Total remains **95 passed, 0 failed**. Saved outputs and synthetic browser downloads under `test-artifacts/create-case/` were refreshed; original Step 4 artifacts and the initial locator-failure record were preserved.
+
+Reviewed feature source, tests, exported synthetic cases, and screenshots; only fictional presets and generated synthetic references are used. Secret-pattern scanning of all changed/new text files found no matches. Reviewed 17 downloaded audit exports for synthetic schema, case associations, unique event IDs, approved creation presets, generated references, and absence of secret detail keys. Details are saved in `create-case/export-review.txt`. Known limitations above remain applicable. The commit/push authorization is subject to successful Product Owner personal review; it does not authorize Step 5.

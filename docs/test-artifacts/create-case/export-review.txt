@@ -1,0 +1,3 @@
+PASS: pre-commit verification confirmed 95 checks/scenarios: 43+34 automated tests, 9+8 browser groups, 1 render check; all pass, no browser page errors.
+PASS: parsed 17 synthetic audit exports; unique IDs, case associations, simulation schema, creation presets/references/state, and forbidden secret detail keys.
+PASS: secret-pattern scan of all changed/new text files. Reviewed sources accept only allowlisted fictional presets and generated references; no real customer information is collected.
