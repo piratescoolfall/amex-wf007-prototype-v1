@@ -1,0 +1,147 @@
+{
+  "applicationBaseline": "0a4167d2ca56246fbbc175392820220ba76b5e1f",
+  "applicationVersion": "0.1.0",
+  "auditDate": "2026-10-09",
+  "files": [
+    {
+      "path": "eslint.config.js",
+      "sha256": "46610ddfa8c8f29dce5e03147967e5855aafe5396c33c9b2c4e5efc8e810b370",
+      "matchesFrozen": true
+    },
+    {
+      "path": "index.html",
+      "sha256": "060fbbef6afea58948639c058e7a2e00953c773c093f840b503371145ad42841",
+      "matchesFrozen": true
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "1b2503af26231fb3b6f845f25bac02925feef1b2f3b338c881146f53397d769e",
+      "matchesFrozen": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "ad85996d1be56e5076d54c7d4c4c742ae46d339c51f7ce73691716730a197c1a",
+      "matchesFrozen": true
+    },
+    {
+      "path": "scripts/check-foundation.mjs",
+      "sha256": "c18b7ea64c903234f062d45892fee43e08e23981770e7d659c8ebbdeb634ca38",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/App.jsx",
+      "sha256": "b929ffcf26f0ffcc3f047f245dc4276bab0b2289f644327a69907da3ba437ae9",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/CaseAnalysisReport.jsx",
+      "sha256": "3a874d5eda5f9e67ec5f5c936078dbf81d506f93af58108dbe62cd0c7e8218f0",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/CreateCaseForm.jsx",
+      "sha256": "089027bcabe9bb39983398ea2ed9cd6945c77745778b743b8c3e938cf1b357de",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/WorkflowScreen.jsx",
+      "sha256": "25655e9132b1906171f7df90374fef4af42a4f80cfc13d771ac4bb99f7c88356",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/approvalRouting.js",
+      "sha256": "20702cc175ae0f648bcb958c84c1688f800828c3511a50b23b650bdfddbd3973",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/caseCreation.js",
+      "sha256": "33eecd086450e21acde4fe4a2c0092b66a9bf94273137b798428a8cc7e8ea17d",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/caseReport.js",
+      "sha256": "ded6c53083799baf1c5c4a3bfa8a667a2372249b5f8840b6a8bcef765c958681",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/data/cases.js",
+      "sha256": "f72bff76bfcea13ca2715a4f00fc800d574a40720ce6e8f03207998c472da8e4",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/main.jsx",
+      "sha256": "4d00e019af4a666d858e40561516b7689a3cbc743dfe5361205d7d34c90c777f",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/presentation.js",
+      "sha256": "3cfd1f67b1fd8bef3d601cb2be6e3216026306143bdd6ab9eb8322a4f78e702c",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "f04b04b5b3b20c14d62034f16f318e21e83bfd85f5e15a62d99eb6c6b29c13ba",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/verification.js",
+      "sha256": "f6940afdb137c7f2128d79f3d1d5bec5a3d5395bc88cf326527e79960368959f",
+      "matchesFrozen": true
+    },
+    {
+      "path": "src/workflow.js",
+      "sha256": "77483f3b17e43410723493ab67808d58469d1ded4ba9d2ee826990ea080ef062",
+      "matchesFrozen": true
+    },
+    {
+      "path": "tests/approval-routing.test.mjs",
+      "sha256": "1cd642e5becc51ec7eb47f6166bbe7a1d99db5a9820b480c6da4cbef9566aa3e",
+      "matchesFrozen": true
+    },
+    {
+      "path": "tests/browser-create-case.mjs",
+      "sha256": "537d198c541d3adc2ccb533b9c4ec884ef27ff4cee43a8eec2d2ea7003c6fba4",
+      "matchesFrozen": true
+    },
+    {
+      "path": "tests/browser-fixtures.mjs",
+      "sha256": "b7aed210c94eb40545e37c636df7707382f64bbf8c988173bb318ae3f8b30e32",
+      "matchesFrozen": true
+    },
+    {
+      "path": "tests/browser.mjs",
+      "sha256": "8997a43eb4ca0359f2e4a72cd4e7f429a3138509b62cdf9d656c70ffdc3beeea",
+      "matchesFrozen": true
+    },
+    {
+      "path": "tests/cancellation.test.mjs",
+      "sha256": "af6557f713487ea6cbef31061b7a21e84b1bf30ab4425b2939c62b9518d11530",
+      "matchesFrozen": true
+    },
+    {
+      "path": "tests/case-creation.test.mjs",
+      "sha256": "66d5e84dda17eb13b80d8f3febda2c86dc1f37905e30145eb088215541d3ca04",
+      "matchesFrozen": true
+    },
+    {
+      "path": "tests/presentation.test.mjs",
+      "sha256": "714453e736a96fc870e657008c8eef47b772554a8574a5b170bc4296afa794e5",
+      "matchesFrozen": true
+    },
+    {
+      "path": "tests/report-verification.test.mjs",
+      "sha256": "8479016bb9ef8580e36d445395d52c766a98acf730e3f84c9cbb6fa1d7e05933",
+      "matchesFrozen": true
+    },
+    {
+      "path": "tests/workflow.test.mjs",
+      "sha256": "b5bf7eeab0af46c671b28c9128829a5dce49cb31a2d807fd3e55b2401fa7ed30",
+      "matchesFrozen": true
+    },
+    {
+      "path": "vite.config.js",
+      "sha256": "5e9ba45fc5fff1f02b9e9a82ed64952ad72d34fc69c1eaae0fc29f56e69813b0",
+      "matchesFrozen": true
+    }
+  ]
+}

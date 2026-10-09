@@ -8,12 +8,10 @@ flowchart TD
     Verify -->|No| Block["Block assessment and AI processing<br/>Record blocked action; case remains open"]
     Block --> Verify
     Verify -->|Yes| Assess["Record verification attestation<br/>CSR assessment is available"]
-    Assess --> Mode{"CSR requests simulated AI assistance?"}
-    Mode -->|No| Manual["CSR manual assessment / fallback"]
-    Mode -->|Yes| AI["Deterministic simulated AI<br/>Summary, classification, uncertainty,<br/>and draft recommendation only"]
+    Assess --> AI["Deterministic simulated AI<br/>Summary, classification, uncertainty,<br/>and draft recommendation only"]
     AI --> Quality{"Output usable?"}
-    Quality -->|Failed or unusable| Fallback["Record failure or unusable output<br/>Use manual fallback; preserve all gates"]
-    Fallback --> Manual
+    Quality -->|Failed, unusable or unavailable| Fallback["Record failure, unusable output or unavailability<br/>Expose manual fallback; preserve all gates"]
+    Fallback --> Manual["CSR selects Complete Assessment Without AI<br/>Human evidence review required"]
     Quality -->|Usable and uncertain| Warning["Display output labeled Simulated AI<br/>Warning: uncertain output requires human review"]
     Quality -->|Usable| Output["Display output labeled Simulated AI<br/>Recommendation only"]
     Warning --> Review["CSR reviews evidence and recommendation"]
@@ -57,6 +55,6 @@ flowchart TD
 
 The audit box describes a cross-cutting control covering all branches, including blocked and failed attempts. Exporting audit data does not change case state. Rejected requests remain open for review unless an eligible CSR explicitly cancels them. Failed-action cases remain open and cannot be cancelled. Cancellation applies to all case types after current verification and with available evidence; no assessment or Supervisor approval is required. Incomplete-verification closure remains a separate existing path.
 
-Usable but uncertain AI output remains visible with a warning and human review. Failed or unusable AI output uses manual fallback. Neither route grants authority, bypasses verification, or substitutes for Supervisor approval, the separate CSR action, or explicit CSR closure.
+Usable but uncertain AI output remains visible with a warning and human review. Only failed, unusable or unavailable AI output exposes Complete Assessment Without AI. No independent manual-assessment choice is offered before that outcome. Neither route grants authority, bypasses verification, or substitutes for Supervisor approval, the separate CSR action, or explicit CSR closure.
 
 Routine information requests now have a separate CSR completion and human closure path. Exceptions and unsupported requests are held for human review. Routing evaluates actual stored request type, category, exact reversal amount, and explicit exception attributes; missing attributes fail closed. The policy version, rule, revision, and reason are included in audit records. Material changes reset verification and authority. This supersedes the earlier absence of routine successful-resolution closure.

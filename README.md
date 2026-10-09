@@ -6,7 +6,9 @@ An internal customer service request review and escalation application built wit
 
 Private repository: [piratescoolfall/amex-wf007-prototype-v1](https://github.com/piratescoolfall/amex-wf007-prototype-v1).
 
-Submitted Prototype V1 baseline: **`d933b0c0fe6cf640f76346e0dad0d69c93660c82`** (`Complete Prototype V1 testing and evidence`). Verified against Git history and the original test evidence. Later approved enhancements are included in the current handoff; this historical baseline does not identify the enhanced version. Run `git rev-parse HEAD` to identify your checked-out version.
+Frozen Week 8 Prototype V1 application baseline: **`0a4167d2ca56246fbbc175392820220ba76b5e1f`** (`Finalize approved workflow enhancements and Prototype V1 handoff`). Verified against Git history. This submission preserves its application source and test behavior. Any later documentation/packaging commit is distinct from this application baseline. The included `PACKAGE-MANIFEST.json` identifies the frozen baseline and file hashes even when extracted without Git. In a checkout, `git rev-parse HEAD` identifies the checkout commit, which may include later documentation changes.
+
+Version **0.1.0** · Submission date **October 9, 2026**. See [submission contents and evidence](docs/submission/CONTENTS.md).
 
 ## Setup and run
 

@@ -34,26 +34,26 @@ sequenceDiagram
                 UI-->>CSR: Show Simulated AI output. recommendation only
             end
             CSR->>UI: Review output and evidence
-        else Failed or unusable output
-            AI-->>UI: Failure or unusable result
-            UI->>Audit: Record failure or unusable result
-            UI-->>CSR: Use manual fallback. gates remain in force
+        else Failed, unusable or unavailable output
+            AI-->>UI: Failure, unusable result or unavailability
+            UI->>Audit: Record failure, unusable result or unavailability
+            UI-->>CSR: Show Complete Assessment Without AI. gates remain in force
             CSR->>UI: Perform manual assessment
         end
 
         UI->>Gate: Evaluate versioned routing rules from current case attributes
         alt Routine information request within CSR authority
-            UI-->>CSR: Supervisor Approval Not Required; routine completion available
+            UI-->>CSR: Supervisor Approval Not Required.  routine completion available
             CSR->>UI: Explicitly confirm Complete Request after reviewed assessment
             UI->>Gate: Check verification, evidence, CSR role, assessment, current route
-            UI->>Audit: Record CSR completion and routing metadata; case stays open
+            UI->>Audit: Record CSR completion and routing metadata.  case stays open
             CSR->>UI: Separately confirm Case Closure
             UI->>Gate: Recheck current completion, route, verification and CSR role
-            UI->>Audit: Record successful-resolution closure; no financial action
+            UI->>Audit: Record successful-resolution closure.  no financial action
         else Exception or unsupported request
-            UI-->>CSR: Human review required; no processing path authorized
+            UI-->>CSR: Human review required.  no processing path authorized
             CSR->>UI: Request review after verification and human assessment
-            UI->>Audit: Record review request and routing reason; no approval granted
+            UI->>Audit: Record review request and routing reason.  no approval granted
         else Exact $500 reversal requires Supervisor approval
         CSR->>UI: Request fictional $500 reversal
         UI->>Gate: Check Supervisor authorization
@@ -107,15 +107,15 @@ sequenceDiagram
         CSR->>UI: Close / Cancel Case with preset reason and explicit confirmation
         UI->>Gate: Check CSR role, current verification, evidence, no processed reversal
         alt Reversal already processed (success or failure)
-            Gate-->>UI: Block cancellation; no automatic undo
+            Gate-->>UI: Block cancellation.  no automatic undo
             UI->>Audit: Record blocked cancellation and corrective-review requirement
             UI-->>CSR: Supervisor review required to determine separate corrective action
         else Missing verification, evidence, reason, confirmation or authority
-            Gate-->>UI: Block cancellation; case state unchanged
+            Gate-->>UI: Block cancellation.  case state unchanged
             UI->>Audit: Record blocked action and reason
         else Cancellation eligible
             UI->>Audit: Record CSR decision, reason, timestamp, closure and transition
-            UI-->>CSR: Closed — Cancelled; prior approval revoked
+            UI-->>CSR: Closed — Cancelled.  prior approval revoked
             Note over UI,Gate: Block further AI, approval, reversal and duplicate closure
         end
     end
@@ -125,7 +125,7 @@ sequenceDiagram
     UI-->>CSR: JSON audit export. case state unchanged
 ```
 
-The sequence shows one successful attestation path and its failure branches. An authorized human CSR supplies the verification attestation; AI never performs verification. Every assessment or AI entry point must enforce that prerequisite. The manual assessment route is also available without invoking AI, after verification.
+The sequence shows one successful attestation path and its failure branches. An authorized human CSR supplies the verification attestation; AI never performs verification. Every assessment or AI entry point must enforce that prerequisite. Complete Assessment Without AI is available only after failed, unusable or unavailable AI output, with verification and human evidence review still required.
 
 Supervisor approval, CSR-triggered mock reversal, and CSR-confirmed closure are separate events. The absence of a CSR action or closure confirmation leaves the case open. Rejected cases remain open unless explicitly cancelled before processing; failed-action cases remain open and cannot be cancelled. No real banking or payment system is contacted.
 

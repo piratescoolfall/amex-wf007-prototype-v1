@@ -1,0 +1,21 @@
+{
+  "frozenApplicationCommit": "0a4167d2ca56246fbbc175392820220ba76b5e1f",
+  "zip": "releases/AMX-WF-007-Prototype-V1-0a4167d.zip",
+  "zipSha256": "a8637b0fa2254c15df82beaa2d6978541e6e2899450e90306a75963ea684dc53",
+  "entries": 59,
+  "archiveIntegrity": "PASS",
+  "manifestHashes": "PASS",
+  "frozenApplicationHashes": "PASS",
+  "coreFiles": 28,
+  "excludedDirectoriesAndSecrets": "PASS (allowlist and pattern scan; not proof of absence)",
+  "extractionDirectory": "/tmp/wf007-week8-submission-extracted",
+  "installationStartupBuild": "PASS: clean offline npm ci, 146 unit tests, lint, foundation check, production build and extracted production preview browser smoke",
+  "startup": "PASS on port 5175 with sandbox escalation; HTTP 200 and zero browser page errors",
+  "startupEvidence": [
+    "docs/submission/extracted-package-startup.txt",
+    "docs/submission/extracted-package-startup.png"
+  ],
+  "environmentLimitation": "Initial preview binding failed with sandbox EPERM; authorized sandbox escalation resolved it without application changes.",
+  "zipReverification": "PASS: checksum unchanged; archive integrity, all manifest entries and hashes, 28 frozen core Git blobs, workspace and extracted source bytes match.",
+  "documentationCommit": "Identified by the Git commit containing this report; distinct from frozenApplicationCommit."
+}

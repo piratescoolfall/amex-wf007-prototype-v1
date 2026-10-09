@@ -1,0 +1,10 @@
+{
+  "baseline": "0a4167d2ca56246fbbc175392820220ba76b5e1f",
+  "trackedFiles": 581,
+  "patternFindings": [],
+  "unnecessaryArtifactFindings": [],
+  "limits": "Pattern scan only; not a proof of absence of secrets or sensitive data. Binary images reviewed through known synthetic fixture provenance, not OCR.",
+  "proposedPackageFiles": 53,
+  "proposedPackageFindings": [],
+  "packageExclusionsVerified": true
+}
