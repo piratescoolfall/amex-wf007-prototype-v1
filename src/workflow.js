@@ -24,6 +24,7 @@ export function caseStatus(item) {
 // not production authentication. No verification secrets are collected.
 function guard(item, role, action, payload) {
   const routing = evaluateApprovalRouting(item)
+  if (payload === null || typeof payload !== 'object' || Array.isArray(payload)) return 'A workflow payload object is required.'
   if (!['CSR', 'Supervisor'].includes(role)) return 'Select the CSR or Supervisor role to continue.'
   if (action === 'role') return null
   if (item.status === 'closed') return action === 'cancel' && item.actionResult !== null ? cancellationBlockedMessage : 'This simulated case is closed; further workflow actions are blocked.'
@@ -67,9 +68,10 @@ function guard(item, role, action, payload) {
   if (action === 'ai') return ['usable', 'uncertain', 'unusable', 'failed', 'unavailable'].includes(payload.mode) ? null : 'Select a valid simulated AI scenario.'
   if (action === 'assess') {
     if (!['ai', 'manual'].includes(payload.method)) return 'Choose AI review or manual assessment.'
-    if (!payload.reviewed) return 'Explicit human review of the synthetic evidence is required.'
+    if (payload.reviewed !== true) return 'Explicit human review of the synthetic evidence is required.'
+    if (payload.method === 'manual' && (!item.ai || !['failed', 'unusable', 'unavailable'].includes(item.ai.mode) || item.ai.revision !== item.revision)) return 'Manual fallback requires a current failed, unusable, or unavailable simulated AI assessment.'
     if (payload.method === 'ai' && (!item.ai || !['usable', 'uncertain'].includes(item.ai.mode) || item.ai.revision !== item.revision)) return 'Use manual fallback for failed, missing, or unusable AI output.'
-    if (payload.method === 'ai' && item.ai.mode === 'uncertain' && !payload.uncertaintyAcknowledged) return 'Acknowledge the uncertainty warning before recording human review.'
+    if (payload.method === 'ai' && item.ai.mode === 'uncertain' && payload.uncertaintyAcknowledged !== true) return 'Acknowledge the uncertainty warning before recording human review.'
     return null
   }
   if (!item.assessment || item.assessment.revision !== item.revision) return 'A current human-reviewed assessment is required.'
@@ -87,13 +89,13 @@ function guard(item, role, action, payload) {
   if (['approve', 'reject'].includes(action)) {
     if (!item.escalated) return 'CSR escalation of the current case revision is required before Supervisor review.'
     if (item.approval) return 'A Supervisor decision is already recorded for this revision.'
-    return payload.confirmed ? null : 'The human Supervisor must explicitly confirm the decision.'
+    return payload.confirmed === true ? null : 'The human Supervisor must explicitly confirm the decision.'
   }
   if (['reverse', 'close'].includes(action)) {
     if (!hasCurrentRoutingApproval(item)) return supervisorMessage
     if (action === 'reverse') return ['success', 'failed'].includes(payload.outcome) ? null : 'Select a valid mock action scenario.'
     if (item.actionResult !== 'success') return 'Only a successfully resolved simulated case is eligible for closure.'
-    return payload.confirmed ? null : 'Explicit human CSR confirmation is required to close the simulated case.'
+    return payload.confirmed === true ? null : 'Explicit human CSR confirmation is required to close the simulated case.'
   }
   return 'Unknown workflow action is blocked.'
 }
@@ -148,7 +150,7 @@ export function transition(item, role, action, payload = {}, timestamp = new Dat
     message = usable ? 'Simulated AI output is ready for human review. It grants no authority.' : 'Simulated AI failed or produced unusable output. Use manual fallback.'
   }
   if (action === 'assess') {
-    next.assessment = { method: payload.method, revision: item.revision, reviewedBy: 'Human CSR', uncertaintyAcknowledged: Boolean(payload.uncertaintyAcknowledged), recommendation: evaluateApprovalRouting(item).route === 'csr' ? 'Complete the routine information request as CSR, then explicitly close the case' : evaluateApprovalRouting(item).route === 'supervisor' ? 'Request Supervisor review of fictional $500 reversal' : 'Request human review; no processing path is authorized' }
+    next.assessment = { method: payload.method, revision: item.revision, reviewedBy: 'Human CSR', uncertaintyAcknowledged: payload.uncertaintyAcknowledged === true, recommendation: evaluateApprovalRouting(item).route === 'csr' ? 'Complete the routine information request as CSR, then explicitly close the case' : evaluateApprovalRouting(item).route === 'supervisor' ? 'Request Supervisor review of fictional $500 reversal' : 'Request human review; no processing path is authorized' }
     next.approval = null; next.escalated = false
     log('human_assessment', next.assessment)
     if (item.approval) log('approval_invalidated', { reason: 'Human assessment changed.' })

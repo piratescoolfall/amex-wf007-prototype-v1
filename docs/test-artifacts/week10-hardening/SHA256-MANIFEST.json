@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "SHA-256",
+  "branch": "week10-product-v1-candidate",
+  "baseCommit": "08701d2085b939ed9a338d70e59bc696edcb76a8",
+  "scope": "All application source, test files, foundation script, entry HTML, package manifests and build/lint configuration; original 57 Week 10 evidence files. Excludes generated dist, dependencies and this manifest/review report.",
+  "provenance": "Created after the recorded tests. Identifies current working-tree bytes; does not independently prove historical test inputs.",
+  "applicationAndTestInputs": [
+    {
+      "path": "eslint.config.js",
+      "bytes": 838,
+      "sha256": "46610ddfa8c8f29dce5e03147967e5855aafe5396c33c9b2c4e5efc8e810b370"
+    },
+    {
+      "path": "index.html",
+      "bytes": 491,
+      "sha256": "060fbbef6afea58948639c058e7a2e00953c773c093f840b503371145ad42841"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 83530,
+      "sha256": "1b2503af26231fb3b6f845f25bac02925feef1b2f3b338c881146f53397d769e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 986,
+      "sha256": "ad85996d1be56e5076d54c7d4c4c742ae46d339c51f7ce73691716730a197c1a"
+    },
+    {
+      "path": "scripts/check-foundation.mjs",
+      "bytes": 1167,
+      "sha256": "c18b7ea64c903234f062d45892fee43e08e23981770e7d659c8ebbdeb634ca38"
+    },
+    {
+      "path": "src/App.jsx",
+      "bytes": 10891,
+      "sha256": "b929ffcf26f0ffcc3f047f245dc4276bab0b2289f644327a69907da3ba437ae9"
+    },
+    {
+      "path": "src/CaseAnalysisReport.jsx",
+      "bytes": 3380,
+      "sha256": "3a874d5eda5f9e67ec5f5c936078dbf81d506f93af58108dbe62cd0c7e8218f0"
+    },
+    {
+      "path": "src/CreateCaseForm.jsx",
+      "bytes": 3292,
+      "sha256": "089027bcabe9bb39983398ea2ed9cd6945c77745778b743b8c3e938cf1b357de"
+    },
+    {
+      "path": "src/WorkflowScreen.jsx",
+      "bytes": 17240,
+      "sha256": "25655e9132b1906171f7df90374fef4af42a4f80cfc13d771ac4bb99f7c88356"
+    },
+    {
+      "path": "src/approvalRouting.js",
+      "bytes": 3248,
+      "sha256": "20702cc175ae0f648bcb958c84c1688f800828c3511a50b23b650bdfddbd3973"
+    },
+    {
+      "path": "src/caseCreation.js",
+      "bytes": 4902,
+      "sha256": "33eecd086450e21acde4fe4a2c0092b66a9bf94273137b798428a8cc7e8ea17d"
+    },
+    {
+      "path": "src/caseReport.js",
+      "bytes": 10067,
+      "sha256": "ded6c53083799baf1c5c4a3bfa8a667a2372249b5f8840b6a8bcef765c958681"
+    },
+    {
+      "path": "src/data/cases.js",
+      "bytes": 1139,
+      "sha256": "f72bff76bfcea13ca2715a4f00fc800d574a40720ce6e8f03207998c472da8e4"
+    },
+    {
+      "path": "src/main.jsx",
+      "bytes": 222,
+      "sha256": "4d00e019af4a666d858e40561516b7689a3cbc743dfe5361205d7d34c90c777f"
+    },
+    {
+      "path": "src/presentation.js",
+      "bytes": 7145,
+      "sha256": "3cfd1f67b1fd8bef3d601cb2be6e3216026306143bdd6ab9eb8322a4f78e702c"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 18713,
+      "sha256": "f04b04b5b3b20c14d62034f16f318e21e83bfd85f5e15a62d99eb6c6b29c13ba"
+    },
+    {
+      "path": "src/verification.js",
+      "bytes": 2368,
+      "sha256": "f6940afdb137c7f2128d79f3d1d5bec5a3d5395bc88cf326527e79960368959f"
+    },
+    {
+      "path": "src/workflow.js",
+      "bytes": 18562,
+      "sha256": "d8d0e85e94ac755cc4cbd200eb310eab4790c76dbe29e82ba38136e3c8b2999c"
+    },
+    {
+      "path": "tests/approval-routing.test.mjs",
+      "bytes": 6990,
+      "sha256": "85d9e797dfb50fb7f7a612a50fb2fbbe6ca5205cc421f4699674e4fd1aec539a"
+    },
+    {
+      "path": "tests/browser-create-case.mjs",
+      "bytes": 12474,
+      "sha256": "537d198c541d3adc2ccb533b9c4ec884ef27ff4cee43a8eec2d2ea7003c6fba4"
+    },
+    {
+      "path": "tests/browser-fixtures.mjs",
+      "bytes": 5676,
+      "sha256": "25f9eb67c4457f4f5db810ef0f8785fa05bf1671c778f9d579513b3d4b90cee6"
+    },
+    {
+      "path": "tests/browser.mjs",
+      "bytes": 22465,
+      "sha256": "8997a43eb4ca0359f2e4a72cd4e7f429a3138509b62cdf9d656c70ffdc3beeea"
+    },
+    {
+      "path": "tests/cancellation.test.mjs",
+      "bytes": 5764,
+      "sha256": "af6557f713487ea6cbef31061b7a21e84b1bf30ab4425b2939c62b9518d11530"
+    },
+    {
+      "path": "tests/case-creation.test.mjs",
+      "bytes": 8816,
+      "sha256": "769a8011845b960a7959294c424278e8b331e9fdc659378c322dbc2e2e43a5a0"
+    },
+    {
+      "path": "tests/presentation.test.mjs",
+      "bytes": 2827,
+      "sha256": "714453e736a96fc870e657008c8eef47b772554a8574a5b170bc4296afa794e5"
+    },
+    {
+      "path": "tests/report-verification.test.mjs",
+      "bytes": 15392,
+      "sha256": "8479016bb9ef8580e36d445395d52c766a98acf730e3f84c9cbb6fa1d7e05933"
+    },
+    {
+      "path": "tests/workflow.test.mjs",
+      "bytes": 11025,
+      "sha256": "fa0903d4b532f3ec9ecf5b8bb57f494f4959beca058fdf49571273f00fcbf6d9"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 411,
+      "sha256": "5e9ba45fc5fff1f02b9e9a82ed64952ad72d34fc69c1eaae0fc29f56e69813b0"
+    }
+  ],
+  "originalEvidence": [
+    {
+      "path": "docs/test-artifacts/week10-hardening/README.md",
+      "bytes": 2496,
+      "sha256": "8c3e2e43b861cded0d9eb296694d03e3f1d0d2a93865b1d1611248ff7dc1da31"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/browser-initial.txt",
+      "bytes": 1111,
+      "sha256": "6a4e1d96e275724bc46154bc18c1c6851ac90dd35e6e7ca3e962e2043a6abd96"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/browser-sandbox.txt",
+      "bytes": 7094,
+      "sha256": "184b6e26fa0612b5f688a8375acc88a56d7b2f220c2827e89d88477b9333973f"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/browser.txt",
+      "bytes": 1391,
+      "sha256": "f655f96a274a57d1267820f6c01cb9dad6c66c841c7be71f050520c2a32f808a"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/build.txt",
+      "bytes": 401,
+      "sha256": "89d1c7c108ae5bfc1ede8ec1abc7d53a194a0c9d46ab450d2ed92ddce655b5c6"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/check.txt",
+      "bytes": 263,
+      "sha256": "e28f7612c9b12a5e391706c61bca02fa027b1d0374cdbb7e3b048135b14eb5db"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/blocked-creation-audit.json",
+      "bytes": 4614,
+      "sha256": "5b8147f684a5fa003896fb58f4793d37ceb45e27283308d8c56c0fc8c3c66e6c"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/browser-results.json",
+      "bytes": 1326,
+      "sha256": "f0af0ee9f8c5ecd5a551944a2dde28fc875267093ede1c5291161d8352ff5614"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/cancelled-new-case-audit.json",
+      "bytes": 7269,
+      "sha256": "fe52cbf000991063fc8643d0e8dcaa76e41be1c5a0b7bd9fe6dc21173a9ada90"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/created-audit.json",
+      "bytes": 4095,
+      "sha256": "7d2653ad880334a2223e0092546e9bbd31c7dbed02fa4e5a6c567e05dae51dde"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/form-desktop.png",
+      "bytes": 313926,
+      "sha256": "f496e353be580237b607416dfa7859ae730f691f6e5646798c54da66ce9e21de"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/form-mobile.png",
+      "bytes": 191565,
+      "sha256": "c3a6c392d4a6100be4b0526cf41e4f9721f53af8f941ac26be2527826df43c33"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/invalid-creation-audit.json",
+      "bytes": 2670,
+      "sha256": "b303074eb0dff0ee25a9769d414c4f0c444a28f1e7697eacc8ea11906e0ad4f5"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/multiple-cases-audit.json",
+      "bytes": 23683,
+      "sha256": "9db612c510b663bf2b7fa7bf9f41516dfe47b597efa22723f9db773901c72a6b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/new-case-audit.png",
+      "bytes": 1655780,
+      "sha256": "2dc9ce0d56d6146305539a0f3a679b5c2cbbacdac8c9417a25beeeef893ea826"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/refresh-audit.json",
+      "bytes": 2298,
+      "sha256": "2e66119b7c9d6d60c3a44f8fe7bee90b16d6148cf206557e34bf72e4607b1183"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/stale-approval-audit.json",
+      "bytes": 11282,
+      "sha256": "1b133534b72a9e935e49e42960ec87562a2b40bf8bad840bd1c8a6044d9cd58f"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/successful-new-case-audit.json",
+      "bytes": 32365,
+      "sha256": "dfee681d3a3b59aaf7eea3fb514ba45ac8e7d49b1cce08f0c5b681d3a6127767"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case-browser-initial.txt",
+      "bytes": 1177,
+      "sha256": "a15072069d145d8b70795ca7d4e3dc88144af5ddec2c7cb2c2cd7facce31246b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case-browser-sandbox.txt",
+      "bytes": 7130,
+      "sha256": "622472aff5de3c7674ee27fe64f6f90883485d945a7a49a4ca49e2e285e2eac5"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case-browser.txt",
+      "bytes": 920,
+      "sha256": "140e3a42971a97dce9a70a3f16d2f3f12f3d5f417967afbe984082f5af54e488"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/lint.txt",
+      "bytes": 50,
+      "sha256": "5c01924d4839fb6652fcfe9d2240ed2cf366996ed37bbfd271b6a05c73dc8f7a"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/assessment-screen.png",
+      "bytes": 674555,
+      "sha256": "633ebcaef17a71afaf34d1206cd8efe05f5497daf1e4c4203d73cea83f303e50"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/browser-results.json",
+      "bytes": 2157,
+      "sha256": "d08350a15eab2de1245c4a62e87e94077ddf89093efb9fbe047dbe9d37e161b2"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/cancelled-audit.json",
+      "bytes": 8930,
+      "sha256": "af34a5bd92e731913fb03a49e1ad8b689fadbeff12a1d1fcbd30e39cb60eab3e"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/cancelled-case.png",
+      "bytes": 259710,
+      "sha256": "60bfc875b955f4932b64318a76d2befb84c7320bb90fc99465bd2b474b279d7d"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/incomplete-audit.json",
+      "bytes": 5462,
+      "sha256": "08b1d50f42727f8c45ac30841f8d4c63efd53549f017e4b64626be0230c5920d"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/incomplete-verification.png",
+      "bytes": 250679,
+      "sha256": "5ac54915885b49965b6ba9e456ebc397a50dfb9cb3a71246af8b98f69fb534a7"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/professional-assessment.png",
+      "bytes": 674887,
+      "sha256": "f0ff3c2485f5a7ec37f85bc43a58ffad20ba37ba3078aa7b9382dfc9ac50988b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/professional-audit.png",
+      "bytes": 1218228,
+      "sha256": "194bf71baf8f7bcee044b9df310179ae4900c26607e3bf512042f1f1111819f2"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-002-audit.json",
+      "bytes": 24574,
+      "sha256": "ea6fe4cd908c76f9bc7863cc1e0640f921672abcc334d48892829055aca2d092"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-002.png",
+      "bytes": 1281998,
+      "sha256": "6e3b5f148bda056d1b124eb5a3df3342c7b3676cca1e48e5936cf875f04e0ffc"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-003-audit.json",
+      "bytes": 24514,
+      "sha256": "917cf2084083a02059d0dcf580658ae9e095f22ace75d6249cc5469a8a5c6341"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-003.png",
+      "bytes": 1279534,
+      "sha256": "f2cfb60d6988bbb2f263807c42449574433a2bd8d0e5cb18135f01e4b1d5016e"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-completion-SYN-007-002.png",
+      "bytes": 254593,
+      "sha256": "89742044615996b928866ab4821f08b06486dc51571b287e614590dd997bd720"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-completion-SYN-007-003.png",
+      "bytes": 252320,
+      "sha256": "75f62bf3507b75ae50498996f8342d205869465622cb34300dd2f31f67231b53"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-1-audit.json",
+      "bytes": 23032,
+      "sha256": "b7e72833c59723ae03cf68e55e017dea36ccffc7aa7ba8a1b78f7bd2818d6585"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-10-audit.json",
+      "bytes": 24571,
+      "sha256": "033aa4b05752e546862103956d674c3ea13b7f1d49628b7207eb86fe5fcf8047"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-11-audit.json",
+      "bytes": 8930,
+      "sha256": "ed7a1d1f203130f92159606a628bb29d6c6c8468cbf5356d73792741f332c095"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-12-audit.json",
+      "bytes": 24555,
+      "sha256": "76ed6933426d3aa0029a73aab78123f0dc9fa3a26ffa6fb2930e1b33edc3a2f3"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-13-audit.json",
+      "bytes": 27808,
+      "sha256": "3ee777e3896706dc30fa926e85f692fe8e56031299e6fae1794bf1854c467d1b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-14-audit.json",
+      "bytes": 24514,
+      "sha256": "0a52baaac1c436f6a7992a29e98f4b797d0e24b3d28a2fd9e63728ac8e73333b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-15-audit.json",
+      "bytes": 16179,
+      "sha256": "203d418fff4e800eae0fd41b69826670bcce2252d487876918251b99c271269d"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-16-audit.json",
+      "bytes": 2298,
+      "sha256": "b098df84432f194ca83c113690c8f7492d3168e3b0414b3be07547b30d56f48c"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-2-audit.json",
+      "bytes": 5462,
+      "sha256": "9e6f39327c74d2e01b120bfe2e10c178500db57ddf8591623470cfa8d56e2ac1"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-3-audit.json",
+      "bytes": 7305,
+      "sha256": "9ff029aca5eba384d3e068b7fd3f8b40bc4341ebef21e49b52c2fbe2217feb3b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-4-audit.json",
+      "bytes": 10145,
+      "sha256": "a0e903f421ffdd5bd050da2925b927740886fefa9e9a4e82f29efc3e7f21f4a9"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-5-audit.json",
+      "bytes": 15707,
+      "sha256": "b4af2fe163a2fac847794226470c1de0817b10f96fbcb564615479fd0d4cbcab"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-6-audit.json",
+      "bytes": 14855,
+      "sha256": "219e33f853420bfee23fdd9e58c5e42f055f6c0bebd9f3ae8c874c9867700abc"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-7-audit.json",
+      "bytes": 8230,
+      "sha256": "5de09e3bd49a4bc6b2ae6aed78ce57f2d7eae14139b0ea9cc42607ec1d263807"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-8-audit.json",
+      "bytes": 21353,
+      "sha256": "df8b9d4f514710433495c28332440f1185562483677ff1ec7712e677873800f6"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-9-audit.json",
+      "bytes": 23700,
+      "sha256": "4c6a03ff06d204e37fc95ccddd7e3a4196d948c89f219852d3d2152185ac1eb4"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/success-audit.json",
+      "bytes": 27808,
+      "sha256": "838e5763260d2e56e26457858a3bdca33064f92e23533dfb7dbf31a5f023e662"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/success-audit.png",
+      "bytes": 1452682,
+      "sha256": "b784fa82149514d53e82ae50c4c7a4ba872034ab335a9a850b3282df6720f4e8"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/supervisor-access-required.png",
+      "bytes": 284256,
+      "sha256": "2c5085abc2cc120270d18c1b883d555f5298d53200594f07f21fe21c9024d997"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/verification-screen.png",
+      "bytes": 236288,
+      "sha256": "c5dae99fd13a47053e2eebd03cbb47cbe6a2216d693d8af04c1b43633d0479be"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/unit.txt",
+      "bytes": 12486,
+      "sha256": "8b5c967ca7b811debf72ffcf54939d0520db3b42e84387c1812867c5afd18f31"
+    }
+  ]
+}

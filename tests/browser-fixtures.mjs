@@ -17,6 +17,7 @@ export async function openMaterialFixture(page, { newCase = false, evidence = fa
     assert.equal(state.notice.blocked, false, state.notice.message)
   }
   act('verify', { attested: true })
+  act('ai', { mode: 'failed' })
   act('assess', { method: 'manual', reviewed: true })
   act('escalate')
   act('approve', { confirmed: true }, 'Supervisor')

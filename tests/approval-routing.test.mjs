@@ -8,7 +8,7 @@ const fresh=()=>createCases()[1]
 const ok=(s,a,p={},r='CSR')=>{const result=transition(s,r,a,p);assert.equal(result.blocked,false,result.message);return result.item}
 const deny=(s,a,p={},r='CSR')=>{const result=transition(s,r,a,p);assert.equal(result.blocked,true,result.message);const {audit:before,...old}=s;const {audit:after,...next}=result.item;assert.deepEqual(next,old);assert.equal(after.length,before.length+1);assert.deepEqual(after.at(-1).routing,evaluateApprovalRouting(s));return result}
 const verified=s=>ok(s,'verify',{attested:true})
-const assessed=s=>ok(verified(s),'assess',{method:'manual',reviewed:true})
+const assessed=s=>ok(ok(verified(s),'ai',{mode:'failed'}),'assess',{method:'manual',reviewed:true})
 const completed=s=>ok(assessed(s),'complete_request',{confirmed:true})
 
 test('rules distinguish routine requests, exact $500 reversal and unsupported cases',()=>{
