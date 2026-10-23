@@ -1,0 +1,20 @@
+Command: node tests/browser.mjs
+Started: 2026-10-23T22:50:30.170Z
+Exit code: 1
+FAIL Professional language across all screens with visible disclosure and unchanged stored records: download.saveAs: canceled
+FAIL Read-only assigned methods, verification outcomes and incomplete JSON export: download.saveAs: canceled
+FAIL Verification bypasses and unauthorized human actions: download.saveAs: canceled
+FAIL Evidence editor absent; internal unavailable-evidence fixture retains all gates: download.saveAs: canceled
+FAIL Normal AI simulation has no outcome controls, preserves structured report and human review gate: download.saveAs: canceled
+FAIL Uncertainty fixture requires explicit acknowledgment: download.saveAs: canceled
+FAIL Failed, unusable and unavailable fixtures expose guarded assessment without AI: download.saveAs: canceled
+FAIL Supervisor approval is separate; role and explicit decision guards: download.saveAs: canceled
+FAIL Failed mock reversal stays open; duplicate and closure controls disabled: download.saveAs: canceled
+FAIL Rejected cases stay open until eligible CSR cancellation: download.saveAs: canceled
+FAIL CSR cancellation requires verification, reason and confirmation; closed status and JSON block further actions: download.saveAs: canceled
+FAIL Processed successful and failed reversals cannot cancel; no automatic corrective action: download.saveAs: canceled
+FAIL Complete $500 success, separate human closure, audit JSON and export immutability: download.saveAs: canceled
+FAIL Routine CSR requests complete and close without Supervisor approval or financial controls: download.saveAs: canceled
+FAIL Exceptions and unsupported requests remain on hold for human review without processing authority: download.saveAs: canceled
+FAIL Browser refresh resets all cases and audit: download.saveAs: canceled
+

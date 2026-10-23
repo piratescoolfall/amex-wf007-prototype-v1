@@ -1,0 +1,118 @@
+{
+  "at": "2026-10-23T22:49:01.090Z",
+  "source": "e16b9967aaa2bf2ab6f595a76c3ac07b21638041",
+  "checks": [
+    {
+      "path": "eslint.config.js",
+      "match": true
+    },
+    {
+      "path": "index.html",
+      "match": true
+    },
+    {
+      "path": "package-lock.json",
+      "match": true
+    },
+    {
+      "path": "package.json",
+      "match": true
+    },
+    {
+      "path": "scripts/check-foundation.mjs",
+      "match": true
+    },
+    {
+      "path": "src/App.jsx",
+      "match": true
+    },
+    {
+      "path": "src/CaseAnalysisReport.jsx",
+      "match": true
+    },
+    {
+      "path": "src/CreateCaseForm.jsx",
+      "match": true
+    },
+    {
+      "path": "src/WorkflowScreen.jsx",
+      "match": true
+    },
+    {
+      "path": "src/approvalRouting.js",
+      "match": true
+    },
+    {
+      "path": "src/caseCreation.js",
+      "match": true
+    },
+    {
+      "path": "src/caseReport.js",
+      "match": true
+    },
+    {
+      "path": "src/data/cases.js",
+      "match": true
+    },
+    {
+      "path": "src/main.jsx",
+      "match": true
+    },
+    {
+      "path": "src/presentation.js",
+      "match": true
+    },
+    {
+      "path": "src/styles.css",
+      "match": true
+    },
+    {
+      "path": "src/verification.js",
+      "match": true
+    },
+    {
+      "path": "src/workflow.js",
+      "match": true
+    },
+    {
+      "path": "tests/approval-routing.test.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/browser-create-case.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/browser-fixtures.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/browser.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/cancellation.test.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/case-creation.test.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/presentation.test.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/report-verification.test.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/workflow.test.mjs",
+      "match": true
+    },
+    {
+      "path": "vite.config.js",
+      "match": true
+    }
+  ]
+}

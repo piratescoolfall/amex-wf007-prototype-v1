@@ -1,0 +1,10 @@
+Command: npm.cmd run check
+Started: 2026-10-23T22:54:04.160Z
+Ended: 2026-10-23T22:54:06.465Z
+Exit code: 0
+
+> amx-wf-007-prototype-v1@0.1.0 check
+> node scripts/check-foundation.mjs
+
+PASS: simulation banner, fictional $500 case, five navigation screens, three open/unverified cases.
+

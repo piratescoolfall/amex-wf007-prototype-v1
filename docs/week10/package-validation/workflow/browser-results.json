@@ -1,0 +1,70 @@
+{
+  "browser": "156.0.8078.4",
+  "results": [
+    {
+      "name": "Professional language across all screens with visible disclosure and unchanged stored records",
+      "result": "PASS"
+    },
+    {
+      "name": "Read-only assigned methods, verification outcomes and incomplete JSON export",
+      "result": "PASS"
+    },
+    {
+      "name": "Verification bypasses and unauthorized human actions",
+      "result": "PASS"
+    },
+    {
+      "name": "Evidence editor absent; internal unavailable-evidence fixture retains all gates",
+      "result": "PASS"
+    },
+    {
+      "name": "Normal AI simulation has no outcome controls, preserves structured report and human review gate",
+      "result": "PASS"
+    },
+    {
+      "name": "Uncertainty fixture requires explicit acknowledgment",
+      "result": "PASS"
+    },
+    {
+      "name": "Failed, unusable and unavailable fixtures expose guarded assessment without AI",
+      "result": "PASS"
+    },
+    {
+      "name": "Supervisor approval is separate; role and explicit decision guards",
+      "result": "PASS"
+    },
+    {
+      "name": "Failed mock reversal stays open; duplicate and closure controls disabled",
+      "result": "PASS"
+    },
+    {
+      "name": "Rejected cases stay open until eligible CSR cancellation",
+      "result": "PASS"
+    },
+    {
+      "name": "CSR cancellation requires verification, reason and confirmation; closed status and JSON block further actions",
+      "result": "PASS"
+    },
+    {
+      "name": "Processed successful and failed reversals cannot cancel; no automatic corrective action",
+      "result": "PASS"
+    },
+    {
+      "name": "Complete $500 success, separate human closure, audit JSON and export immutability",
+      "result": "PASS"
+    },
+    {
+      "name": "Routine CSR requests complete and close without Supervisor approval or financial controls",
+      "result": "PASS"
+    },
+    {
+      "name": "Exceptions and unsupported requests remain on hold for human review without processing authority",
+      "result": "PASS"
+    },
+    {
+      "name": "Browser refresh resets all cases and audit",
+      "result": "PASS"
+    }
+  ],
+  "pageErrors": []
+}

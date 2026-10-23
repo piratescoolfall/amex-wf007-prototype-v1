@@ -1,0 +1,50 @@
+{
+  "browser": "156.0.8078.4",
+  "results": [
+    {
+      "name": "Required presets, fixed reversal amount, generated reference, cancel and open/unverified creation",
+      "result": "FAIL",
+      "error": "download.saveAs: canceled"
+    },
+    {
+      "name": "CSR-only creation remains enforced if role changes while form is open",
+      "result": "FAIL",
+      "error": "download.saveAs: canceled"
+    },
+    {
+      "name": "Forged non-preset input rejected in app logic without storing submitted text",
+      "result": "FAIL",
+      "error": "download.saveAs: canceled"
+    },
+    {
+      "name": "Multiple cases get distinct IDs and references; routine information case requires completion before closure",
+      "result": "FAIL",
+      "error": "download.saveAs: canceled"
+    },
+    {
+      "name": "New case verification and evidence gates block processing and actions",
+      "result": "PASS"
+    },
+    {
+      "name": "New case internal material-change fixture invalidates approval without an evidence editor",
+      "result": "FAIL",
+      "error": "download.saveAs: canceled"
+    },
+    {
+      "name": "New $500 case completes only with Supervisor approval, distinct CSR action and human closure; export unchanged",
+      "result": "FAIL",
+      "error": "download.saveAs: canceled"
+    },
+    {
+      "name": "New case can close as cancelled after CSR verification without AI or approval",
+      "result": "FAIL",
+      "error": "download.saveAs: canceled"
+    },
+    {
+      "name": "Form at mobile viewport fits and refresh resets new cases and creation audit",
+      "result": "FAIL",
+      "error": "download.saveAs: canceled"
+    }
+  ],
+  "pageErrors": []
+}

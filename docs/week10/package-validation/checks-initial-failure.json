@@ -1,0 +1,9 @@
+[
+  {
+    "name": "install",
+    "command": "npm.cmd ci",
+    "exitCode": 4294963248,
+    "signal": null,
+    "error": null
+  }
+]

@@ -1,0 +1,13 @@
+Command: node tests/browser-create-case.mjs
+Started: 2026-10-23T22:50:50.104Z
+Exit code: 1
+FAIL Required presets, fixed reversal amount, generated reference, cancel and open/unverified creation: download.saveAs: canceled
+FAIL CSR-only creation remains enforced if role changes while form is open: download.saveAs: canceled
+FAIL Forged non-preset input rejected in app logic without storing submitted text: download.saveAs: canceled
+FAIL Multiple cases get distinct IDs and references; routine information case requires completion before closure: download.saveAs: canceled
+PASS New case verification and evidence gates block processing and actions
+FAIL New case internal material-change fixture invalidates approval without an evidence editor: download.saveAs: canceled
+FAIL New $500 case completes only with Supervisor approval, distinct CSR action and human closure; export unchanged: download.saveAs: canceled
+FAIL New case can close as cancelled after CSR verification without AI or approval: download.saveAs: canceled
+FAIL Form at mobile viewport fits and refresh resets new cases and creation audit: download.saveAs: canceled
+

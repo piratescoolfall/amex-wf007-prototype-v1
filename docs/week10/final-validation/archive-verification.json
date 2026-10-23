@@ -1,0 +1,13 @@
+{
+  "phase": "final",
+  "zip": "C:\\Users\\Kyra\\Documents\\Codex\\2026-10-09\\read-agents-md-and-propose-a\\outputs\\AMEX-WF007-Week10-Demo2-Candidate-e16b9967.zip",
+  "zipBytes": 20208596,
+  "zipSha256": "d07ae6dbe333cbd7d1662339f24100a33307097fcd0d32a3ffed1262402f69e0",
+  "extractedTo": "C:\\Users\\Kyra\\Documents\\Codex\\2026-10-09\\read-agents-md-and-propose-a\\work\\week10-final-extracted",
+  "entryCount": 199,
+  "manifestPayloadsVerified": 198,
+  "canonicalSourceFilesVerified": 28,
+  "originalHardeningEntriesVerified": 85,
+  "forbiddenEntries": 0,
+  "verifiedAt": "2026-10-23T22:53:41.865Z"
+}

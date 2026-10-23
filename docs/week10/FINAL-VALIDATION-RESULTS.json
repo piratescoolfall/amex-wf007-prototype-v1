@@ -1,0 +1,58 @@
+{
+  "designation": "Product V1.0 Candidate — Week 10 Demo 2",
+  "applicationSourceCandidate": "e16b9967aaa2bf2ab6f595a76c3ac07b21638041",
+  "branch": "week10-product-v1-candidate",
+  "applicationVersion": "0.1.0",
+  "packagingGitCommit": null,
+  "packageDate": "2026-10-23",
+  "zip": "C:\\Users\\Kyra\\Documents\\Codex\\2026-10-09\\read-agents-md-and-propose-a\\outputs\\AMEX-WF007-Week10-Demo2-Candidate-e16b9967.zip",
+  "zipBytes": 20208596,
+  "zipSha256": "d07ae6dbe333cbd7d1662339f24100a33307097fcd0d32a3ffed1262402f69e0",
+  "archiveEntries": 199,
+  "verifiedPayloads": 198,
+  "canonicalInputs": 28,
+  "originalHardeningManifestEntries": 85,
+  "environment": {
+    "platform": "win32",
+    "node": "v24.19.0",
+    "npm": "11.17.0",
+    "playwright": "1.64.1",
+    "chromium": "156.0.8078.4"
+  },
+  "checks": {
+    "installation": "PASS",
+    "unit": {
+      "passed": 150,
+      "failed": 0
+    },
+    "lint": "PASS",
+    "foundation": "PASS",
+    "build": "PASS",
+    "workflowBrowser": {
+      "passed": 16,
+      "pageErrors": 0
+    },
+    "creationBrowser": {
+      "passed": 9,
+      "pageErrors": 0
+    },
+    "previewSmoke": {
+      "name": "built-preview-http-and-dollar500-workflow",
+      "status": "PASS",
+      "httpStatus": 200,
+      "browser": "156.0.8078.4",
+      "pageErrors": [],
+      "caseState": "Closed — Successfully Resolved"
+    },
+    "postExecutionPayloadHashes": "PASS"
+  },
+  "limitations": [
+    "One high-severity development zod 4.6.5 advisory; dependencies unchanged. Runtime-only audit zero findings.",
+    "Original VIS-07/08/09 exports/OneDrive references not supplied; provisional text only.",
+    "Recording, Canvas submissions and peer reviews not performed.",
+    "Original hardening manifest generated after historical tests; new hashes captured before new tests.",
+    "Windows browser success used external writable temp/download paths and launch adapter; preparation failures retained.",
+    "No production security/IAM/live AI/real account action/persistence/formal V&V claims."
+  ],
+  "finalPOReviewPending": true
+}

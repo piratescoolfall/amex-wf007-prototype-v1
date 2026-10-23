@@ -1,0 +1,1148 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "SHA-256",
+  "designation": "Product V1.0 Candidate — Week 10 Demo 2",
+  "applicationSourceCandidate": "e16b9967aaa2bf2ab6f595a76c3ac07b21638041",
+  "branch": "week10-product-v1-candidate",
+  "applicationVersion": "0.1.0",
+  "documentationDate": "2026-10-23",
+  "packagingCommit": null,
+  "sourceProvenance": "Application/test/config bytes exported from immutable candidate Git objects. Handoff documentation is uncommitted.",
+  "originalEvidenceProvenance": "Original 85-entry hardening manifest generated after original testing. All hashes match canonical exported inputs/evidence. Does not prove historical test inputs.",
+  "validationProvenance": "Preparation evidence inside ZIP is source-equivalent. Adjacent final report/evidence identify exact final ZIP and final extraction checks.",
+  "selfExclusion": "Manifest excludes itself; final ZIP checksum is external to avoid self-reference.",
+  "sourceCandidateFiles": [
+    {
+      "path": "eslint.config.js",
+      "bytes": 838,
+      "sha256": "46610ddfa8c8f29dce5e03147967e5855aafe5396c33c9b2c4e5efc8e810b370"
+    },
+    {
+      "path": "index.html",
+      "bytes": 491,
+      "sha256": "060fbbef6afea58948639c058e7a2e00953c773c093f840b503371145ad42841"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 83530,
+      "sha256": "1b2503af26231fb3b6f845f25bac02925feef1b2f3b338c881146f53397d769e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 986,
+      "sha256": "ad85996d1be56e5076d54c7d4c4c742ae46d339c51f7ce73691716730a197c1a"
+    },
+    {
+      "path": "scripts/check-foundation.mjs",
+      "bytes": 1167,
+      "sha256": "c18b7ea64c903234f062d45892fee43e08e23981770e7d659c8ebbdeb634ca38"
+    },
+    {
+      "path": "src/App.jsx",
+      "bytes": 10891,
+      "sha256": "b929ffcf26f0ffcc3f047f245dc4276bab0b2289f644327a69907da3ba437ae9"
+    },
+    {
+      "path": "src/CaseAnalysisReport.jsx",
+      "bytes": 3380,
+      "sha256": "3a874d5eda5f9e67ec5f5c936078dbf81d506f93af58108dbe62cd0c7e8218f0"
+    },
+    {
+      "path": "src/CreateCaseForm.jsx",
+      "bytes": 3292,
+      "sha256": "089027bcabe9bb39983398ea2ed9cd6945c77745778b743b8c3e938cf1b357de"
+    },
+    {
+      "path": "src/WorkflowScreen.jsx",
+      "bytes": 17240,
+      "sha256": "25655e9132b1906171f7df90374fef4af42a4f80cfc13d771ac4bb99f7c88356"
+    },
+    {
+      "path": "src/approvalRouting.js",
+      "bytes": 3248,
+      "sha256": "20702cc175ae0f648bcb958c84c1688f800828c3511a50b23b650bdfddbd3973"
+    },
+    {
+      "path": "src/caseCreation.js",
+      "bytes": 4902,
+      "sha256": "33eecd086450e21acde4fe4a2c0092b66a9bf94273137b798428a8cc7e8ea17d"
+    },
+    {
+      "path": "src/caseReport.js",
+      "bytes": 10067,
+      "sha256": "ded6c53083799baf1c5c4a3bfa8a667a2372249b5f8840b6a8bcef765c958681"
+    },
+    {
+      "path": "src/data/cases.js",
+      "bytes": 1139,
+      "sha256": "f72bff76bfcea13ca2715a4f00fc800d574a40720ce6e8f03207998c472da8e4"
+    },
+    {
+      "path": "src/main.jsx",
+      "bytes": 222,
+      "sha256": "4d00e019af4a666d858e40561516b7689a3cbc743dfe5361205d7d34c90c777f"
+    },
+    {
+      "path": "src/presentation.js",
+      "bytes": 7145,
+      "sha256": "3cfd1f67b1fd8bef3d601cb2be6e3216026306143bdd6ab9eb8322a4f78e702c"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 18713,
+      "sha256": "f04b04b5b3b20c14d62034f16f318e21e83bfd85f5e15a62d99eb6c6b29c13ba"
+    },
+    {
+      "path": "src/verification.js",
+      "bytes": 2368,
+      "sha256": "f6940afdb137c7f2128d79f3d1d5bec5a3d5395bc88cf326527e79960368959f"
+    },
+    {
+      "path": "src/workflow.js",
+      "bytes": 18562,
+      "sha256": "d8d0e85e94ac755cc4cbd200eb310eab4790c76dbe29e82ba38136e3c8b2999c"
+    },
+    {
+      "path": "tests/approval-routing.test.mjs",
+      "bytes": 6990,
+      "sha256": "85d9e797dfb50fb7f7a612a50fb2fbbe6ca5205cc421f4699674e4fd1aec539a"
+    },
+    {
+      "path": "tests/browser-create-case.mjs",
+      "bytes": 12474,
+      "sha256": "537d198c541d3adc2ccb533b9c4ec884ef27ff4cee43a8eec2d2ea7003c6fba4"
+    },
+    {
+      "path": "tests/browser-fixtures.mjs",
+      "bytes": 5676,
+      "sha256": "25f9eb67c4457f4f5db810ef0f8785fa05bf1671c778f9d579513b3d4b90cee6"
+    },
+    {
+      "path": "tests/browser.mjs",
+      "bytes": 22465,
+      "sha256": "8997a43eb4ca0359f2e4a72cd4e7f429a3138509b62cdf9d656c70ffdc3beeea"
+    },
+    {
+      "path": "tests/cancellation.test.mjs",
+      "bytes": 5764,
+      "sha256": "af6557f713487ea6cbef31061b7a21e84b1bf30ab4425b2939c62b9518d11530"
+    },
+    {
+      "path": "tests/case-creation.test.mjs",
+      "bytes": 8816,
+      "sha256": "769a8011845b960a7959294c424278e8b331e9fdc659378c322dbc2e2e43a5a0"
+    },
+    {
+      "path": "tests/presentation.test.mjs",
+      "bytes": 2827,
+      "sha256": "714453e736a96fc870e657008c8eef47b772554a8574a5b170bc4296afa794e5"
+    },
+    {
+      "path": "tests/report-verification.test.mjs",
+      "bytes": 15392,
+      "sha256": "8479016bb9ef8580e36d445395d52c766a98acf730e3f84c9cbb6fa1d7e05933"
+    },
+    {
+      "path": "tests/workflow.test.mjs",
+      "bytes": 11025,
+      "sha256": "fa0903d4b532f3ec9ecf5b8bb57f494f4959beca058fdf49571273f00fcbf6d9"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 411,
+      "sha256": "5e9ba45fc5fff1f02b9e9a82ed64952ad72d34fc69c1eaae0fc29f56e69813b0"
+    }
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 2243,
+      "sha256": "dcb0fefb689cd92e1532e3e9dd30ff1d9e2a5a8d36c9878926f9716c3d389d1d"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2068,
+      "sha256": "488912b09263329199098b831b04e372720334bdfee3712af0ace3941757c799"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6649,
+      "sha256": "1de009a3db155c3c159f386c4598cacd5c698e2985afe723ff208f8c9c3606be"
+    },
+    {
+      "path": "docs/VIS-05.md",
+      "bytes": 6121,
+      "sha256": "5b508ff08ce8ed5556156495063b3edc1c2ba943c5f0ddcada2992f9239a7a52"
+    },
+    {
+      "path": "docs/VIS-06.md",
+      "bytes": 7965,
+      "sha256": "d91b4112b653da3761c310dc54dd235e60285bb00ac7aa7eea10a724f1d2103a"
+    },
+    {
+      "path": "docs/design-to-build-map.md",
+      "bytes": 12443,
+      "sha256": "7363c66c98a77f0bf4ba2e6403d26f0ee76457af7a639f8a069c0b8ec517820f"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/CONTENT-REVIEW.md",
+      "bytes": 2440,
+      "sha256": "fd19c596102033f5a9fa21431ff9d3189edb599411852f521be650a28bc6fe84"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/README.md",
+      "bytes": 2496,
+      "sha256": "8c3e2e43b861cded0d9eb296694d03e3f1d0d2a93865b1d1611248ff7dc1da31"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/SHA256-MANIFEST.json",
+      "bytes": 16554,
+      "sha256": "458a269167b77efdc63be85303a106a01247214132108bb36b764e3036a99557"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/browser-initial.txt",
+      "bytes": 1111,
+      "sha256": "6a4e1d96e275724bc46154bc18c1c6851ac90dd35e6e7ca3e962e2043a6abd96"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/browser-sandbox.txt",
+      "bytes": 7094,
+      "sha256": "184b6e26fa0612b5f688a8375acc88a56d7b2f220c2827e89d88477b9333973f"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/browser.txt",
+      "bytes": 1391,
+      "sha256": "f655f96a274a57d1267820f6c01cb9dad6c66c841c7be71f050520c2a32f808a"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/build.txt",
+      "bytes": 401,
+      "sha256": "89d1c7c108ae5bfc1ede8ec1abc7d53a194a0c9d46ab450d2ed92ddce655b5c6"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/check.txt",
+      "bytes": 263,
+      "sha256": "e28f7612c9b12a5e391706c61bca02fa027b1d0374cdbb7e3b048135b14eb5db"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case-browser-initial.txt",
+      "bytes": 1177,
+      "sha256": "a15072069d145d8b70795ca7d4e3dc88144af5ddec2c7cb2c2cd7facce31246b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case-browser-sandbox.txt",
+      "bytes": 7130,
+      "sha256": "622472aff5de3c7674ee27fe64f6f90883485d945a7a49a4ca49e2e285e2eac5"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case-browser.txt",
+      "bytes": 920,
+      "sha256": "140e3a42971a97dce9a70a3f16d2f3f12f3d5f417967afbe984082f5af54e488"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/blocked-creation-audit.json",
+      "bytes": 4614,
+      "sha256": "5b8147f684a5fa003896fb58f4793d37ceb45e27283308d8c56c0fc8c3c66e6c"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/browser-results.json",
+      "bytes": 1326,
+      "sha256": "f0af0ee9f8c5ecd5a551944a2dde28fc875267093ede1c5291161d8352ff5614"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/cancelled-new-case-audit.json",
+      "bytes": 7269,
+      "sha256": "fe52cbf000991063fc8643d0e8dcaa76e41be1c5a0b7bd9fe6dc21173a9ada90"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/created-audit.json",
+      "bytes": 4095,
+      "sha256": "7d2653ad880334a2223e0092546e9bbd31c7dbed02fa4e5a6c567e05dae51dde"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/form-desktop.png",
+      "bytes": 313926,
+      "sha256": "f496e353be580237b607416dfa7859ae730f691f6e5646798c54da66ce9e21de"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/form-mobile.png",
+      "bytes": 191565,
+      "sha256": "c3a6c392d4a6100be4b0526cf41e4f9721f53af8f941ac26be2527826df43c33"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/invalid-creation-audit.json",
+      "bytes": 2670,
+      "sha256": "b303074eb0dff0ee25a9769d414c4f0c444a28f1e7697eacc8ea11906e0ad4f5"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/multiple-cases-audit.json",
+      "bytes": 23683,
+      "sha256": "9db612c510b663bf2b7fa7bf9f41516dfe47b597efa22723f9db773901c72a6b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/new-case-audit.png",
+      "bytes": 1655780,
+      "sha256": "2dc9ce0d56d6146305539a0f3a679b5c2cbbacdac8c9417a25beeeef893ea826"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/refresh-audit.json",
+      "bytes": 2298,
+      "sha256": "2e66119b7c9d6d60c3a44f8fe7bee90b16d6148cf206557e34bf72e4607b1183"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/stale-approval-audit.json",
+      "bytes": 11282,
+      "sha256": "1b133534b72a9e935e49e42960ec87562a2b40bf8bad840bd1c8a6044d9cd58f"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/successful-new-case-audit.json",
+      "bytes": 32365,
+      "sha256": "dfee681d3a3b59aaf7eea3fb514ba45ac8e7d49b1cce08f0c5b681d3a6127767"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/lint.txt",
+      "bytes": 50,
+      "sha256": "5c01924d4839fb6652fcfe9d2240ed2cf366996ed37bbfd271b6a05c73dc8f7a"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/assessment-screen.png",
+      "bytes": 674555,
+      "sha256": "633ebcaef17a71afaf34d1206cd8efe05f5497daf1e4c4203d73cea83f303e50"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/browser-results.json",
+      "bytes": 2157,
+      "sha256": "d08350a15eab2de1245c4a62e87e94077ddf89093efb9fbe047dbe9d37e161b2"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/cancelled-audit.json",
+      "bytes": 8930,
+      "sha256": "af34a5bd92e731913fb03a49e1ad8b689fadbeff12a1d1fcbd30e39cb60eab3e"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/cancelled-case.png",
+      "bytes": 259710,
+      "sha256": "60bfc875b955f4932b64318a76d2befb84c7320bb90fc99465bd2b474b279d7d"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/incomplete-audit.json",
+      "bytes": 5462,
+      "sha256": "08b1d50f42727f8c45ac30841f8d4c63efd53549f017e4b64626be0230c5920d"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/incomplete-verification.png",
+      "bytes": 250679,
+      "sha256": "5ac54915885b49965b6ba9e456ebc397a50dfb9cb3a71246af8b98f69fb534a7"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/professional-assessment.png",
+      "bytes": 674887,
+      "sha256": "f0ff3c2485f5a7ec37f85bc43a58ffad20ba37ba3078aa7b9382dfc9ac50988b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/professional-audit.png",
+      "bytes": 1218228,
+      "sha256": "194bf71baf8f7bcee044b9df310179ae4900c26607e3bf512042f1f1111819f2"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-002-audit.json",
+      "bytes": 24574,
+      "sha256": "ea6fe4cd908c76f9bc7863cc1e0640f921672abcc334d48892829055aca2d092"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-002.png",
+      "bytes": 1281998,
+      "sha256": "6e3b5f148bda056d1b124eb5a3df3342c7b3676cca1e48e5936cf875f04e0ffc"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-003-audit.json",
+      "bytes": 24514,
+      "sha256": "917cf2084083a02059d0dcf580658ae9e095f22ace75d6249cc5469a8a5c6341"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-003.png",
+      "bytes": 1279534,
+      "sha256": "f2cfb60d6988bbb2f263807c42449574433a2bd8d0e5cb18135f01e4b1d5016e"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-completion-SYN-007-002.png",
+      "bytes": 254593,
+      "sha256": "89742044615996b928866ab4821f08b06486dc51571b287e614590dd997bd720"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-completion-SYN-007-003.png",
+      "bytes": 252320,
+      "sha256": "75f62bf3507b75ae50498996f8342d205869465622cb34300dd2f31f67231b53"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-1-audit.json",
+      "bytes": 23032,
+      "sha256": "b7e72833c59723ae03cf68e55e017dea36ccffc7aa7ba8a1b78f7bd2818d6585"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-10-audit.json",
+      "bytes": 24571,
+      "sha256": "033aa4b05752e546862103956d674c3ea13b7f1d49628b7207eb86fe5fcf8047"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-11-audit.json",
+      "bytes": 8930,
+      "sha256": "ed7a1d1f203130f92159606a628bb29d6c6c8468cbf5356d73792741f332c095"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-12-audit.json",
+      "bytes": 24555,
+      "sha256": "76ed6933426d3aa0029a73aab78123f0dc9fa3a26ffa6fb2930e1b33edc3a2f3"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-13-audit.json",
+      "bytes": 27808,
+      "sha256": "3ee777e3896706dc30fa926e85f692fe8e56031299e6fae1794bf1854c467d1b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-14-audit.json",
+      "bytes": 24514,
+      "sha256": "0a52baaac1c436f6a7992a29e98f4b797d0e24b3d28a2fd9e63728ac8e73333b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-15-audit.json",
+      "bytes": 16179,
+      "sha256": "203d418fff4e800eae0fd41b69826670bcce2252d487876918251b99c271269d"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-16-audit.json",
+      "bytes": 2298,
+      "sha256": "b098df84432f194ca83c113690c8f7492d3168e3b0414b3be07547b30d56f48c"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-2-audit.json",
+      "bytes": 5462,
+      "sha256": "9e6f39327c74d2e01b120bfe2e10c178500db57ddf8591623470cfa8d56e2ac1"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-3-audit.json",
+      "bytes": 7305,
+      "sha256": "9ff029aca5eba384d3e068b7fd3f8b40bc4341ebef21e49b52c2fbe2217feb3b"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-4-audit.json",
+      "bytes": 10145,
+      "sha256": "a0e903f421ffdd5bd050da2925b927740886fefa9e9a4e82f29efc3e7f21f4a9"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-5-audit.json",
+      "bytes": 15707,
+      "sha256": "b4af2fe163a2fac847794226470c1de0817b10f96fbcb564615479fd0d4cbcab"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-6-audit.json",
+      "bytes": 14855,
+      "sha256": "219e33f853420bfee23fdd9e58c5e42f055f6c0bebd9f3ae8c874c9867700abc"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-7-audit.json",
+      "bytes": 8230,
+      "sha256": "5de09e3bd49a4bc6b2ae6aed78ce57f2d7eae14139b0ea9cc42607ec1d263807"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-8-audit.json",
+      "bytes": 21353,
+      "sha256": "df8b9d4f514710433495c28332440f1185562483677ff1ec7712e677873800f6"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-9-audit.json",
+      "bytes": 23700,
+      "sha256": "4c6a03ff06d204e37fc95ccddd7e3a4196d948c89f219852d3d2152185ac1eb4"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/success-audit.json",
+      "bytes": 27808,
+      "sha256": "838e5763260d2e56e26457858a3bdca33064f92e23533dfb7dbf31a5f023e662"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/success-audit.png",
+      "bytes": 1452682,
+      "sha256": "b784fa82149514d53e82ae50c4c7a4ba872034ab335a9a850b3282df6720f4e8"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/supervisor-access-required.png",
+      "bytes": 284256,
+      "sha256": "2c5085abc2cc120270d18c1b883d555f5298d53200594f07f21fe21c9024d997"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/verification-screen.png",
+      "bytes": 236288,
+      "sha256": "c5dae99fd13a47053e2eebd03cbb47cbe6a2216d693d8af04c1b43633d0479be"
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/unit.txt",
+      "bytes": 12486,
+      "sha256": "8b5c967ca7b811debf72ffcf54939d0520db3b42e84387c1812867c5afd18f31"
+    },
+    {
+      "path": "docs/week10/ACCEPTANCE-BASIS.md",
+      "bytes": 8153,
+      "sha256": "d3e3901e885779931594075ab5cc1695ad7c02bd8a281289de5029f1de955638"
+    },
+    {
+      "path": "docs/week10/D2CHK.md",
+      "bytes": 7369,
+      "sha256": "0e9b0e55b5527023406622a92df61d2917260202af421a57862f2e178716d2dd"
+    },
+    {
+      "path": "docs/week10/DEMO-2.md",
+      "bytes": 2257,
+      "sha256": "96951eaa09dde4ddc31b01d93260bb51824634364f539a052711d55e939da9e5"
+    },
+    {
+      "path": "docs/week10/ENGINEERING-RECONCILIATION.md",
+      "bytes": 11348,
+      "sha256": "11758ac3954719e40aa4ada0b4871830a909062c5e03e4f8d1c536ff78d74237"
+    },
+    {
+      "path": "docs/week10/PCFG.md",
+      "bytes": 6023,
+      "sha256": "01b13b4c14de70c06f6f060ee03c05c3edc14c929f0da86f336ebfba4caa7e56"
+    },
+    {
+      "path": "docs/week10/PKG6-INDEX.md",
+      "bytes": 4470,
+      "sha256": "6adb63542bdaef18229ab0a5709361aa5b959cf22226bf8400efd3d8ee829dca"
+    },
+    {
+      "path": "docs/week10/SOURCE-IDENTITY.json",
+      "bytes": 4628,
+      "sha256": "60d01a938a35c109e99c539a0783cd5b553a3862af42460c9f6aaba39668bcd8"
+    },
+    {
+      "path": "docs/week10/WEEK8-README-HISTORICAL.md",
+      "bytes": 4855,
+      "sha256": "5f5f33dceb2e378eb66fb2506da2346799d57c133d93afd99c746d232f6f76c3"
+    },
+    {
+      "path": "docs/week10/package-validation/VALIDATION-SUMMARY.md",
+      "bytes": 2249,
+      "sha256": "791c223b1cbb973bb99b9a97f07bece71427184d1eaac007001c38695d6ccfd9"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-checks.json",
+      "bytes": 508,
+      "sha256": "34f6011e0f2d912733889a63cdcfe937c5b6afd7a99096ba4000dc2792a89c7d"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/browser-checks.json",
+      "bytes": 1505,
+      "sha256": "b09dea23d7027bc33ec5beb9aee1d7562c42e9c6d2c027182a89fc89c6035033"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/creation-browser.txt",
+      "bytes": 1132,
+      "sha256": "45c556d9610de09e2d627b8d42339333c1d875a578f03633c77627ff26ed9546"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/creation/browser-results.json",
+      "bytes": 1678,
+      "sha256": "a904b51c606a115a596e911e0a373e0244f1b8c7f65a9225f1ef58bce0ca8f3b"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/creation/form-desktop.png",
+      "bytes": 233353,
+      "sha256": "c9683d2bb94bef041d2aeb7ac885f17968c4d6558f275b60bf717404344ee634"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/creation/form-mobile.png",
+      "bytes": 131441,
+      "sha256": "17dc576a2e09c50fd5bad456ec1475cd1ba03db5dab18a61846926117f9aa419"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/dev-server.txt",
+      "bytes": 72,
+      "sha256": "ccc3b93f2e1e45a7bfa5f77ed1abdca82455e90b3dc951babf8b0c90a779f18d"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/preview-server.txt",
+      "bytes": 39,
+      "sha256": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow-browser.txt",
+      "bytes": 1831,
+      "sha256": "99c1cb49dee73deb4ebe5d6ecc5dfbb3c4919287e17a4a197d712935ef4ad9e4"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/assessment-screen.png",
+      "bytes": 439264,
+      "sha256": "337d96a0d9caa9bd3e4d9fe1f8611bcae3058319b37a74c31e196c79048b68fd"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/browser-results.json",
+      "bytes": 2861,
+      "sha256": "aecd180a25733e0b4a97462d973e16929b9fa78b645e643c466b14a139c55952"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/cancelled-case.png",
+      "bytes": 191378,
+      "sha256": "ec31645ce1725df3efdc7a8bbc11e1a52b9c6007264022f01274c9be72ce3f25"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/incomplete-verification.png",
+      "bytes": 186315,
+      "sha256": "107f9df5cf71a6e9f216acd49d81115bce08e4ebcbd2ab1f6768a200d24ff0fc"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/professional-assessment.png",
+      "bytes": 439753,
+      "sha256": "0d05f0d4dc6dc4254a8c785e9d96fafa30c15c3b425cb9fa7c915cf7f5f2e875"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/professional-audit.png",
+      "bytes": 827753,
+      "sha256": "05a7b74e0e4c0af37e3988636ce5f84b742ec79f47d05a5141d2e4155a4f3cfa"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/routine-completion-SYN-007-002.png",
+      "bytes": 190061,
+      "sha256": "d7a01823ee79343af9025edd7d69ad3862bf2a2d8fc9a4839d27ab192e3598b6"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/supervisor-access-required.png",
+      "bytes": 208878,
+      "sha256": "a0d118ccd8edd7a15efe6fca53fb897c6e4d69d3c7b854c8cad08a20d78edac5"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/verification-screen.png",
+      "bytes": 175382,
+      "sha256": "230bf71b390eec6ed6e40229002fcd789251eff5b44a0f9a78c297e701324d89"
+    },
+    {
+      "path": "docs/week10/package-validation/browser-week10.cjs.txt",
+      "bytes": 4957,
+      "sha256": "c9486c78e5b285ae8362311935064e8522df924fea72b4041ada8c19a6eb57a2"
+    },
+    {
+      "path": "docs/week10/package-validation/build.txt",
+      "bytes": 508,
+      "sha256": "17796f13a964e6a93e1a11475c3d510335930cae500b1a9ca5e712a8666992e8"
+    },
+    {
+      "path": "docs/week10/package-validation/checks-initial-failure.json",
+      "bytes": 130,
+      "sha256": "762e2b200614117bcaff3132bb3563ff79640ebd7d77c9e087babb9579ed57db"
+    },
+    {
+      "path": "docs/week10/package-validation/checks.json",
+      "bytes": 610,
+      "sha256": "096a42d1f0bb28d0f4c9747e86205bee29053fb4f79ce2a68fe1d200d410aaf4"
+    },
+    {
+      "path": "docs/week10/package-validation/creation-browser.txt",
+      "bytes": 916,
+      "sha256": "320e124034872561a0a6d23b47b4fc82b47d73682ccc6232fb3257af8eea7b02"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/blocked-creation-audit.json",
+      "bytes": 4614,
+      "sha256": "8b59143fa48c015f5b2d1bb90e4523f36930b85e580f7836f5a108e9fa36000b"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/browser-results.json",
+      "bytes": 1326,
+      "sha256": "f0af0ee9f8c5ecd5a551944a2dde28fc875267093ede1c5291161d8352ff5614"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/cancelled-new-case-audit.json",
+      "bytes": 7269,
+      "sha256": "22b44a3158f5730fb95bb0a261822679720f1e785a567ad61b12cdd65115d6eb"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/created-audit.json",
+      "bytes": 4095,
+      "sha256": "b5fa0c968cdff74f985eb4d9346f6957b83410ffc2ae26671443b0ff9095c0d4"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/form-desktop.png",
+      "bytes": 233353,
+      "sha256": "c9683d2bb94bef041d2aeb7ac885f17968c4d6558f275b60bf717404344ee634"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/form-mobile.png",
+      "bytes": 131441,
+      "sha256": "17dc576a2e09c50fd5bad456ec1475cd1ba03db5dab18a61846926117f9aa419"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/invalid-creation-audit.json",
+      "bytes": 2670,
+      "sha256": "a4123270d3789ea00510fd808fafa88c5988fcc8c6027481d316bc435062efb0"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/multiple-cases-audit.json",
+      "bytes": 23683,
+      "sha256": "8a428e30174abcb819e0ab7afdc88eaa0dc49f47b97630f2130e15daec5396b6"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/new-case-audit.png",
+      "bytes": 1115881,
+      "sha256": "13543181236470914abb1a20d809e5a0c7dda92ac05b3376ca8624d01bf1f341"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/refresh-audit.json",
+      "bytes": 2298,
+      "sha256": "205edcead0b1003dfdaaafad602ef19287519f09cae537510ae30a5d0745f11e"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/stale-approval-audit.json",
+      "bytes": 11282,
+      "sha256": "96d8ddfa0a9347028aba3f07840d78b1831893f805cb55185a55db7340692a44"
+    },
+    {
+      "path": "docs/week10/package-validation/creation/successful-new-case-audit.json",
+      "bytes": 32365,
+      "sha256": "c88a3276762d7007d2cea4b710bf668c43bca6f19d01a8e507a221eb848324bd"
+    },
+    {
+      "path": "docs/week10/package-validation/dev-server.txt",
+      "bytes": 72,
+      "sha256": "ced5f6dcc4f1361eb82359c98139bda2b2a608b829eaa7df52d9efbe2bb5f9ff"
+    },
+    {
+      "path": "docs/week10/package-validation/environment.json",
+      "bytes": 962,
+      "sha256": "a284a40fa85c943b2e4caffd2b98402db8642b56a63fff24ec9e093d2b51b048"
+    },
+    {
+      "path": "docs/week10/package-validation/external-browser-install.txt",
+      "bytes": 8864,
+      "sha256": "5ccdd9121f435da97e706bc99ad09b53cb7b788afb62c9e98a232c93e48aded3"
+    },
+    {
+      "path": "docs/week10/package-validation/foundation.txt",
+      "bytes": 283,
+      "sha256": "582edbab49c5579084cf726ff65c25bfb7f65c223c3c3f39a7e9e2c7754b50c7"
+    },
+    {
+      "path": "docs/week10/package-validation/install-initial-failure.txt",
+      "bytes": 2321,
+      "sha256": "980d100765e31f37610317b42854bec903d567dcd896bdca330bf92e9e6e7713"
+    },
+    {
+      "path": "docs/week10/package-validation/install.txt",
+      "bytes": 533,
+      "sha256": "8c93410c62517d9e93f270470fddb330835f8a7b8aba352c343faea26134db3b"
+    },
+    {
+      "path": "docs/week10/package-validation/launch-overrides.cjs",
+      "bytes": 458,
+      "sha256": "98b38cf486966b1a3047a1c6898b17251dd19a9ff051c52d9efc1f0779973146"
+    },
+    {
+      "path": "docs/week10/package-validation/lint.txt",
+      "bytes": 156,
+      "sha256": "829992517ec46372a4f7ebe31069b86f8832a8e2f5b68924b3a5e5432ed4681c"
+    },
+    {
+      "path": "docs/week10/package-validation/npm-audit-initial-merged-output.txt",
+      "bytes": 1390,
+      "sha256": "e3cb347b618df4a13067abf4a9539fe8ad69388bcd1ad2b4dfcd6da8b4071d76"
+    },
+    {
+      "path": "docs/week10/package-validation/npm-audit-runtime-stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/week10/package-validation/npm-audit-runtime.json",
+      "bytes": 363,
+      "sha256": "5000e801ae78804e2e156210a6c7cd234abe172ce29b06dbe9af31af6bf416a7"
+    },
+    {
+      "path": "docs/week10/package-validation/npm-audit-stderr.txt",
+      "bytes": 209,
+      "sha256": "e00f04f40e8fa05222de7bb913441aa655530ae17adae49c6b9465ec3307401a"
+    },
+    {
+      "path": "docs/week10/package-validation/npm-audit.json",
+      "bytes": 1124,
+      "sha256": "38aedd2da2db95fb12e86834d55524289bc95e6e244387bb8e6edb447078a61a"
+    },
+    {
+      "path": "docs/week10/package-validation/package-content-scan.json",
+      "bytes": 556,
+      "sha256": "1ed9d7ba795ed9910abceab01289e6c0e851e36c60d574d16a534abf7f0872d3"
+    },
+    {
+      "path": "docs/week10/package-validation/preparation-archive.json",
+      "bytes": 576,
+      "sha256": "8b2317fac27740b8e1de751f0b7ad3186376dd0d514e48dacba48f88115d3f49"
+    },
+    {
+      "path": "docs/week10/package-validation/preview-audit.json",
+      "bytes": 27108,
+      "sha256": "99c121b33eb9de6c301884fe7035e2fad7e879d00e72dce237bcf0a29e06225c"
+    },
+    {
+      "path": "docs/week10/package-validation/preview-audit.png",
+      "bytes": 957286,
+      "sha256": "fbf1b6d50427120afd8679bb9a72cbd796d448a15e3f480ae38c77ec56c77f65"
+    },
+    {
+      "path": "docs/week10/package-validation/preview-server.txt",
+      "bytes": 39,
+      "sha256": "ecbd7eb35ac4acd913ff89a5390ee30069b6e910709e5626dc3f8fc34eadb53f"
+    },
+    {
+      "path": "docs/week10/package-validation/source-hashes-after-browser.json",
+      "bytes": 2114,
+      "sha256": "1cb6cb0540e9d926b099ee19bddadb8233750ae99c63d4ac478815f881e52030"
+    },
+    {
+      "path": "docs/week10/package-validation/source-hashes-after.json",
+      "bytes": 2114,
+      "sha256": "65412772b3a606d01af5ef449b51ba59530dd0c68afc6886d49fc32ac77fb062"
+    },
+    {
+      "path": "docs/week10/package-validation/source-hashes-before.json",
+      "bytes": 2114,
+      "sha256": "2bce2257d4e245470c170d975094cadd03be23a487200cccfc692a46ef43ea2e"
+    },
+    {
+      "path": "docs/week10/package-validation/unit.txt",
+      "bytes": 12283,
+      "sha256": "3b4e496a9a3d571a0cb6a10ac319bb3e6c1d0c6a2a00b97e151ef03e1d6256ec"
+    },
+    {
+      "path": "docs/week10/package-validation/validate-week10.cjs.txt",
+      "bytes": 2251,
+      "sha256": "9bbcb39e5b2f5d4f39f39611af03f8171514c284d372adc02889332ad01007b6"
+    },
+    {
+      "path": "docs/week10/package-validation/week10-playwright-launch.cjs.txt",
+      "bytes": 387,
+      "sha256": "35b24517588f2a0e255db263bea7fec81fbe9660d31552e8195c6ebbb6ddaf78"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow-browser.txt",
+      "bytes": 1399,
+      "sha256": "9517355a4576aee092e4949dc2487ff710878091f41a6658d4c004e19aedee45"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/assessment-screen.png",
+      "bytes": 439264,
+      "sha256": "337d96a0d9caa9bd3e4d9fe1f8611bcae3058319b37a74c31e196c79048b68fd"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/browser-results.json",
+      "bytes": 2157,
+      "sha256": "d08350a15eab2de1245c4a62e87e94077ddf89093efb9fbe047dbe9d37e161b2"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/cancelled-audit.json",
+      "bytes": 8930,
+      "sha256": "3209ab294a862c479954e323f12c80fe8e5096d143914c222975ed35b0ec0bd7"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/cancelled-case.png",
+      "bytes": 191378,
+      "sha256": "ec31645ce1725df3efdc7a8bbc11e1a52b9c6007264022f01274c9be72ce3f25"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/incomplete-audit.json",
+      "bytes": 5462,
+      "sha256": "1e133bea2c3a05b805f7b4271f290600a69d666d4b8ef1f9e006db981e0a94eb"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/incomplete-verification.png",
+      "bytes": 186315,
+      "sha256": "107f9df5cf71a6e9f216acd49d81115bce08e4ebcbd2ab1f6768a200d24ff0fc"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/professional-assessment.png",
+      "bytes": 439758,
+      "sha256": "6a09105053b0d5dfa6a8421115bb027b5ceb5940e28d05b63abf5083d8c7e29d"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/professional-audit.png",
+      "bytes": 826130,
+      "sha256": "da5d23c02af77a60d67532b44e8fe33443d508140a716d6af7fa816c75117f10"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-SYN-007-002-audit.json",
+      "bytes": 24574,
+      "sha256": "f715e7c839da6496a025ec71082a1fece48887422d4d034914aab6df52913dd7"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-SYN-007-002.png",
+      "bytes": 878182,
+      "sha256": "b25c08775446833b9db2176db5842ba9c1d0e56b8687da0204bd112f1bbf2b0c"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-SYN-007-003-audit.json",
+      "bytes": 24514,
+      "sha256": "34c754289397fe15740907a89dbf7cd18964f7338012c5444fd2681fad4fea92"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-SYN-007-003.png",
+      "bytes": 875406,
+      "sha256": "dff2da4ecb986c15c000347dd0e7814ba7f8535654c8268053aea01b11f1cddb"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-completion-SYN-007-002.png",
+      "bytes": 190061,
+      "sha256": "d7a01823ee79343af9025edd7d69ad3862bf2a2d8fc9a4839d27ab192e3598b6"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-completion-SYN-007-003.png",
+      "bytes": 189788,
+      "sha256": "464ce949445ee8677ed7b3c698517c079ffc312e34b4e39d18dce3ed3a431666"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-1-audit.json",
+      "bytes": 23032,
+      "sha256": "16c33a05fb959d889abf60b881bb654d42f8bd033875142890fb197ef0720677"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-10-audit.json",
+      "bytes": 24571,
+      "sha256": "05ff0b726db646793c963243ad44ba6a796fdec82bf11c5dfa21c8aa34b894c1"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-11-audit.json",
+      "bytes": 8930,
+      "sha256": "2235b9c97e2b2dddda9288c6ebbfa4f65a460bb23313d43dc95a8cb049463fd3"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-12-audit.json",
+      "bytes": 24555,
+      "sha256": "f324167e2773eb2a84a1c3efe2b50ee92b435375ec681f0286b0a9bbc3d4452c"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-13-audit.json",
+      "bytes": 27808,
+      "sha256": "b75bfc9df3fe682e0ac280b1e822af56b39bbd3717a76545fbf1eaaf7f47ec9c"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-14-audit.json",
+      "bytes": 24514,
+      "sha256": "103b6f211528848b55c03d165cf9b3a0985a2b3986f0ce442ccdf485fa130d79"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-15-audit.json",
+      "bytes": 16179,
+      "sha256": "0282f087051c73b860bf0a185b198ad086ded9d340275577682a131146457770"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-16-audit.json",
+      "bytes": 2298,
+      "sha256": "42907a1b7ca88b5c567d108d662b186542def99c1120a080364c405853fd1ae6"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-2-audit.json",
+      "bytes": 5462,
+      "sha256": "34a681488ec0f019d27140ce70ece4ca35ae5c8d380b174abb8d79a39aea27e1"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-3-audit.json",
+      "bytes": 7305,
+      "sha256": "5e6a05bfb0ac488d8405790e745e2ab412f32dc696c718c692d4607794567a33"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-4-audit.json",
+      "bytes": 10145,
+      "sha256": "3e9b1d2bcd3fff7ee7e35f8a0ca557e6643e1d0ece450b8cecc1f28a3bacf1fb"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-5-audit.json",
+      "bytes": 15707,
+      "sha256": "b2095052aae7c4b167a194b1d1ee493b0104b917699efbac5fedec80a1da877e"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-6-audit.json",
+      "bytes": 14855,
+      "sha256": "1e2a9b9f068d9dddc8312c55b563f0d56e4d2b22a7ddd6811ad53af2ef4769c6"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-7-audit.json",
+      "bytes": 8230,
+      "sha256": "7d863cbbce7a1fb6599391e66ed33b4b8494350dcd9703f1caa63d857eed70bf"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-8-audit.json",
+      "bytes": 21353,
+      "sha256": "568472d4e1a9e5af62d6555351c00a55cd1973642ece91d06bc3a886a685c7e3"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-9-audit.json",
+      "bytes": 23700,
+      "sha256": "eaeec72823fd9da64b7fdea12e9f512a535fa70970b6a409029ab322736e82f2"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/success-audit.json",
+      "bytes": 27808,
+      "sha256": "f8e99a5e409703a6a3ed943710c4a95a75125a2baf4461c43c4b3fb5a9c731fc"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/success-audit.png",
+      "bytes": 979116,
+      "sha256": "1908cc434a9ce2c731f6ee9490b8489862a2ff075e190591472ae88a8fede4ce"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/supervisor-access-required.png",
+      "bytes": 208878,
+      "sha256": "a0d118ccd8edd7a15efe6fca53fb897c6e4d69d3c7b854c8cad08a20d78edac5"
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/verification-screen.png",
+      "bytes": 175767,
+      "sha256": "89ea3902ca9068266f4eeb9ef3643f0e50846d630b7868e6e81d27107af6ef29"
+    },
+    {
+      "path": "docs/week10/package-validation/zod-dependency-tree-stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/week10/package-validation/zod-dependency-tree.json",
+      "bytes": 804,
+      "sha256": "2b238be3d4d1c4134e42072c091a1be66e683f1f35aa046c8ca82da7beb9bf80"
+    },
+    {
+      "path": "eslint.config.js",
+      "bytes": 838,
+      "sha256": "46610ddfa8c8f29dce5e03147967e5855aafe5396c33c9b2c4e5efc8e810b370"
+    },
+    {
+      "path": "index.html",
+      "bytes": 491,
+      "sha256": "060fbbef6afea58948639c058e7a2e00953c773c093f840b503371145ad42841"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 83530,
+      "sha256": "1b2503af26231fb3b6f845f25bac02925feef1b2f3b338c881146f53397d769e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 986,
+      "sha256": "ad85996d1be56e5076d54c7d4c4c742ae46d339c51f7ce73691716730a197c1a"
+    },
+    {
+      "path": "scripts/check-foundation.mjs",
+      "bytes": 1167,
+      "sha256": "c18b7ea64c903234f062d45892fee43e08e23981770e7d659c8ebbdeb634ca38"
+    },
+    {
+      "path": "src/App.jsx",
+      "bytes": 10891,
+      "sha256": "b929ffcf26f0ffcc3f047f245dc4276bab0b2289f644327a69907da3ba437ae9"
+    },
+    {
+      "path": "src/CaseAnalysisReport.jsx",
+      "bytes": 3380,
+      "sha256": "3a874d5eda5f9e67ec5f5c936078dbf81d506f93af58108dbe62cd0c7e8218f0"
+    },
+    {
+      "path": "src/CreateCaseForm.jsx",
+      "bytes": 3292,
+      "sha256": "089027bcabe9bb39983398ea2ed9cd6945c77745778b743b8c3e938cf1b357de"
+    },
+    {
+      "path": "src/WorkflowScreen.jsx",
+      "bytes": 17240,
+      "sha256": "25655e9132b1906171f7df90374fef4af42a4f80cfc13d771ac4bb99f7c88356"
+    },
+    {
+      "path": "src/approvalRouting.js",
+      "bytes": 3248,
+      "sha256": "20702cc175ae0f648bcb958c84c1688f800828c3511a50b23b650bdfddbd3973"
+    },
+    {
+      "path": "src/caseCreation.js",
+      "bytes": 4902,
+      "sha256": "33eecd086450e21acde4fe4a2c0092b66a9bf94273137b798428a8cc7e8ea17d"
+    },
+    {
+      "path": "src/caseReport.js",
+      "bytes": 10067,
+      "sha256": "ded6c53083799baf1c5c4a3bfa8a667a2372249b5f8840b6a8bcef765c958681"
+    },
+    {
+      "path": "src/data/cases.js",
+      "bytes": 1139,
+      "sha256": "f72bff76bfcea13ca2715a4f00fc800d574a40720ce6e8f03207998c472da8e4"
+    },
+    {
+      "path": "src/main.jsx",
+      "bytes": 222,
+      "sha256": "4d00e019af4a666d858e40561516b7689a3cbc743dfe5361205d7d34c90c777f"
+    },
+    {
+      "path": "src/presentation.js",
+      "bytes": 7145,
+      "sha256": "3cfd1f67b1fd8bef3d601cb2be6e3216026306143bdd6ab9eb8322a4f78e702c"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 18713,
+      "sha256": "f04b04b5b3b20c14d62034f16f318e21e83bfd85f5e15a62d99eb6c6b29c13ba"
+    },
+    {
+      "path": "src/verification.js",
+      "bytes": 2368,
+      "sha256": "f6940afdb137c7f2128d79f3d1d5bec5a3d5395bc88cf326527e79960368959f"
+    },
+    {
+      "path": "src/workflow.js",
+      "bytes": 18562,
+      "sha256": "d8d0e85e94ac755cc4cbd200eb310eab4790c76dbe29e82ba38136e3c8b2999c"
+    },
+    {
+      "path": "tests/approval-routing.test.mjs",
+      "bytes": 6990,
+      "sha256": "85d9e797dfb50fb7f7a612a50fb2fbbe6ca5205cc421f4699674e4fd1aec539a"
+    },
+    {
+      "path": "tests/browser-create-case.mjs",
+      "bytes": 12474,
+      "sha256": "537d198c541d3adc2ccb533b9c4ec884ef27ff4cee43a8eec2d2ea7003c6fba4"
+    },
+    {
+      "path": "tests/browser-fixtures.mjs",
+      "bytes": 5676,
+      "sha256": "25f9eb67c4457f4f5db810ef0f8785fa05bf1671c778f9d579513b3d4b90cee6"
+    },
+    {
+      "path": "tests/browser.mjs",
+      "bytes": 22465,
+      "sha256": "8997a43eb4ca0359f2e4a72cd4e7f429a3138509b62cdf9d656c70ffdc3beeea"
+    },
+    {
+      "path": "tests/cancellation.test.mjs",
+      "bytes": 5764,
+      "sha256": "af6557f713487ea6cbef31061b7a21e84b1bf30ab4425b2939c62b9518d11530"
+    },
+    {
+      "path": "tests/case-creation.test.mjs",
+      "bytes": 8816,
+      "sha256": "769a8011845b960a7959294c424278e8b331e9fdc659378c322dbc2e2e43a5a0"
+    },
+    {
+      "path": "tests/presentation.test.mjs",
+      "bytes": 2827,
+      "sha256": "714453e736a96fc870e657008c8eef47b772554a8574a5b170bc4296afa794e5"
+    },
+    {
+      "path": "tests/report-verification.test.mjs",
+      "bytes": 15392,
+      "sha256": "8479016bb9ef8580e36d445395d52c766a98acf730e3f84c9cbb6fa1d7e05933"
+    },
+    {
+      "path": "tests/workflow.test.mjs",
+      "bytes": 11025,
+      "sha256": "fa0903d4b532f3ec9ecf5b8bb57f494f4959beca058fdf49571273f00fcbf6d9"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 411,
+      "sha256": "5e9ba45fc5fff1f02b9e9a82ed64952ad72d34fc69c1eaae0fc29f56e69813b0"
+    }
+  ]
+}

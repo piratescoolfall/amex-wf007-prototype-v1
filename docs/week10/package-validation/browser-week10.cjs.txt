@@ -1,0 +1,41 @@
+const fs=require('node:fs'),p=require('node:path'),cp=require('node:child_process'),assert=require('node:assert/strict');
+const cfg=require('./week10-paths.json'),phase=process.argv[2]||'prep',cwd=p.join(__dirname,phase==='final'?'week10-final-extracted':'week10-prep-extracted'),ev=p.join(phase==='final'?cfg.out:__dirname,phase==='final'?'Week10-Final-Validation-Evidence':'week10-preparation-validation');
+const tools=p.join(__dirname,'week10-browser-tools'),moduleDir=p.join(tools,'node_modules/playwright'),browsers=p.join(tools,'browsers');
+fs.mkdirSync(ev,{recursive:true});
+const tmp=p.join(__dirname,'week10-browser-temp');fs.mkdirSync(tmp,{recursive:true}); process.env.PLAYWRIGHT_BROWSERS_PATH=browsers; process.env.TEMP=tmp; process.env.TMP=tmp; const env={...process.env,PLAYWRIGHT_MODULE:p.join(__dirname,'week10-playwright-launch.cjs'),PLAYWRIGHT_BROWSERS_PATH:browsers,TEMP:tmp,TMP:tmp};
+const runs=[];const children=[];
+function server(mode,port){
+ const log=fs.openSync(p.join(ev,mode+'-server.txt'),'w');
+ const args=[p.join(cwd,'node_modules/vite/bin/vite.js'),...(mode==='preview'?['preview']:[]),'--host','127.0.0.1','--port',String(port),'--strictPort'];
+ const child=cp.spawn(process.execPath,args,{cwd,env,stdio:['ignore',log,log],windowsHide:true});children.push(child);return child;
+}
+async function wait(port){for(let n=0;n<60;n++){try{const r=await fetch('http://localhost:'+port);if(r.status===200)return;}catch{}await new Promise(r=>setTimeout(r,500));}throw Error('Server not ready '+port);}
+(async()=>{
+ const dev=server('dev',5173);await wait(5173);
+ for(const [name,script,dir]of[['workflow-browser','tests/browser.mjs','workflow'],['creation-browser','tests/browser-create-case.mjs','creation']]){
+ const started=new Date().toISOString(),r=cp.spawnSync(process.execPath,[script],{cwd,env:{...env,TEST_ARTIFACT_DIR:p.join(ev,dir)},encoding:'utf8',timeout:240000,maxBuffer:8*1024*1024,windowsHide:true});
+ fs.writeFileSync(p.join(ev,name+'.txt'),'Command: node '+script+'\nStarted: '+started+'\nExit code: '+r.status+'\n'+r.stdout+'\n'+r.stderr+(r.error?'\n'+r.error.message:''));
+ runs.push({name,exitCode:r.status,error:r.error?.message||null});console.log(JSON.stringify(runs.at(-1)));
+ }
+ dev.kill();
+ const preview=server('preview',4173);await wait(4173);
+ const {chromium}=require(p.join(__dirname,'week10-playwright-launch.cjs'));
+ const browser=await chromium.launch({headless:true,env});const page=await browser.newPage({acceptDownloads:true});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ try{
+ await page.goto('http://localhost:4173');await page.getByRole('button',{name:'View case SYN-007-001',exact:true}).click();
+ const click=n=>page.getByRole('button',{name:n,exact:true}).click(),check=n=>page.getByRole('checkbox',{name:n}).check(),role=v=>page.getByLabel('Role:').selectOption(v);
+ await click('AI Assessment');await click('Run AI Assessment');assert.match(await page.getByRole('status').innerText(),/verification is mandatory/i);
+ await click('Identity Verification');await check('I, the CSR, confirm that');await click('Confirm Verification');
+ await click('AI Assessment');await click('Run AI Assessment');await check('I have reviewed');await click('Record human AI review');await click('Request Supervisor review');
+ await click('Supervisor Review');await role('Supervisor');await check('I, the human Supervisor');await click('Approve Reversal');
+ await click('Action & Closure');await role('CSR');await click('Process Reversal');assert.match(await page.getByRole('status').innerText(),/still open/i);
+ await check('I, the human CSR, explicitly');await click('Confirm Case Closure');await click('Audit History');
+ const pending=page.waitForEvent('download');await click('Download JSON audit');await(await pending).saveAs(p.join(ev,'preview-audit.json'));
+ const data=JSON.parse(fs.readFileSync(p.join(ev,'preview-audit.json')));assert.equal(data.simulationOnly,true);assert.equal(data.cases[0].status,'Closed — Successfully Resolved');
+ for(const t of['verification_attestation','blocked_action','supervisor_approval','csr_mock_reversal_triggered','simulated_action_result','human_closure_confirmation'])assert.ok(data.cases[0].events.some(e=>e.type===t));
+ await page.screenshot({path:p.join(ev,'preview-audit.png'),fullPage:true});
+ assert.deepEqual(errors,[]);
+ runs.push({name:'built-preview-http-and-dollar500-workflow',status:'PASS',httpStatus:200,browser:browser.version(),pageErrors:errors,caseState:data.cases[0].status});
+ }finally{await browser.close();preview.kill();}
+})().catch(e=>{runs.push({name:'browser-runner',status:'FAIL',error:e.stack});process.exitCode=1;console.error(e.stack);}).finally(()=>{for(const child of children)child.kill();fs.writeFileSync(p.join(ev,'browser-checks.json'),JSON.stringify({phase,at:new Date().toISOString(),playwright:require(p.join(moduleDir,'package.json')).version,runs},null,2)+'\n');console.log(JSON.stringify(runs));});
+

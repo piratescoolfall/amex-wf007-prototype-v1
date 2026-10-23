@@ -1,0 +1,797 @@
+{
+  "at": "2026-10-23T22:56:35.401Z",
+  "checks": [
+    {
+      "path": ".gitignore",
+      "match": true
+    },
+    {
+      "path": "AGENTS.md",
+      "match": true
+    },
+    {
+      "path": "README.md",
+      "match": true
+    },
+    {
+      "path": "docs/VIS-05.md",
+      "match": true
+    },
+    {
+      "path": "docs/VIS-06.md",
+      "match": true
+    },
+    {
+      "path": "docs/design-to-build-map.md",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/CONTENT-REVIEW.md",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/README.md",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/SHA256-MANIFEST.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/browser-initial.txt",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/browser-sandbox.txt",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/browser.txt",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/build.txt",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/check.txt",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case-browser-initial.txt",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case-browser-sandbox.txt",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case-browser.txt",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/blocked-creation-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/browser-results.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/cancelled-new-case-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/created-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/form-desktop.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/form-mobile.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/invalid-creation-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/multiple-cases-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/new-case-audit.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/refresh-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/stale-approval-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/create-case/successful-new-case-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/lint.txt",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/assessment-screen.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/browser-results.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/cancelled-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/cancelled-case.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/incomplete-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/incomplete-verification.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/professional-assessment.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/professional-audit.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-002-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-002.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-003-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-SYN-007-003.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-completion-SYN-007-002.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/routine-completion-SYN-007-003.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-1-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-10-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-11-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-12-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-13-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-14-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-15-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-16-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-2-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-3-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-4-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-5-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-6-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-7-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-8-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/scenario-9-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/success-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/success-audit.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/supervisor-access-required.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/regression/verification-screen.png",
+      "match": true
+    },
+    {
+      "path": "docs/test-artifacts/week10-hardening/unit.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/ACCEPTANCE-BASIS.md",
+      "match": true
+    },
+    {
+      "path": "docs/week10/D2CHK.md",
+      "match": true
+    },
+    {
+      "path": "docs/week10/DEMO-2.md",
+      "match": true
+    },
+    {
+      "path": "docs/week10/ENGINEERING-RECONCILIATION.md",
+      "match": true
+    },
+    {
+      "path": "docs/week10/PCFG.md",
+      "match": true
+    },
+    {
+      "path": "docs/week10/PKG6-INDEX.md",
+      "match": true
+    },
+    {
+      "path": "docs/week10/SOURCE-IDENTITY.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/WEEK8-README-HISTORICAL.md",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/VALIDATION-SUMMARY.md",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-checks.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/browser-checks.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/creation-browser.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/creation/browser-results.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/creation/form-desktop.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/creation/form-mobile.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/dev-server.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/preview-server.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow-browser.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/assessment-screen.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/browser-results.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/cancelled-case.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/incomplete-verification.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/professional-assessment.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/professional-audit.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/routine-completion-SYN-007-002.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/supervisor-access-required.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-initial-attempt/workflow/verification-screen.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/browser-week10.cjs.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/build.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/checks-initial-failure.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/checks.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation-browser.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/blocked-creation-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/browser-results.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/cancelled-new-case-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/created-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/form-desktop.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/form-mobile.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/invalid-creation-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/multiple-cases-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/new-case-audit.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/refresh-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/stale-approval-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/creation/successful-new-case-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/dev-server.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/environment.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/external-browser-install.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/foundation.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/install-initial-failure.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/install.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/launch-overrides.cjs",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/lint.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/npm-audit-initial-merged-output.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/npm-audit-runtime-stderr.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/npm-audit-runtime.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/npm-audit-stderr.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/npm-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/package-content-scan.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/preparation-archive.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/preview-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/preview-audit.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/preview-server.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/source-hashes-after-browser.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/source-hashes-after.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/source-hashes-before.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/unit.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/validate-week10.cjs.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/week10-playwright-launch.cjs.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow-browser.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/assessment-screen.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/browser-results.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/cancelled-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/cancelled-case.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/incomplete-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/incomplete-verification.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/professional-assessment.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/professional-audit.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-SYN-007-002-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-SYN-007-002.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-SYN-007-003-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-SYN-007-003.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-completion-SYN-007-002.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/routine-completion-SYN-007-003.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-1-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-10-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-11-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-12-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-13-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-14-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-15-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-16-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-2-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-3-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-4-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-5-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-6-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-7-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-8-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/scenario-9-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/success-audit.json",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/success-audit.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/supervisor-access-required.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/workflow/verification-screen.png",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/zod-dependency-tree-stderr.txt",
+      "match": true
+    },
+    {
+      "path": "docs/week10/package-validation/zod-dependency-tree.json",
+      "match": true
+    },
+    {
+      "path": "eslint.config.js",
+      "match": true
+    },
+    {
+      "path": "index.html",
+      "match": true
+    },
+    {
+      "path": "package-lock.json",
+      "match": true
+    },
+    {
+      "path": "package.json",
+      "match": true
+    },
+    {
+      "path": "scripts/check-foundation.mjs",
+      "match": true
+    },
+    {
+      "path": "src/App.jsx",
+      "match": true
+    },
+    {
+      "path": "src/CaseAnalysisReport.jsx",
+      "match": true
+    },
+    {
+      "path": "src/CreateCaseForm.jsx",
+      "match": true
+    },
+    {
+      "path": "src/WorkflowScreen.jsx",
+      "match": true
+    },
+    {
+      "path": "src/approvalRouting.js",
+      "match": true
+    },
+    {
+      "path": "src/caseCreation.js",
+      "match": true
+    },
+    {
+      "path": "src/caseReport.js",
+      "match": true
+    },
+    {
+      "path": "src/data/cases.js",
+      "match": true
+    },
+    {
+      "path": "src/main.jsx",
+      "match": true
+    },
+    {
+      "path": "src/presentation.js",
+      "match": true
+    },
+    {
+      "path": "src/styles.css",
+      "match": true
+    },
+    {
+      "path": "src/verification.js",
+      "match": true
+    },
+    {
+      "path": "src/workflow.js",
+      "match": true
+    },
+    {
+      "path": "tests/approval-routing.test.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/browser-create-case.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/browser-fixtures.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/browser.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/cancellation.test.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/case-creation.test.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/presentation.test.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/report-verification.test.mjs",
+      "match": true
+    },
+    {
+      "path": "tests/workflow.test.mjs",
+      "match": true
+    },
+    {
+      "path": "vite.config.js",
+      "match": true
+    }
+  ]
+}

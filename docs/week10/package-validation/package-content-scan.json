@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-23T22:53:37.464Z",
+  "files": 198,
+  "textFilesScanned": 156,
+  "patterns": [
+    "private-key",
+    "github-token",
+    "openai-token",
+    "credential-url",
+    "aws-key"
+  ],
+  "findings": [],
+  "exclusions": [],
+  "limitations": "Pattern scan is not proof of absence. Original screenshot review retained from CONTENT-REVIEW; new full-page audit preview visually inspected at reduced scale with companion JSON parsed in smoke test. No OCR claim. All 85 original hashes verified. Existing failure logs preserve local path metadata."
+}

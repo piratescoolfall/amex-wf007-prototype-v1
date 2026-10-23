@@ -1,0 +1,19 @@
+const fs=require('node:fs'),p=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto');
+const cfg=require('./week10-paths.json'),phase=process.argv[2]||'prep';
+const cwd=p.join(__dirname,phase==='final'?'week10-final-extracted':'week10-prep-extracted');
+const evidence=p.join(phase==='final'?cfg.out:__dirname,phase==='final'?'Week10-Final-Validation-Evidence':'week10-preparation-validation');
+fs.mkdirSync(evidence,{recursive:true});
+const results=[];
+const identity=JSON.parse(fs.readFileSync(p.join(cwd,'docs/week10/SOURCE-IDENTITY.json')));
+function sourceCheck(name){const checks=identity.sourceFiles.map(e=>({path:e.path,match:crypto.createHash('sha256').update(fs.readFileSync(p.join(cwd,e.path))).digest('hex')===e.sha256}));fs.writeFileSync(p.join(evidence,name),JSON.stringify({at:new Date().toISOString(),source:cfg.sha,checks},null,2));if(checks.some(c=>!c.match))throw Error('Source differs');}
+sourceCheck('source-hashes-before.json');
+fs.writeFileSync(p.join(evidence,'environment.json'),JSON.stringify({phase,at:new Date().toISOString(),platform:process.platform,node:process.version,arch:process.arch,sourceCandidate:cfg.sha,packagingCommit:null,cwd,archive:require('./week10-'+phase+'-archive.json'),npm:cp.execFileSync('cmd.exe',['/d','/s','/c','npm.cmd --version']).toString().trim()},null,2));
+for(const [name,command]of [['install','npm.cmd ci'],['unit','npm.cmd test'],['lint','npm.cmd run lint'],['foundation','npm.cmd run check'],['build','npm.cmd run build']]){
+ const start=new Date().toISOString();const r=cp.spawnSync('cmd.exe',['/d','/s','/c',command],{cwd,encoding:'utf8',timeout:240000,maxBuffer:16*1024*1024,windowsHide:true});
+ fs.writeFileSync(p.join(evidence,name+'.txt'),'Command: '+command+'\nStarted: '+start+'\nEnded: '+new Date().toISOString()+'\nExit code: '+r.status+'\n'+r.stdout+'\n'+r.stderr+(r.error?'\n'+r.error.message:''));
+ const row={name,command,exitCode:r.status,signal:r.signal,error:r.error?.message||null};results.push(row);console.log(JSON.stringify(row));fs.writeFileSync(p.join(evidence,'checks.json'),JSON.stringify(results,null,2)+'\n');
+ if(name==='install'&&r.status!==0)break;
+}
+sourceCheck('source-hashes-after.json');
+console.log('Evidence: '+evidence);
+

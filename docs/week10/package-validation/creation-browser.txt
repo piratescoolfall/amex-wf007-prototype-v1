@@ -1,0 +1,13 @@
+Command: node tests/browser-create-case.mjs
+Started: 2026-10-23T22:51:54.079Z
+Exit code: 0
+PASS Required presets, fixed reversal amount, generated reference, cancel and open/unverified creation
+PASS CSR-only creation remains enforced if role changes while form is open
+PASS Forged non-preset input rejected in app logic without storing submitted text
+PASS Multiple cases get distinct IDs and references; routine information case requires completion before closure
+PASS New case verification and evidence gates block processing and actions
+PASS New case internal material-change fixture invalidates approval without an evidence editor
+PASS New $500 case completes only with Supervisor approval, distinct CSR action and human closure; export unchanged
+PASS New case can close as cancelled after CSR verification without AI or approval
+PASS Form at mobile viewport fits and refresh resets new cases and creation audit
+

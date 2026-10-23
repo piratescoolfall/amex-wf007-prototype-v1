@@ -1,0 +1,150 @@
+{
+  "designation": "Product V1.0 Candidate — Week 10 Demo 2",
+  "sourceCandidate": "e16b9967aaa2bf2ab6f595a76c3ac07b21638041",
+  "branch": "week10-product-v1-candidate",
+  "version": "0.1.0",
+  "date": "2026-10-23",
+  "packagingCommit": null,
+  "sourceFiles": [
+    {
+      "path": "eslint.config.js",
+      "bytes": 838,
+      "sha256": "46610ddfa8c8f29dce5e03147967e5855aafe5396c33c9b2c4e5efc8e810b370"
+    },
+    {
+      "path": "index.html",
+      "bytes": 491,
+      "sha256": "060fbbef6afea58948639c058e7a2e00953c773c093f840b503371145ad42841"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 83530,
+      "sha256": "1b2503af26231fb3b6f845f25bac02925feef1b2f3b338c881146f53397d769e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 986,
+      "sha256": "ad85996d1be56e5076d54c7d4c4c742ae46d339c51f7ce73691716730a197c1a"
+    },
+    {
+      "path": "scripts/check-foundation.mjs",
+      "bytes": 1167,
+      "sha256": "c18b7ea64c903234f062d45892fee43e08e23981770e7d659c8ebbdeb634ca38"
+    },
+    {
+      "path": "src/App.jsx",
+      "bytes": 10891,
+      "sha256": "b929ffcf26f0ffcc3f047f245dc4276bab0b2289f644327a69907da3ba437ae9"
+    },
+    {
+      "path": "src/CaseAnalysisReport.jsx",
+      "bytes": 3380,
+      "sha256": "3a874d5eda5f9e67ec5f5c936078dbf81d506f93af58108dbe62cd0c7e8218f0"
+    },
+    {
+      "path": "src/CreateCaseForm.jsx",
+      "bytes": 3292,
+      "sha256": "089027bcabe9bb39983398ea2ed9cd6945c77745778b743b8c3e938cf1b357de"
+    },
+    {
+      "path": "src/WorkflowScreen.jsx",
+      "bytes": 17240,
+      "sha256": "25655e9132b1906171f7df90374fef4af42a4f80cfc13d771ac4bb99f7c88356"
+    },
+    {
+      "path": "src/approvalRouting.js",
+      "bytes": 3248,
+      "sha256": "20702cc175ae0f648bcb958c84c1688f800828c3511a50b23b650bdfddbd3973"
+    },
+    {
+      "path": "src/caseCreation.js",
+      "bytes": 4902,
+      "sha256": "33eecd086450e21acde4fe4a2c0092b66a9bf94273137b798428a8cc7e8ea17d"
+    },
+    {
+      "path": "src/caseReport.js",
+      "bytes": 10067,
+      "sha256": "ded6c53083799baf1c5c4a3bfa8a667a2372249b5f8840b6a8bcef765c958681"
+    },
+    {
+      "path": "src/data/cases.js",
+      "bytes": 1139,
+      "sha256": "f72bff76bfcea13ca2715a4f00fc800d574a40720ce6e8f03207998c472da8e4"
+    },
+    {
+      "path": "src/main.jsx",
+      "bytes": 222,
+      "sha256": "4d00e019af4a666d858e40561516b7689a3cbc743dfe5361205d7d34c90c777f"
+    },
+    {
+      "path": "src/presentation.js",
+      "bytes": 7145,
+      "sha256": "3cfd1f67b1fd8bef3d601cb2be6e3216026306143bdd6ab9eb8322a4f78e702c"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 18713,
+      "sha256": "f04b04b5b3b20c14d62034f16f318e21e83bfd85f5e15a62d99eb6c6b29c13ba"
+    },
+    {
+      "path": "src/verification.js",
+      "bytes": 2368,
+      "sha256": "f6940afdb137c7f2128d79f3d1d5bec5a3d5395bc88cf326527e79960368959f"
+    },
+    {
+      "path": "src/workflow.js",
+      "bytes": 18562,
+      "sha256": "d8d0e85e94ac755cc4cbd200eb310eab4790c76dbe29e82ba38136e3c8b2999c"
+    },
+    {
+      "path": "tests/approval-routing.test.mjs",
+      "bytes": 6990,
+      "sha256": "85d9e797dfb50fb7f7a612a50fb2fbbe6ca5205cc421f4699674e4fd1aec539a"
+    },
+    {
+      "path": "tests/browser-create-case.mjs",
+      "bytes": 12474,
+      "sha256": "537d198c541d3adc2ccb533b9c4ec884ef27ff4cee43a8eec2d2ea7003c6fba4"
+    },
+    {
+      "path": "tests/browser-fixtures.mjs",
+      "bytes": 5676,
+      "sha256": "25f9eb67c4457f4f5db810ef0f8785fa05bf1671c778f9d579513b3d4b90cee6"
+    },
+    {
+      "path": "tests/browser.mjs",
+      "bytes": 22465,
+      "sha256": "8997a43eb4ca0359f2e4a72cd4e7f429a3138509b62cdf9d656c70ffdc3beeea"
+    },
+    {
+      "path": "tests/cancellation.test.mjs",
+      "bytes": 5764,
+      "sha256": "af6557f713487ea6cbef31061b7a21e84b1bf30ab4425b2939c62b9518d11530"
+    },
+    {
+      "path": "tests/case-creation.test.mjs",
+      "bytes": 8816,
+      "sha256": "769a8011845b960a7959294c424278e8b331e9fdc659378c322dbc2e2e43a5a0"
+    },
+    {
+      "path": "tests/presentation.test.mjs",
+      "bytes": 2827,
+      "sha256": "714453e736a96fc870e657008c8eef47b772554a8574a5b170bc4296afa794e5"
+    },
+    {
+      "path": "tests/report-verification.test.mjs",
+      "bytes": 15392,
+      "sha256": "8479016bb9ef8580e36d445395d52c766a98acf730e3f84c9cbb6fa1d7e05933"
+    },
+    {
+      "path": "tests/workflow.test.mjs",
+      "bytes": 11025,
+      "sha256": "fa0903d4b532f3ec9ecf5b8bb57f494f4959beca058fdf49571273f00fcbf6d9"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 411,
+      "sha256": "5e9ba45fc5fff1f02b9e9a82ed64952ad72d34fc69c1eaae0fc29f56e69813b0"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "phase": "prep",
+  "zip": "C:\\Users\\Kyra\\Documents\\Codex\\2026-10-09\\read-agents-md-and-propose-a\\work\\week10-preparation.zip",
+  "zipBytes": 9802350,
+  "zipSha256": "503e8b43169d67c98268c7a4a8545af3b7523a21d46469ac49250f6d3710d38c",
+  "extractedTo": "C:\\Users\\Kyra\\Documents\\Codex\\2026-10-09\\read-agents-md-and-propose-a\\work\\week10-prep-extracted",
+  "entryCount": 102,
+  "manifestPayloadsVerified": 101,
+  "canonicalSourceFilesVerified": 28,
+  "originalHardeningEntriesVerified": 85,
+  "forbiddenEntries": 0,
+  "verifiedAt": "2026-10-23T22:47:51.415Z"
+}
